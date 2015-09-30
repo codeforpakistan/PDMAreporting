@@ -1,0 +1,221 @@
+h1 {
+  background: #bebebe;
+  transition: all 400ms ease;
+  width: 300px;
+  margin-top: 0px;
+}
+h1:hover {
+  animation: slideAround 3s infinite;
+}
+body {
+  padding: 50px;
+}
+.b {
+  padding: 1rem 3rem;
+  background-color: #f66;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  border-bottom: 3px solid #900;
+  transition: all 300ms ease;
+  outline: none;
+  overflow: hidden;
+}
+.b:hover {
+  margin-top: 1px;
+  border-bottom-width: 2px;
+  background-color: #f33;
+}
+.b:hover .btn-bg {
+  left: -40px;
+}
+.b:active,
+.b:focus {
+  margin-top: 2px;
+  border-bottom-width: 1px;
+  background-color: #f33;
+}
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+.btn-bg {
+  position: absolute;
+  background-color: #fff;
+  top: 0px;
+  left: 150px;
+  width: 20%;
+  height: 100%;
+  transform: skew(30deg, 0deg);
+  transition: all 300ms ease;
+}
+.star {
+  transition: all 300ms ease;
+  width: 100px;
+}
+.star-rotate {
+  animation: spinning 3s linear infinite;
+  transform-origin: center;
+}
+.loading {
+  transition: all 300ms ease;
+  width: 100px;
+}
+.load-rotate {
+  animation: anti-spinning 1s linear infinite;
+  transform-origin: center;
+}
+@-moz-keyframes slideAround {
+  0% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  50% {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  75% {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  100% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+@-webkit-keyframes slideAround {
+  0% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  50% {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  75% {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  100% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+@-o-keyframes slideAround {
+  0% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  50% {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  75% {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  100% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+@keyframes slideAround {
+  0% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  50% {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  75% {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  100% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+@-moz-keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@-moz-keyframes anti-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
+}
+@-webkit-keyframes anti-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
+}
+@-o-keyframes anti-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
+}
+@keyframes anti-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
+}

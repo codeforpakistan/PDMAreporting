@@ -1,0 +1,244 @@
+body {
+  outline: 0;
+  text-decoration: none;
+}
+.heading1 {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 25px;
+  font-family: sans-serif;
+  color: #127348;
+}
+.heading2 {
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #127348;
+}
+.login-image {
+  width: 120px;
+}
+.title-banner {
+  margin-top: 80px;
+}
+.login-bottom {
+  position: absolute;
+  z-index: -20;
+  bottom: 0px;
+}
+.edit-area {
+  margin-top: 100px;
+}
+.btn {
+  width: 120px;
+}
+.anchor-small {
+  font-size: 12px;
+}
+.btn-success {
+  background-color: #127348;
+  font-family: sans-serif;
+  border: 0;
+  font-size: 12px;
+  box-shadow: 1px 1px 5px #5c5c5c;
+  transition: all 300ms ease;
+}
+.btn-success:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #25c880;
+  font-size: 12px;
+  box-shadow: 2px 2px 10px #cfcfcf;
+}
+/*dashboard*/
+.box {
+  width: 120px;
+  height: 120px;
+  padding: 120px;
+  position: relative;
+  margin: 10px auto;
+  background-color: #fff;
+  border: 3px solid #25c880;
+  box-shadow: 1px 1px 5px #7d7d7d;
+  opacity: 0;
+  transition: all 300ms ease;
+  border-radius: 5px;
+}
+.box:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #fff;
+  box-shadow: 2px 2px 10px #cfcfcf;
+}
+.box-show {
+  opacity: 1;
+}
+.box1 {
+  top: 100%;
+  left: 50%;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: -100px;
+  position: relative;
+  color: #25c880;
+  text-align: center;
+  font-size: 20px;
+}
+.box2 {
+  top: 100%;
+  left: 50%;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: -100px;
+  position: relative;
+  color: #25c880;
+  text-align: center;
+  font-size: 20px;
+}
+.box3 {
+  top: 100%;
+  left: 50%;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: -100px;
+  position: relative;
+  color: #25c880;
+  text-align: center;
+  font-size: 20px;
+}
+.box4 {
+  top: 100%;
+  left: 50%;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: -100px;
+  position: relative;
+  color: #25c880;
+  text-align: center;
+  font-size: 20px;
+}
+.box5 {
+  top: 100%;
+  left: 50%;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: -100px;
+  position: relative;
+  color: #25c880;
+  text-align: center;
+  font-size: 20px;
+}
+.box6 {
+  top: 100%;
+  left: 50%;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: -100px;
+  position: relative;
+  color: #25c880;
+  text-align: center;
+  font-size: 20px;
+}
+.dashboard-row {
+  padding-top: 50px;
+}
+.dash-img {
+  top: 50%;
+  left: 50%;
+  margin-top: -95px;
+  margin-left: -75px;
+  transform: scale(0.5, 0.5);
+  position: absolute;
+}
+.mis-img {
+  top: 50%;
+  left: 50%;
+  margin-top: -175px;
+  margin-left: -150px;
+  transform: scale(0.5, 0.5);
+  position: absolute;
+}
+.dash-title {
+  margin-top: 100px;
+  text-align: center;
+  color: #25c880;
+  font-size: 30px;
+  font-family: "Roboto", Arial, sans-serif;
+}
+/*data-entry*/
+.left-content {
+  background: #efefef;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.right-content {
+  background-color: #3682c4;
+  z-index: 1000;
+  position: fixed;
+  overflow-y: auto;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  transition: all 1s ease;
+}
+.right-content .wapper-right {
+  width: 100%;
+  height: 100%;
+  background-color: #25c880;
+}
+.side-slide {
+  width: 90%;
+}
+.toggle-side {
+  background-color: #fff;
+  font-family: sans-serif;
+  border: 0;
+  font-size: 12px;
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 2px 2px 10px #303030;
+  transition: all 300ms ease;
+}
+.toggle-side:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #fff;
+  font-size: 12px;
+  box-shadow: 2px 2px 10px #464646;
+}
+.toggle-side:active,
+.toggle-side:focus {
+  text-decoration: none;
+  outline: none;
+}
+.entry-title {
+  margin-top: 50px;
+  margin-left: 100px;
+  text-align: center;
+  color: #25c880;
+  font-size: 30px;
+  font-family: "Roboto", Arial, sans-serif;
+}
+.form-row {
+  margin-top: 100px;
+}
+/*.search-div*/
+/*position relative*/
+/*.imgsearch*/
+/*z-index 20*/
+/*position: relative;*/
+/*right: 0*/
+/*background: #808080*/
+/*transition all 300ms ease*/
+/*.mysearch*/
+/*background-color: none;*/
+/*transition all 300ms ease*/
+/*border #808080 solid 2px*/
+/*height 32px*/
+/*position: absolute;*/
+/*width 300px*/
+/*&:active, &:focus*/
+/*transform scale(1.1,1)*/
+/*transform-origin bottom left*/
+/*margin-left 30px*/

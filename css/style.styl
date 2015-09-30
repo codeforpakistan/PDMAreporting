@@ -1,0 +1,93 @@
+h1
+  background : #bebebe
+  transition : all 400ms ease
+  width : 300px
+  margin-top : 0px
+  &:hover
+    animation: slideAround 3s infinite
+
+@keyframes slideAround
+  0%
+    margin-left : 0px
+    margin-top : 0px
+  25%
+    margin-left : 50px
+    margin-top : 0px
+  50%
+    margin-left : 50px
+    margin-top : 50px
+  75%
+    margin-left : 0px
+    margin-top : 50px
+  100%
+    margin-left : 0px
+    margin-top : 0px
+
+body
+  padding: 50px
+
+.b
+  padding : 1rem 3rem
+  background-color: lighten(red,40%)
+  border-radius : 5px
+  border 0
+  cursor : pointer
+  position: relative;
+  color : #ffffff
+  border-bottom : 3px solid darken(red,40%)
+  transition all 300ms ease
+  outline none
+  overflow hidden
+  &:hover
+    margin-top : 1px
+    border-bottom-width : 2px
+    background-color: lighten(red,20%)
+    .btn-bg
+      left:-40px
+  &:active, &:focus
+    margin-top : 2px
+    border-bottom-width : 1px
+    background-color: lighten(red,20%)
+
+
+.btn-text
+    position: relative;
+    z-index 1
+  .btn-bg
+    position: absolute;
+    background-color: lighten(red,100%)
+    top 0px
+    left: 150px
+    width 20%
+    height: 100%
+    transform skew(30deg,0deg)
+    transition all 300ms ease
+
+
+@keyframes spinning
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(359deg)
+
+@keyframes anti-spinning
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(-359deg)
+
+.star
+  transition all 300ms ease
+  width 100px
+
+.star-rotate
+  animation spinning 3s linear infinite
+  transform-origin center
+
+.loading
+  transition all 300ms ease
+  width 100px
+
+.load-rotate
+  animation anti-spinning 1s linear infinite
+  transform-origin center
