@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/login.css"/>
-    <link rel="stylesheet" href="css/anicollection.css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"> -->
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.js"></script>
-    <![endif]-->
-    <style>
-        /*body{*/
-        /*background-color: #989898;*/
-        /*height: 100px;*/
-        /*}*/
-    </style>
-</head>
-<body>
+<?php 
+    $this->load->view('template/header');
+?>
 <div class="left-content">
     <div class="row">
         <div class="col-lg-2 entry-title">Manage User</div>
@@ -49,10 +31,6 @@
     </div>
 
 
-<!--js files-->
-<script src="js/jquery-2.1.4.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/login_animation.js"></script>
-<script src="js/angular.min.js"></script>
-</body>
-</html>
+<?php 
+    $this->load->view('template/footer');
+?>
