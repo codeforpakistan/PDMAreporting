@@ -19,6 +19,7 @@ class Cattle_model extends CI_Model{
 
 
 		$data = array(	'ct_owner_name' => $name,
+						'ct_cnic'	=> $cnicnumber,
 		 				'ct_father_name' => $fathername,
 		 				'ct_date_of_incident' => $dateofincident,
 		 				'ct_address'	=> $address,
@@ -30,7 +31,6 @@ class Cattle_model extends CI_Model{
 		 				'ct_imam'	=> $imam,
 		 				'ct_officer_livestock' => $districtofficerlivestock,
 		 				'ct_rep_mpa'	=> $repofmpa,
-		 				'ct_date_created' => date('Y-m-d'),
 		 				'b_id'	=> $budget,
 		 				'u_id'	=> 1);
 		$response = [];

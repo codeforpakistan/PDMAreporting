@@ -1,22 +1,26 @@
-<style type="text/css">
-    .label{
-        color: #333;
-    }
-</style>
-<div ng-controller="HouseDamageCtrl">
-<form ng-submit="AddHouseDamage(data)" method="post" role="form" name="newHouseForm" novalidate>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/pdmastyle.css">
+		<link rel="stylesheet" type="text/css" href="css/1.css">
+		 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">		
+			<div class="col-lg-3 text"> House Damage</div>
+			</div> <br/>
+
+            <div ng-controller="HouseDamageCtrl">
+    <form ng-submit="AddHouseDamage(data)" method="post" role="form">
             <div class="row form-row">
                 <div class="col-lg-12 ">
                     <div class="form-group">
+
                     <div class="row">
-                        <div class="col-sm-6">
-                            <h2>House Damage</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-2 label text-right"> Name of Owner:</div>
+                 		<div class="col-lg-2 label text-right"> Name of Owner:</div>
                 <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="Name" ng-model="data.name" required>
+                <input type="text" class="form-control" name="" id="" placeholder="Name" ng-model="data.name">
                 </div>
                 </div>
                       
@@ -26,12 +30,12 @@
                 <div class="col-lg-3 "> 
                    <input type="text" class="form-control" name="" id="" placeholder="Father Name" ng-model="data.fathername">
                 
-                </div>
-                </div>
+				</div>
+				</div>
                 <div class="row">
                       <div class="col-lg-2 text-right label">Date of Incident:</div>
                 <div class="col-lg-3 "> 
-                <p><input type="date" class="form-control" ng-model="data.incidentdate"></p>
+                <p><input type="text" class="datepicker" ng-model="data.incidentdate"></p>
                 
                 </div>
                 </div>
@@ -39,14 +43,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Cnic Number:</div>
                 <div class="col-lg-3 "> 
-                       <input type="text" class="form-control" name="" id="" placeholder="CNIC Number" ng-model="data.cnicnumber">
-                </div>
-                </div>
-                
-                <div class="row">
-                <div class="col-lg-2 text-right label">District</div>
-                <div class="col-lg-3 "> 
-                       <input type="text" class="form-control" name="" id="" placeholder="District" ng-model="data.district" required>
+                       <input type="text" class="form-control" name="" id="" placeholder="Cnic number" ng-model="data.cnicnumber">
                 </div>
                 </div>
 
@@ -63,36 +60,26 @@
                        <input type="text" class="form-control" name="" id="" placeholder="Reason" ng-model="data.reason">
                        </div>
                        </div>
-                <div class="row">
-                    <div class="col-sm-2 text-right label">Budget</div>
-                    <div class="col-sm-3">
-                        <select name="budget" ng-model="data.budget" required="required">
-                            <option ng-repeat="b in budget" value="{{b.b_id}}">
-                                {{b.b_amount}}
-                            </option>
-                        </select>
-                    </div>
-                </div>
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">House Damage:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="HouseDamage" value="full" ng-model="data.housedamage"> Fully Damage
-                 <input type="radio" name="HouseDamage" value="partial" ng-model="data.housedamage"> Partially Damage
+                <input type="radio" name="HouseDamage" value="Fully Damage" ng-model="data.housedamage"> Fully Damage
+                 <input type="radio" name="HouseDamage" value="Partially Damage" ng-model="data.housedamage"> Partially Damage
 
                 
                 </div>
                 </div>
 
-                    <div class="row">
+ 					<div class="row">
                       <div class="col-lg-2 text-right label">Halqa patwari:</div>
-                     <div class="col-lg-3 "> 
+               		 <div class="col-lg-3 "> 
                   <input type="radio" name="Halqapatwari" value="yes" ng-model="data.halqapatwari"> Yes
                  <input type="radio" name="Halqapatwari" value="no" ng-model="data.halqapatwari"> No
 
                 
-                </div>
-                </div>
+				</div>
+				</div>
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">Rep of MPA:</div>
@@ -106,11 +93,11 @@
                  <div class="row">
                       <div class="col-lg-2 text-right label">Tehsiladar:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="Tehsiladar" value="yes" ng-model="data.tehsildar"> Yes
-                 <input type="radio" name="Tehsiladar" value="no" ng-model="data.tehsildar"> No
+                <input type="radio" name="Tehsiladar" value="yes" ng-model="data.tehsiladar"> Yes
+                 <input type="radio" name="Tehsiladar" value="no" ng-model="data.tehsiladar"> No
    
-                </div>
-                </div>
+				</div>
+				</div>
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">Local School Headmaster:</div>
@@ -138,11 +125,22 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">
-            <button type="submit" class="btn btn-success" ng-disabled="newHouseForm.$invalid">Add to list</button>
+            <button type="submit" class="btn btn-success">Add to list</button>
                     </div>
                 </div>
         </form>
         </div>
-        <script>
-          $( ".datepicker" ).datepicker();
-        </script>
+
+		</div>
+		<script type="text/javascript" src="js/2.js"></script>
+		<script type="text/javascript" src="js/3.js"></script>
+
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	  		  <script>
+   	 $( ".datepicker" ).datepicker();
+   
+  </script>
+	</body>
+	 
+</html>

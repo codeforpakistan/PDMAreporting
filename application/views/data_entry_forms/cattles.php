@@ -31,7 +31,7 @@
                 <div class="row">
                       <div class="col-lg-2 text-right label">Date of Incident:</div>
                 <div class="col-lg-3 "> 
-                <p><input type="date" class="datepicker form-control" ng-model="data.incidentdate" required></p>
+                <p><input type="date" class="form-control" ng-model="data.incidentdate" required></p>
                 
                 </div>
                 </div>
@@ -125,7 +125,7 @@
                 <div class="col-lg-2 text-right label">Local Imam Masjid:</div>
                 <div class="col-lg-3 "> 
                 <input type="radio" name="imam" value="1" ng-model="data.imam"> Yes
-                 <input type="radio" name="imam" value="0" ng-model="data.imam"> No
+                <input type="radio" name="imam" value="0" ng-model="data.imam"> No
 
                       
                 </div>
@@ -143,3 +143,6 @@
     </form>
         {{message}}
 </div>
+<script>
+          $( ".datepicker" ).datepicker();
+        </script>
