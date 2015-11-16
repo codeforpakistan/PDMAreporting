@@ -23,11 +23,9 @@ app.config(function($routeProvider) {
 });
  
 app.controller('DeadInjuredCtrl', function($scope, $http) {
-    // console.log('im here...');
-    $scope.controllerName = "DeadInjuredCtrl";
+  
      $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
-          //console.log(data);
         });
 
         $scope.AddDeadInjured = function(data){
@@ -41,20 +39,16 @@ app.controller('DeadInjuredCtrl', function($scope, $http) {
         }
 
         //get dead data
-              $http.get(baseURL+'deadinjured/get_all').success(function(data, status, headers, config){
-              
-                $scope.table_info = data;
-          console.log(data);
-              });
+        $http.get(baseURL+'deadinjured/get_all').success(function(data, status, headers, config){    
+          $scope.table_info = data;
+        });
 
 });
  
 app.controller('HouseDamageCtrl', function($scope, $http) {
 
-    $scope.controllerName = "HouseDamageCtrl";
         $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
-          //console.log(data);
         });
 
         $scope.AddHouseDamage = function(data){
@@ -66,30 +60,24 @@ app.controller('HouseDamageCtrl', function($scope, $http) {
               });
         }
 
-      
-      //get houses data
-              $http.get(baseURL+'house/get_all').success(function(data, status, headers, config){
-              
-                $scope.table_info = data;
-          console.log(data);
-              });
+        //get houses data
+        $http.get(baseURL+'house/get_all').success(function(data, status, headers, config){      
+          $scope.table_info = data;
+        });
             
 
 });
 
 app.controller('CattleCtrl', function($scope, $http) {
 
-    $scope.controllerName = "CattleCtrl";
         $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
-          //console.log(data);
         });
 
   $scope.addCattle = function(data){
     //var mydata = JSON.stringify(data);
     $scope.message = "Data is being inserted...";
-        $http.post('http://localhost/PDMAreporting/cattle/add',data).success(function(data, status, headers, config){
-          
+        $http.post('http://localhost/PDMAreporting/cattle/add',data).success(function(data, status, headers, config){          
           $scope.message = "Data Inserted";
         });
     /*
@@ -100,10 +88,8 @@ app.controller('CattleCtrl', function($scope, $http) {
   }
 
     //get cattle data
-              $http.get(baseURL+'cattle/get_all').success(function(data, status, headers, config){
-              
-                $scope.table_info = data;
-          console.log(data);
-              });
+    $http.get(baseURL+'cattle/get_all').success(function(data, status, headers, config){
+      $scope.table_info = data;
+    });
 
 });
