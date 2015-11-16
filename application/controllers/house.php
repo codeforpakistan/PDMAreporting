@@ -6,7 +6,7 @@ class House extends CI_Controller {
 		
 	}
 	public function data(){
-		echo 'load table page';
+		$this->load->view('data_tables/tables');
 	}
 	/**
 	 * *********************** API proced **********************
