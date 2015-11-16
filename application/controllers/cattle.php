@@ -11,6 +11,11 @@ class Cattle extends CI_Controller {
 	/**
 	 * *********************** API proced **********************
 	 */
+	public function get_by_id($id){
+		$this->load->model('cattle_model');
+		$data = $this->cattle_model->get_by_id($id);
+		echo json_encode($data);
+	}
 	public function get_all(){
 		$this->db->select('*');
 		$this->db->from('cattle');

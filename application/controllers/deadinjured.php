@@ -11,6 +11,12 @@ class Deadinjured extends CI_Controller {
 	/**
 	 * *********************** API proced **********************
 	 */
+	public function get_by_id($id){
+		$this->load->model('deadinjured_model');
+		$data = $this->deadinjured_model->get_by_id($id);
+		echo json_encode($data);
+	}
+
 	public function get_all(){
 		$this->db->select('*');
 		$this->db->from('dead_injured');
