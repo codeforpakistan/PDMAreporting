@@ -56,13 +56,14 @@
         </table>
       </div>
     </div>
-  </div>
-</div>
     <div class="row">
-                <div class="col-lg-1 col-lg-offset-10">
+        <div class="col-lg-1 col-lg-offset-10">
             <button type="submit" class="btn btn-success">Generate</button>
-                    </div>
-                </div>
+        </div>
+    </div>
+  </div>
+
+    
                  
 
 <?php 
