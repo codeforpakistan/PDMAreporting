@@ -38,8 +38,9 @@ app.controller('DeadInjuredCtrl', function($scope, $http) {
               });
         }
         $scope.getbyid = function(id){
-          $http.get('/deadinjured/get_by_id' + id).success(function(data, status, headers, config){
+          $http.get(baseURL+'/deadinjured/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
+            console.log(data);
           });
         }
 
@@ -66,8 +67,9 @@ app.controller('HouseDamageCtrl', function($scope, $http) {
         }
 
         $scope.getbyid = function(id){
-          $http.get('/house/get_by_id' + id).success(function(data, status, headers, config){
+          $http.get(baseURL+'/house/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
+            console.log(data);
           });
         }
 
@@ -99,8 +101,9 @@ app.controller('CattleCtrl', function($scope, $http) {
         }
 
         $scope.getbyid = function(id){
-          $http.get('/cattle/get_by_id' + id).success(function(data, status, headers, config){
+          $http.get(baseURL+'/cattle/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
+            console.log(data);
           });
         }
 

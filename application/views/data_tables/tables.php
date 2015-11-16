@@ -28,18 +28,29 @@
               <th>Category</th>
               <th>District</th>
               <th>Budget</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="h in table_info">
+            <tr ng-repeat="i in table_info">
               <td>{{1}}</td>
-              <td>{{h.name}}</td>
-              <td>{{h.father_name}}</td>
-              <td>{{h.date_of_incident}}</td>
-              <td>{{h.b_category}}</td>
-              <td>{{h.district}}</td>
-              <td>{{h.b_amount}}</td>
-
+              <td>{{i.name}}</td>
+              <td>{{i.father_name}}</td>
+              <td>{{i.date_of_incident}}</td>
+              <td>{{i.b_category}}</td>
+              <td>{{i.district}}</td>
+              <td>{{i.b_amount}}</td>
+              <td class="text-center">
+              <?php  
+                if($type == "house"){
+                  echo "<button class='btn btn-sm btn-info' ng-click='getbyid(i.hd_id)'>Details</button>";
+                }else if($type == "cattle"){
+                  echo "<button class='btn btn-sm btn-info' ng-click='getbyid(i.ct_id)'>Details</button>";
+                }else{
+                  echo "<button class='btn btn-sm btn-info' ng-click='getbyid(i.di_id)'>Details</button>";
+                }
+              ?>
+              </td>
             </tr>
           </tbody>
         </table>
