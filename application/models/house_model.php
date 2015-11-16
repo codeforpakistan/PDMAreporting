@@ -1,6 +1,15 @@
 <?php
 class House_model extends CI_Model{
 	
+	public function get_by_id($id){
+		$this->db->where('hd_id',$id);
+		$return = $this->db->get('house_damage')->result_array();
+		return $return;
+	}
+
+
+
+
 	public function add($formdata){
 		$name = $formdata->name;
 		$fathername = $formdata->fathername;
