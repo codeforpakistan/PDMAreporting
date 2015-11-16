@@ -24,6 +24,7 @@ app.config(function($routeProvider) {
  
 app.controller('DeadInjuredCtrl', function($scope, $http) {
     // console.log('im here...');
+    $scope.controllerName = "DeadInjuredCtrl";
      $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
           //console.log(data);
@@ -38,9 +39,19 @@ app.controller('DeadInjuredCtrl', function($scope, $http) {
                 $scope.message = "Data Inserted";
               });
         }
+
+        //get dead data
+              $http.get(baseURL+'deadinjured/get_all').success(function(data, status, headers, config){
+              
+                $scope.table_info = data;
+          console.log(data);
+              });
+
 });
  
 app.controller('HouseDamageCtrl', function($scope, $http) {
+
+    $scope.controllerName = "HouseDamageCtrl";
         $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
           //console.log(data);
@@ -55,9 +66,20 @@ app.controller('HouseDamageCtrl', function($scope, $http) {
               });
         }
 
+      
+      //get houses data
+              $http.get(baseURL+'house/get_all').success(function(data, status, headers, config){
+              
+                $scope.table_info = data;
+          console.log(data);
+              });
+            
+
 });
 
 app.controller('CattleCtrl', function($scope, $http) {
+
+    $scope.controllerName = "CattleCtrl";
         $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
           //console.log(data);
@@ -76,4 +98,12 @@ app.controller('CattleCtrl', function($scope, $http) {
         });
     */
   }
+
+    //get cattle data
+              $http.get(baseURL+'cattle/get_all').success(function(data, status, headers, config){
+              
+                $scope.table_info = data;
+          console.log(data);
+              });
+
 });
