@@ -5,6 +5,11 @@ class Budget extends CI_Controller {
 	public function index(){
 		
 	}
+	
+	/**
+	 * *********************** API proced **********************
+	 */
+
 	public function getbudget(){
 		$result = $this->db->get('budget')->result_array();
 		echo json_encode($result);
@@ -27,8 +32,5 @@ class Budget extends CI_Controller {
 			echo json_encode($response);
 		}
 
-	}
-	public function add2($id){
-		echo json_encode($id);
 	}
 }
