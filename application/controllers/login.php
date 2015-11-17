@@ -22,6 +22,7 @@ class Login extends CI_Controller {
 		$q = $this->db->query($sql, array($user_name, $user_name, $password, $category));
 		$row = $q->row();
 		if($q->num_rows()==1){
+			// if 1, then MIS
 			if($row->u_category==1){
 				$data = array(	'is_logged_in' 			=> true,
 								'is_admin'				=> true,
@@ -31,6 +32,7 @@ class Login extends CI_Controller {
 				$this->session->set_userdata($data);
 				$this->load->view('mis/dashboard');
 			}
+			// if 2, then AD
 			else if($row->u_category==2){
 				$data = array(	'is_logged_in' 			=> true,
 								'is_ad'					=> true,
@@ -38,7 +40,7 @@ class Login extends CI_Controller {
 						 		'user_name'				=> $row->u_username);
 				/*---------------------- save data in session ------------------------- */
 				$this->session->set_userdata($data);
-				echo 'its ad';
+				redirect('ad/dashboard');
 			}
 			else{
 				$data = array(	'is_logged_in' 				=> true,

@@ -6,16 +6,22 @@ class Deadinjured extends CI_Controller {
 		
 	}
 	public function data(){
-		echo 'load table page';
+		$this->load->view('data_tables/tables');
 	}
 	/**
 	 * *********************** API proced **********************
 	 */
+	public function get_by_id($id){
+		$this->load->model('deadinjured_model');
+		$data = $this->deadinjured_model->get_by_id($id);
+		echo json_encode($data);
+	}
+
 	public function get_all(){
 		$this->db->select('*');
 		$this->db->from('dead_injured');
-		$this->db->join('budget', 'budget.b_id = house_damage.b_id');
-		$this->db->join('user', 'user.u_id = house_damage.u_id');
+		$this->db->join('budget', 'budget.b_id = dead_injured.b_id');
+		$this->db->join('user', 'user.u_id = dead_injured.u_id');
 		$result  = $this->db->get()->result_array();
 		echo json_encode($result);
 	}

@@ -6,11 +6,18 @@ class House extends CI_Controller {
 		
 	}
 	public function data(){
-		echo 'load table page';
+		$this->load->view('data_tables/tables');
 	}
 	/**
 	 * *********************** API proced **********************
 	 */
+
+	public function get_by_id($id){
+		$this->load->model('house_model');
+		$data = $this->house_model->get_by_id($id);
+		echo json_encode($data);
+	}
+
 	public function get_all(){
 		$this->db->select('*');
 		$this->db->from('house_damage');
