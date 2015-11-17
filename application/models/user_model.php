@@ -1,10 +1,23 @@
 <?php
-class Cattle_model extends CI_Model{
+class User_model extends CI_Model{
 	
 	public function get_by_id($id){
-		$this->db->where('ct_id',$id);
-		$return = $this->db->get('cattle')->result_array();
+		$this->db->where('u_id',$id);
+		$return = $this->db->get('user')->result_array();
 		return $return[0];
+	}
+	public function edit_category($formdata){
+		$u_category = $formdata->u_category;
+		$id = $formdata->u_id;
+
+		$data = array('u_category' => $u_category);
+		$this->db->where('u_id', $id);
+		$response = [];
+		if($this->db->update('user', $data)){
+			$response['done'] = true;
+			echo json_encode($response);
+		}
+
 	}
 	public function add($formdata){
 		$name = $formdata->name;

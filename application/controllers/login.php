@@ -25,12 +25,12 @@ class Login extends CI_Controller {
 			// if 1, then MIS
 			if($row->u_category==1){
 				$data = array(	'is_logged_in' 			=> true,
-								'is_admin'				=> true,
+								'is_mis'				=> true,
 						 		'user_id'				=> $row->u_id,
 						 		'user_name'				=> $row->u_username);
 				/*---------------------- save data in session ------------------------- */
 				$this->session->set_userdata($data);
-				$this->load->view('mis/dashboard');
+				redirect('mis/dashboard');
 			}
 			// if 2, then AD
 			else if($row->u_category==2){

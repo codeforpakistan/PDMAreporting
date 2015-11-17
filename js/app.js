@@ -90,7 +90,7 @@ app.controller('CattleCtrl', function($scope, $http) {
         $scope.addCattle = function(data){
           //var mydata = JSON.stringify(data);
           $scope.message = "Data is being inserted...";
-              $http.post('http://localhost/PDMAreporting/cattle/add',data).success(function(data, status, headers, config){          
+              $http.post(baseURL + 'cattle/add',data).success(function(data, status, headers, config){          
                 $scope.message = "Data Inserted";
               });
           /*
@@ -109,6 +109,40 @@ app.controller('CattleCtrl', function($scope, $http) {
 
     //get cattle data
     $http.get(baseURL+'cattle/get_all').success(function(data, status, headers, config){
+      $scope.table_info = data;
+    });
+
+});
+
+
+
+app.controller('UserCtrl', function($scope, $http) {
+        $scope.addUser = function(data){
+            $http.post(baseURL + 'user/add',data).success(function(data, status, headers, config){          
+                $scope.message = "Data Inserted";
+            });
+        }
+  
+        $scope.getbyid = function(id, set_showUserEditForm){
+          $scope.showUserEditForm = set_showUserEditForm;
+          $http.get(baseURL + 'user/get_by_id/' + id).success(function(data, status, headers, config){
+            $scope.row = data;
+            console.log(data);
+          });
+        }
+
+        $scope.editUserCategory = function(data){ 
+          console.log(data); 
+            $http.post(baseURL + 'user/edit_category', data).success(function(){
+              $scope.message = "Update Successfully";
+              $scope.showUserEditForm = 0; 
+
+            });
+
+        }
+
+    //get cattle data
+    $http.get(baseURL+'user/get_all').success(function(data, status, headers, config){
       $scope.table_info = data;
     });
 
