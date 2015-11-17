@@ -59,4 +59,63 @@ $('document').ready(function(){
     $('.toggle-side').click(function(){
         $('.right-content').toggleClass("side-slide");
     });
+
+
+    //hidding category and showing navbar
+    $('.b1').click(function () {
+        $('.dash').addClass("fadeOut");
+        $('.dash').addClass("animated");
+        $('.dash').remove();
+        $('.navbar').removeClass("hide");
+        $('.navbar').addClass("fadeIn");
+        $('.navbar').addClass("animated");
+        $('.my-view').removeClass("hide");
+        $('.my-view').addClass("fadeIn");
+        $('.my-view').addClass("animated");
+        $('.house-nav').addClass("active");
+    });
+
+    $('.b2').click(function () {
+        $('.dash').addClass("fadeOut");
+        $('.dash').addClass("animated");
+        $('.dash').remove();
+        $('.navbar').removeClass("hide");
+        $('.navbar').addClass("fadeIn");
+        $('.navbar').addClass("animated");
+        $('.my-view').removeClass("hide");
+        $('.my-view').addClass("fadeIn");
+        $('.my-view').addClass("animated");
+        $('.cattle-nav').addClass("active");
+    });
+
+    $('.b3').click(function () {
+        $('.dash').addClass("fadeOut");
+        $('.dash').addClass("animated");
+        $('.dash').remove();
+        $('.navbar').removeClass("hide");
+        $('.navbar').addClass("fadeIn");
+        $('.navbar').addClass("animated");
+        $('.my-view').removeClass("hide");
+        $('.my-view').addClass("fadeIn");
+        $('.my-view').addClass("animated");
+        $('.dead-nav').addClass("active");
+    });
+
+    $('.house-nav').click(function() {
+         $('.house-nav').addClass("active");
+         $('.cattle-nav').removeClass("active");
+         $('.dead-nav').removeClass("active");
+    });
+
+    $('.cattle-nav').click(function() {
+         $('.house-nav').removeClass("active");
+         $('.cattle-nav').addClass("active");
+         $('.dead-nav').removeClass("active");
+    });
+
+    $('.dead-nav').click(function() {
+         $('.house-nav').removeClass("active");
+         $('.cattle-nav').removeClass("active");
+         $('.dead-nav').addClass("active");
+    });
 })
