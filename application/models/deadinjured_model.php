@@ -4,7 +4,7 @@ class Deadinjured_model extends CI_Model{
 	public function get_by_id($id){
 		$this->db->where('di_id',$id);
 		$return = $this->db->get('dead_injured')->result_array();
-		return $return;
+		return $return[0];
 	}
 
 	public function add($formdata){

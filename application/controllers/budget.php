@@ -5,6 +5,9 @@ class Budget extends CI_Controller {
 	public function index(){
 		
 	}
+	public function data(){
+		$this->load->view('data_tables/budget');
+	}
 	
 	/**
 	 * *********************** API proced **********************

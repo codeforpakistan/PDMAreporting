@@ -23,17 +23,17 @@ class Login extends CI_Controller {
 		$row = $q->row();
 		if($q->num_rows()==1){
 			// if 1, then MIS
-			if($row->u_category==1){
+			if($row->u_category=="MIS User"){
 				$data = array(	'is_logged_in' 			=> true,
-								'is_admin'				=> true,
+								'is_mis'				=> true,
 						 		'user_id'				=> $row->u_id,
 						 		'user_name'				=> $row->u_username);
 				/*---------------------- save data in session ------------------------- */
 				$this->session->set_userdata($data);
-				$this->load->view('mis/dashboard');
+				redirect('mis/dashboard');
 			}
 			// if 2, then AD
-			else if($row->u_category==2){
+			else if($row->u_category=="Assistant Director"){
 				$data = array(	'is_logged_in' 			=> true,
 								'is_ad'					=> true,
 						 		'user_id'				=> $row->u_id,

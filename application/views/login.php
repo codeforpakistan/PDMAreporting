@@ -32,9 +32,9 @@
                     <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                     <br/>
                     <select name="category" class="form-control" id="category">
-                        <option value="3">Data Entry Operator</option>
-                        <option value="2">Assistant Director</option>
-                        <option value="1">Admin</option>
+                        <option value="Data Entry Operator">Data Entry Operator</option>
+                        <option value="Assistant Director">Assistant Director</option>
+                        <option value="MIS User">MIS User</option>
                     </select>
             	</div>
                 <div class="form-group form-forget hidden">
