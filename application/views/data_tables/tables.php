@@ -58,7 +58,13 @@
     </div>
 
 <?php 
-    $this->load->view('modal/modal_cattle');
+    if($type == "cattle")
+      $this->load->view('modal/modal_cattle');
+    if($type == "house")
+      $this->load->view('modal/modal_house');
+    if($type == "deadinjured")
+      $this->load->view('modal/modal_deadinjured');
+
 ?>
 
     <div class="row">

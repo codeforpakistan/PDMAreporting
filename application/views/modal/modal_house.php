@@ -6,23 +6,23 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Cattle</h4>
+          <h4 class="modal-title">House Damage </h4>
         </div>
         <div class="modal-body">
         <div class="row">
              <div class="col-lg-12 ">
                 <div class="form-group">
 
-                    <div class="row">
+                  <div class="row">
                     <div class="col-lg-4 ">Name of Owner: </div>
                     <div class="col-sm-4">{{row.name}}</div>     
                   </div>
 
                       
-                     <div class="row">
-                       <div class="col-lg-4 ">Father Name:</div>
+                  <div class="row">
+                      <div class="col-lg-4 ">Father Name:</div>
                        <div class="col-sm-4">{{row.fathername}}</div>
-          </div>
+                  </div>
 
                 <div class="row">
                       <div class="col-lg-4 ">Date of Incident:</div>
@@ -40,31 +40,30 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-4 ">Reason:</div>
+                  <div class="col-lg-4 ">Reason For Damage:</div>
                    <div class="col-sm-4">{{row.reason}}</div>
 
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-4">:</div>
-                   <div class="col-sm-4">{{row.housedamage}}</div>
+                    <div class="col-lg-4">House Damage:</div>
+                    <div class="col-sm-4">{{row.housedamage}}</div>
                 </div>
 
-        <div class="row">
+              <div class="row">
                       <div class="col-lg-4"> Halqa patwari:</div>
                        <div class="col-sm-4">{{row.halqapatwari}}</div>
-        </div>
+             </div>
 
                 <div class="row">
-                  <div class="col-lg-4">Rep of MPA:</div>
-                  <div class="col-sm-4">{{row.repofmpa}}</div>
-
-                </div>
+                    <div class="col-lg-4">Rep of MPA:</div>
+                    <div class="col-sm-4">{{row.repofmpa}}</div>
+               </div>
 
                  <div class="row">
-                      <div class="col-lg-4">District Officer Liverstock:</div>
-                      <div class="col-sm-4">{{row.districtofficerlivestock}}</div>
-        		</div>
+                      <div class="col-lg-4">Tehsildar:</div>
+                      <div class="col-sm-4">{{row.tehsildar}}</div>
+                </div>
 
                 <div class="row">
                   <div class="col-lg-4">Local School Headmaster:</div>
