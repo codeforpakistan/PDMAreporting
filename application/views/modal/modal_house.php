@@ -79,7 +79,14 @@
 
                 </div>
             </div>
-        </div>
+          </div>
+              <div class="row">
+                  <div class="col-lg-1 col-lg-offset-8">
+                  <a href="<?php echo base_url();?>house/edit/{{row.hd_id}}" class="btn btn-success"> Edit</a>
+                  </div>  
+                </div>
+                <br>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>

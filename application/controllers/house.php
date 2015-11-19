@@ -8,6 +8,13 @@ class House extends CI_Controller {
 	public function data(){
 		$this->load->view('data_tables/tables');
 	}
+
+	public function edit($id){
+		echo "id";
+		$this->load->model('house_model');
+		$data= $this->house_model->get_by_id($id);
+		print_r($data);
+	}
 	/**
 	 * *********************** API proced **********************
 	 */

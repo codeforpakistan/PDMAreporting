@@ -8,6 +8,16 @@ class Cattle extends CI_Controller {
 	public function data(){
 		$this->load->view('data_tables/tables');
 	}
+
+    public function edit($id){
+		echo "id";
+		$this->load->model('cattle_model');
+		$data= $this->cattle_model->get_by_id($id);
+		print_r($data);
+	}
+
+
+
 	/**
 	 * *********************** API proced **********************
 	 */
@@ -15,7 +25,7 @@ class Cattle extends CI_Controller {
 		$this->load->model('cattle_model');
 		$data = $this->cattle_model->get_by_id($id);
 		echo json_encode($data);
-	}
+	} 
 	public function get_all(){
 		$this->db->select('*');
 		$this->db->from('cattle');

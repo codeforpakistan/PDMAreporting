@@ -45,10 +45,7 @@
 
                 </div>
 
-                <div class="row">
-                  <div class="col-lg-4">:</div>
-                   <div class="col-sm-4">{{row.housedamage}}</div>
-                </div>
+                
 
         <div class="row">
                       <div class="col-lg-4"> Halqa patwari:</div>
@@ -75,12 +72,18 @@
                   <div class="col-lg-4 ">Local Imam Masjid:</div>
                   <div class="col-sm-4">{{row.imam}}</div>
                 </div>
-
                     </div>
 
                 </div>
             </div>
         </div>
+        		<div class="row">
+                	<div class="col-lg-1 col-lg-offset-8">
+                	<a href="<?php echo base_url();?>cattle/edit/{{row.ct_id}}" class="btn btn-success"> Edit</a>
+                	</div>	
+                </div>
+
+                	<br>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>

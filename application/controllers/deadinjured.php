@@ -8,6 +8,13 @@ class Deadinjured extends CI_Controller {
 	public function data(){
 		$this->load->view('data_tables/tables');
 	}
+
+	public function edit($id){
+		echo "id";
+		$this->load->model('deadinjured_model');
+		$data= $this->deadinjured_model->get_by_id($id);
+		print_r($data);
+	}
 	/**
 	 * *********************** API proced **********************
 	 */
