@@ -23,19 +23,19 @@ class Cattle_model extends CI_Model{
 		$imam = $formdata->imam;
 
 
-		$data = array(	'ct_owner_name' => $name,
-						'ct_cnic'	=> $cnicnumber,
-		 				'ct_father_name' => $fathername,
-		 				'ct_date_of_incident' => $dateofincident,
-		 				'ct_address'	=> $address,
-		 				'ct_cattle_type' => $cattletype,
-		 				'ct_reason'	=> $reason,
-		 				'ct_district' => $district,
-		 				'ct_patwari'	=> $halqapatwari,
-		 				'ct_headmaster'	=> $headmaster,
-		 				'ct_imam'	=> $imam,
-		 				'ct_officer_livestock' => $districtofficerlivestock,
-		 				'ct_rep_mpa'	=> $repofmpa,
+		$data = array(	'owner_name' => $name,
+						'cnic'	=> $cnicnumber,
+		 				'father_name' => $fathername,
+		 				'date_of_incident' => $dateofincident,
+		 				'address'	=> $address,
+		 				'cattle_type' => $cattletype,
+		 				'reason'	=> $reason,
+		 				'district' => $district,
+		 				'patwari'	=> $halqapatwari,
+		 				'headmaster'	=> $headmaster,
+		 				'imam'	=> $imam,
+		 				'officer_livestock' => $districtofficerlivestock,
+		 				'rep_mpa'	=> $repofmpa,
 		 				'b_id'	=> $budget,
 		 				'u_id'	=> 1);
 		$response = [];

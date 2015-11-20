@@ -25,19 +25,19 @@ class Deadinjured_model extends CI_Model{
 
 
 		$data = array(	
-						'di_date_of_report_rfs' => $dateofreport,
-						'di_date_of_incident' => $dateofaccident,
-						'di_name' => $name,
-		 				'di_father_name' => $fathername,
-		 				'di_address'	=> $address,
-		 				'di_cnic'	=> $cnicnumber,
-		 				'di_reason'	=> $reason,
-		 				'di_district' => $district,
-		 				'di_patwari'	=> $halqapatwari,
-		 				'di_headmaster'	=> $localschoolheadmaster,
-		 				'di_med_officer'	=> $medicalofficer,
-		 				'di_tehsildar' => $tehsildar,
-		 				'di_date_created' => date('Y-m-d'),
+						'date_of_report_rfs' => $dateofreport,
+						'date_of_incident' => $dateofaccident,
+						'name' => $name,
+		 				'father_name' => $fathername,
+		 				'address'	=> $address,
+		 				'cnic'	=> $cnicnumber,
+		 				'reason'	=> $reason,
+		 				'district' => $district,
+		 				'patwari'	=> $halqapatwari,
+		 				'headmaster'	=> $localschoolheadmaster,
+		 				'med_officer'	=> $medicalofficer,
+		 				'tehsildar' => $tehsildar,
+		 				'date_created' => date('Y-m-d'),
 		 				'b_id'	=> $budget,
 		 				'u_id'	=> 1);
 		$response = [];

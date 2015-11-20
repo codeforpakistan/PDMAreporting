@@ -27,19 +27,19 @@ class House_model extends CI_Model{
 		$localimammasjid = $formdata->localimammasjid;
 
 
-		$data = array(	'hd_owner_name' => $name,
-		 				'hd_father_name' => $fathername,
-		 				'hd_date_of_incident' => $dateofincident,
-		 				'hd_cnic'	=> $cnicnumber,
-		 				'hd_address'	=> $address,
-		 				'hd_damage_type' => $housedamage,
-		 				'hd_reason'	=> $reason,
-		 				'hd_district' => $district,
-		 				'hd_patwari'	=> $halqapatwari,
-		 				'hd_headmaster'	=> $localschoolheadmaster,
-		 				'hd_imam'	=> $localimammasjid,
-		 				'hd_tehsildar' => $tehsildar,
-		 				'hd_rep_mpa'	=> $repofmpa,
+		$data = array(	'owner_name' => $name,
+		 				'father_name' => $fathername,
+		 				'date_of_incident' => $dateofincident,
+		 				'cnic'	=> $cnicnumber,
+		 				'address'	=> $address,
+		 				'damage_type' => $housedamage,
+		 				'reason'	=> $reason,
+		 				'district' => $district,
+		 				'patwari'	=> $halqapatwari,
+		 				'headmaster'	=> $localschoolheadmaster,
+		 				'himam'	=> $localimammasjid,
+		 				'tehsildar' => $tehsildar,
+		 				'rep_mpa'	=> $repofmpa,
 		 				'b_id'	=> $budget,
 		 				'u_id'	=> 1);
 		$response = [];
