@@ -2,8 +2,11 @@
 class House_model extends CI_Model{
 	
 	public function get_by_id($id){
+		$this->db->select('*');
+		$this->db->from('house_damage');
 		$this->db->where('hd_id',$id);
-		$return = $this->db->get('house_damage')->result_array();
+		$this->db->join('budget', 'budget.b_id = house_damage.b_id');
+		$return = $this->db->get()->result_array();
 		return $return[0];
 	}
 

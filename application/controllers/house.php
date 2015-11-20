@@ -10,10 +10,10 @@ class House extends CI_Controller {
 	}
 
 	public function edit($id){
-		echo "id";
 		$this->load->model('house_model');
-		$data= $this->house_model->get_by_id($id);
-		print_r($data);
+		$data['data']= $this->house_model->get_by_id($id);
+		$data['budget'] = $this->db->get('budget')->result();
+		$this->load->view('edit_forms/house', $data);
 	}
 	/**
 	 * *********************** API proced **********************

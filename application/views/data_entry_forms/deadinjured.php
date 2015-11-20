@@ -8,8 +8,8 @@
             <div class="row form-row">
                 <div class="col-lg-12 ">
                     <div class="form-group">
-<div class="row">
-                        <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-2 text">
                             <h2>Dead / Injured</h2>
                         </div>
                     </div>

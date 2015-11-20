@@ -10,10 +10,10 @@ class Cattle extends CI_Controller {
 	}
 
     public function edit($id){
-		echo "id";
 		$this->load->model('cattle_model');
-		$data= $this->cattle_model->get_by_id($id);
-		print_r($data);
+		$data['data']= $this->cattle_model->get_by_id($id);
+		$data['budget'] = $this->db->get('budget')->result();
+		$this->load->view('edit_forms/cattle', $data);
 	}
 
 

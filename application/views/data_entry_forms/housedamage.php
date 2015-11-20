@@ -9,7 +9,7 @@
                 <div class="col-lg-12 ">
                     <div class="form-group">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-2 text">
                             <h2>House Damage</h2>
                         </div>
                     </div>

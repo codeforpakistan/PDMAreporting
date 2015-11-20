@@ -10,10 +10,12 @@ class Deadinjured extends CI_Controller {
 	}
 
 	public function edit($id){
-		echo "id";
+
 		$this->load->model('deadinjured_model');
-		$data= $this->deadinjured_model->get_by_id($id);
-		print_r($data);
+		$data['data']= $this->deadinjured_model->get_by_id($id);
+		$data['budget'] = $this->db->get('budget')->result();
+		$this->load->view('edit_forms/dead_injured', $data);
+	
 	}
 	/**
 	 * *********************** API proced **********************

@@ -2,8 +2,13 @@
 class Deadinjured_model extends CI_Model{
 	
 	public function get_by_id($id){
+
+		$this->db->select('*');
+		$this->db->from('dead_injured');
 		$this->db->where('di_id',$id);
-		$return = $this->db->get('dead_injured')->result_array();
+		$this->db->join('budget', 'budget.b_id = dead_injured.b_id');
+		$return = $this->db->get()->result_array();
+
 		return $return[0];
 	}
 
