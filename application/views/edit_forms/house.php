@@ -47,7 +47,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
                 <div class="col-lg-3 "> 
-                       <input type="text" class="form-control" name="district" id="" placeholder="District" ng-model="data.district" required value="<?php echo $data['hd_district'];?>">
+                       <input type="text" class="form-control" name="district" id="" placeholder="District" ng-model="data.district" required value="<?php echo $data['district'];?>">
                 </div>
                 </div>
 

@@ -125,7 +125,7 @@
                  > Yes
                  <input type="radio" name="medicalofficer" value="no" 
                  <?php
-                if($data['med_officer'] == "yes")
+                if($data['med_officer'] == "no")
                 echo 'checked';
                 ?>
 
@@ -139,13 +139,13 @@
                 <div class="col-lg-3 "> 
                 <input type="radio" name="tehsiladar" value="yes" 
                 <?php
-                if($data[''] == "yes")
+                if($data['tehsildar'] == "yes")
                 echo 'checked';
                 ?>
                 > Yes
                  <input type="radio" name="tehsiladar" value="no" 
                  <?php
-                if($data['tehsildar'] == "yes")
+                if($data['tehsildar'] == "no")
                 echo 'checked';
                 ?>
                  > No
@@ -158,13 +158,13 @@
                 <div class="col-lg-3 "> 
                 <input type="radio" name="localschoolheadmaster" value="yes"
                 <?php
-                if($data['Headmaster'] == "yes")
+                if($data['headmaster'] == "yes")
                 echo 'checked';
                 ?>
                  > Yes
                  <input type="radio" name="localschoolheadmaster" value="no" 
                  <?php
-                if($data['Headmaster'] == "yes")
+                if($data['headmaster'] == "no")
                 echo 'checked';
                 ?>
                 > No

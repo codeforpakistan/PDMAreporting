@@ -178,7 +178,7 @@
                 > Yes
                  <input type="radio" name="headmaster" value="no" 
                  <?php
-                    if($data['headmaster'] == "yes")
+                    if($data['headmaster'] == "no")
                     echo 'checked';
                     ?>
                  > No
@@ -196,7 +196,7 @@
                 > Yes
                 <input type="radio" name="imam" value="no" 
                 <?php
-                    if($data['imam'] == "yes")
+                    if($data['imam'] == "no")
                     echo 'checked';
                     ?>
                 > No
