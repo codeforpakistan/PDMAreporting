@@ -9,7 +9,7 @@
 </style>
 <div class="container">
     <div ng-controller="CattleCtrl">
-    <form novalidate method="post">
+    <form method="post" action="<?php echo base_url();?>cattle/update">
             <div class="row form-row">
                 <div class="col-lg-12 ">
                     <div class="form-group">
@@ -51,14 +51,14 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
                 <div class="col-lg-3 "> 
-                       <input type="text" value="<?php echo $data['district'];?>" class="form-control" name="District" id="" placeholder="District" ng-model="data.district" required>
+                       <input type="text" value="<?php echo $data['district'];?>" class="form-control" name="district" id="" placeholder="District" ng-model="data.district" required>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-lg-2 text-right label"> Address:</div>
                 <div class="col-lg-3 ">
-                       <textarea class="form-control" name="address" id="" placeholder="Address" ng-model="data.address">
+                       <textarea class="form-control" name="address" id="" placeholder="address" ng-model="data.address">
                            <?php echo $data['address'];?>
                        </textarea>
                 </div>
@@ -77,7 +77,7 @@
                         <?php 
                         foreach ($budget as $b) {
                         ?>
-                            <option
+                            <option value="<?php echo $b->b_id?>"
                             <?php 
                             if($data['b_id']==$b->b_id)
                                 echo 'selected';
@@ -151,7 +151,7 @@
                  <div class="row">
                       <div class="col-lg-2 text-right label">District Officer Liverstock:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="districtofficerliverstock" value="yes" 
+                <input type="radio" name="officerliverstock" value="yes" 
                 <?php
                     if($data['officer_livestock'] == "yes")
                     echo 'checked';
@@ -211,7 +211,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">
-                <input type="submit" value="Submit" class="btn btn-success" ng-disabled="newCattleForm.$invalid">
+                <input type="hidden" value="<?php echo $data['ct_id']?>" name="ct_id">
+                <input type="submit" value="Submit" class="btn btn-success">
                     </div>
                 </div>
     </form>

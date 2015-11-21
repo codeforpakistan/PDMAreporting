@@ -11,6 +11,43 @@ class Cattle_model extends CI_Model{
 
 		return $return[0];
 	}
+	public function update(){
+
+		$name = $this->input->post('name');
+		$fathername = $this->input->post('fathername');
+		$incidentdate = $this->input->post('incidentdate');
+		$cnicnumber = $this->input->post('cnicnumber');
+		$district = $this->input->post('district');
+		$address = $this->input->post('address');
+		$reason = $this->input->post('reason');
+		$budget = $this->input->post('budget');
+		$cattletype = $this->input->post('cattletype');
+		$halqapatwari = $this->input->post('halqapatwari');
+		$repofmpa = $this->input->post('repofmpa');
+		$officerliverstock = $this->input->post('officerliverstock');
+		$headmaster = $this->input->post('headmaster');
+		$imam = $this->input->post('imam');
+		$ct_id = $this->input->post('ct_id'); 
+
+		$form_data = array(	'name' => $name,
+							'father_name' => $fathername,
+							'date_of_incident' => $incidentdate,
+							'address' => $cnicnumber,
+							'district' => $district,
+							'address' => $address,
+							'reason' => $reason,
+							'b_id' => $budget,
+							'cattle_type' => $cattletype,
+							'patwari' => $halqapatwari,
+							'rep_mpa' => $repofmpa,
+							'officer_livestock' => $officerliverstock,
+							'headmaster' => $headmaster,
+							'imam' => $imam,
+							'u_id'	=> 1 );
+
+		$this->db->where('ct_id', $ct_id);
+		$this->db->update('cattle', $form_data);
+	}
 	public function add($formdata){
 		$name = $formdata->name;
 		$fathername = $formdata->fathername;

@@ -110,6 +110,7 @@ app.controller('CattleCtrl', function($scope, $http) {
     //get cattle data
     $http.get(baseURL+'cattle/get_all').success(function(data, status, headers, config){
       $scope.table_info = data;
+      console.log(data);
     });
 
 });

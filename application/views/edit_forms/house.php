@@ -5,7 +5,7 @@
 
 <div class="container">
     <div ng-controller="HouseDamageCtrl">
-<form ng-submit="AddHouseDamage(data)" method="post" role="form" name="newHouseForm" novalidate>
+<form method="post" action="<?php echo base_url();?>house/update">
             <div class="row form-row">
                 <div class="col-lg-12 ">
                     <div class="form-group">
@@ -71,7 +71,7 @@
                         <?php 
                         foreach ($budget as $b) {
                         ?>
-                            <option
+                            <option value="<?php echo $b->b_id?>"
                             <?php 
                             if($data['b_id']==$b->b_id)
                                 echo 'selected';
@@ -107,13 +107,13 @@
                     <div class="row">
                       <div class="col-lg-2 text-right label">Halqa patwari:</div>
                      <div class="col-lg-3 "> 
-                  <input type="radio" name="halqapatwari" value="yes"
+                  <input type="radio" name="patwari" value="yes"
                   <?php
                 if($data['patwari'] == "yes")
                 echo 'checked';
                 ?>
                   >Yes
-                 <input type="radio" name="halqapatwari" value="no" 
+                 <input type="radio" name="patwari" value="no" 
                  <?php
                 if($data['patwari'] == "no")
                 echo 'checked';
@@ -165,13 +165,13 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Local School Headmaster:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="localschoolheadmaster" value="yes" 
+                <input type="radio" name="headmaster" value="yes" 
                 <?php
                 if($data['headmaster'] == "yes")
                 echo 'checked';
                 ?>
                 > Yes
-                 <input type="radio" name="localschoolheadmaster" value="no" 
+                 <input type="radio" name="headmaster" value="no" 
                  <?php
                 if($data['headmaster'] == "no")
                 echo 'checked';
@@ -185,15 +185,15 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Local Imam Masjid:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="localimammasjid" value="yes" 
+                <input type="radio" name="imam" value="yes" 
                 <?php
-                if($data['headmaster'] == "yes")
+                if($data['imam'] == "yes")
                 echo 'checked';
                 ?>
                 > Yes
-                 <input type="radio" name="localimammasjid" value="no" 
+                 <input type="radio" name="imam" value="no" 
                  <?php
-                if($data['headmaster'] == "no")
+                if($data['imam'] == "no")
                 echo 'checked';
                 ?>
                  > No
@@ -208,7 +208,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">
-            <button type="submit" class="btn btn-success" ng-disabled="newHouseForm.$invalid">Add to list</button>
+                 <input type="hidden" value="<?php echo $data['hd_id']?>" name="hd_id">
+            <button type="submit" class="btn btn-success">Add to list</button>
                     </div>
                 </div>
         </form>

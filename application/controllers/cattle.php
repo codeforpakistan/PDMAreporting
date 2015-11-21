@@ -15,6 +15,11 @@ class Cattle extends CI_Controller {
 		$data['budget'] = $this->db->get('budget')->result();
 		$this->load->view('edit_forms/cattle', $data);
 	}
+	public function update(){
+		$this->load->model('cattle_model');
+		$this->cattle_model->update();
+		redirect('cattle/data');
+	}
 
 
 

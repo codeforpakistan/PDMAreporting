@@ -15,6 +15,11 @@ class House extends CI_Controller {
 		$data['budget'] = $this->db->get('budget')->result();
 		$this->load->view('edit_forms/house', $data);
 	}
+	public function update(){
+		$this->load->model('house_model');
+		$this->house_model->update();
+		redirect('house/data');
+	}
 	/**
 	 * *********************** API proced **********************
 	 */

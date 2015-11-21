@@ -21,7 +21,7 @@
                       
                      <div class="row">
                        <div class="col-lg-4 ">Father Name:</div>
-                       <div class="col-sm-4">{{row.fathername}}</div>
+                       <div class="col-sm-4">{{row.father_name}}</div>
           </div>
 
                 <div class="row">

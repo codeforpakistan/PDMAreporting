@@ -17,6 +17,11 @@ class Deadinjured extends CI_Controller {
 		$this->load->view('edit_forms/dead_injured', $data);
 	
 	}
+	public function update(){
+		$this->load->model('deadinjured_model');
+		$this->deadinjured_model->update();
+		redirect('deadinjured/data');
+	}
 	/**
 	 * *********************** API proced **********************
 	 */

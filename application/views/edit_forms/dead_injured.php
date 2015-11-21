@@ -9,7 +9,7 @@
 </style>
 <div class="container">
     <div ng-controller="DeadInjuredCtrl">
-    <form ng-submit="AddDeadInjured(data)"method="post" role="form" name="newDeadInjuredForm" novalidate>
+    <form method="post" action="<?php echo base_url();?>deadinjured/update">
             <div class="row form-row">
                 <div class="col-lg-12 ">
                     <div class="form-group">
@@ -52,7 +52,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label"> Address:</div>
                 <div class="col-lg-3 ">
-                       <textarea class="form-control" name="address" id="" placeholder="Address" value="<?php echo $data['address'];?>" ng-model="data.address"></textarea>
+                       <textarea class="form-control" name="address" id="" placeholder="Address" ng-model="data.address"><?php echo $data['address'];?></textarea>
                 </div>
                 </div>
 
@@ -69,7 +69,7 @@
                         <?php 
                         foreach ($budget as $b) {
                         ?>
-                            <option
+                            <option value="<?php echo $b->b_id?>"
                             <?php 
                             if($data['b_id']==$b->b_id)
                                 echo 'selected';
@@ -84,14 +84,14 @@
                 <div class="row">
                         <div class="col-lg-2 label text-right"> Date of Report by R.F.S:</div>
                 <div class="col-lg-3 "> 
-                <p><input type="date" value="<?php echo $data['date_of_report_rfs'];?>" class="form-control" ng-model="data.reportdate"></p>
+                <p><input name="dateofreport" type="date" value="<?php echo $data['date_of_report_rfs'];?>" class="form-control" ng-model="data.reportdate"></p>
                 </div>
                 </div>
 
                  <div class="row">
                  <div class="col-lg-2 text-right label">Date of accident:</div>
                 <div class="col-lg-3 "> 
-                <p><input type="date" value="<?php echo $data['date_of_incident'];?>"class="form-control" ng-model="data.incidentdate"></p>
+                <p><input name="incidentdate" type="date" value="<?php echo $data['date_of_incident'];?>"class="form-control" ng-model="data.incidentdate"></p>
                 </div>
                 </div>
 
@@ -137,13 +137,13 @@
                  <div class="row">
                       <div class="col-lg-2 text-right label">Tehsildar:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="tehsiladar" value="yes" 
+                <input type="radio" name="tehsildar" value="yes" 
                 <?php
                 if($data['tehsildar'] == "yes")
                 echo 'checked';
                 ?>
                 > Yes
-                 <input type="radio" name="tehsiladar" value="no" 
+                 <input type="radio" name="tehsildar" value="no" 
                  <?php
                 if($data['tehsildar'] == "no")
                 echo 'checked';
@@ -156,13 +156,13 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Local School Headmaster:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="localschoolheadmaster" value="yes"
+                <input type="radio" name="headmaster" value="yes"
                 <?php
                 if($data['headmaster'] == "yes")
                 echo 'checked';
                 ?>
                  > Yes
-                 <input type="radio" name="localschoolheadmaster" value="no" 
+                 <input type="radio" name="headmaster" value="no" 
                  <?php
                 if($data['headmaster'] == "no")
                 echo 'checked';
@@ -179,7 +179,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">
-            <button type="submit" class="btn btn-success" ng-disabled="newDeadInjuredForm.$invalid">Add to list</button>
+                <input type="hidden" value="<?php echo $data['di_id']?>" name="di_id">
+            <button type="submit" class="btn btn-success">Add to list</button>
                     </div>
                 </div>
         </form>

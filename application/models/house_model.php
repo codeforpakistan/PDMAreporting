@@ -11,7 +11,44 @@ class House_model extends CI_Model{
 	}
 
 
+	public function update(){
 
+		$name = $this->input->post('name');
+		$fathername = $this->input->post('fathername');
+		$incidentdate = $this->input->post('incidentdate');
+		$dateofreport = $this->input->post('dateofreport');
+		$cnicnumber = $this->input->post('cnic');
+		$district = $this->input->post('district');
+		$address = $this->input->post('address');
+		$reason = $this->input->post('reason');
+		$budget = $this->input->post('budget');
+		$housedamage = $this->input->post('housedamage');
+		$halqapatwari = $this->input->post('patwari');
+		$repofmpa = $this->input->post('repofmpa');
+		$tehsildar = $this->input->post('tehsildar');
+		$headmaster = $this->input->post('headmaster');
+		$imam = $this->input->post('imam');
+		$di_id = $this->input->post('hd_id'); 
+
+		$form_data = array(	'name' => $name,
+			 				'father_name' => $fathername,
+			 				'date_of_incident' => $incidentdate,
+			 				'cnic'	=> $cnicnumber,
+			 				'address'	=> $address,
+			 				'damage_type' => $housedamage,
+			 				'reason'	=> $reason,
+			 				'district' => $district,
+			 				'patwari'	=> $halqapatwari,
+			 				'headmaster'	=> $headmaster,
+			 				'imam'	=> $imam,
+			 				'tehsildar' => $tehsildar,
+			 				'rep_mpa'	=> $repofmpa,
+			 				'b_id'	=> $budget,
+			 				'u_id'	=> 1);
+
+		$this->db->where('hd_id', $di_id);
+		$this->db->update('house_damage', $form_data);
+	}
 
 	public function add($formdata){
 		$name = $formdata->name;
@@ -40,7 +77,7 @@ class House_model extends CI_Model{
 		 				'district' => $district,
 		 				'patwari'	=> $halqapatwari,
 		 				'headmaster'	=> $localschoolheadmaster,
-		 				'himam'	=> $localimammasjid,
+		 				'imam'	=> $localimammasjid,
 		 				'tehsildar' => $tehsildar,
 		 				'rep_mpa'	=> $repofmpa,
 		 				'b_id'	=> $budget,

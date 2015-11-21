@@ -11,7 +11,42 @@ class Deadinjured_model extends CI_Model{
 
 		return $return[0];
 	}
+	public function update(){
 
+		$name = $this->input->post('name');
+		$fathername = $this->input->post('fathername');
+		$incidentdate = $this->input->post('incidentdate');
+		$dateofreport = $this->input->post('dateofreport');
+		$cnicnumber = $this->input->post('cnicnumber');
+		$district = $this->input->post('district');
+		$address = $this->input->post('address');
+		$reason = $this->input->post('reason');
+		$budget = $this->input->post('budget');
+		$cattletype = $this->input->post('cattletype');
+		$halqapatwari = $this->input->post('halqapatwari');
+		$medicalofficer = $this->input->post('medicalofficer');
+		$tehsildar = $this->input->post('tehsildar');
+		$headmaster = $this->input->post('headmaster');
+		$di_id = $this->input->post('di_id'); 
+
+		$form_data = array(	'name' => $name,
+							'father_name' => $fathername,
+							'cnic'	=> $cnicnumber,
+							'date_of_incident' => $incidentdate,
+							'date_of_report_rfs' => $dateofreport,
+							'district' => $district,
+							'address' => $address,
+							'reason' => $reason,
+							'b_id' => $budget,
+							'patwari' => $halqapatwari,
+							'med_officer' => $medicalofficer,
+							'tehsildar' => $tehsildar,
+							'headmaster' => $headmaster,
+							'u_id'	=> 1 );
+
+		$this->db->where('di_id', $di_id);
+		$this->db->update('dead_injured', $form_data);
+	}
 	public function add($formdata){
 		$dateofreport = $formdata->reportdate;
 		$dateofaccident = $formdata->incidentdate;
