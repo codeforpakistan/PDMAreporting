@@ -1,14 +1,14 @@
 <?php
     $this->load->view('template/header');
-    print_r($data);
-    print_r($budget);
+   
 ?> 
 <style type="text/css">
     .label{
         color: #333;
     }
 </style>
-<div ng-controller="DeadInjuredCtrl">
+<div class="container">
+    <div ng-controller="DeadInjuredCtrl">
     <form ng-submit="AddDeadInjured(data)"method="post" role="form" name="newDeadInjuredForm" novalidate>
             <div class="row form-row">
                 <div class="col-lg-12 ">
@@ -184,6 +184,7 @@
                 </div>
         </form>
         </div>
+</div>
 
 <?php
 $this->load->view('template/footer');

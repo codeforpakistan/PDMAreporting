@@ -1,10 +1,10 @@
 <?php
     $this->load->view('template/header');
-    print_r($data);
-    print_r($budget);
+
 ?>
 
-<div ng-controller="HouseDamageCtrl">
+<div class="container">
+    <div ng-controller="HouseDamageCtrl">
 <form ng-submit="AddHouseDamage(data)" method="post" role="form" name="newHouseForm" novalidate>
             <div class="row form-row">
                 <div class="col-lg-12 ">
@@ -213,6 +213,7 @@
                 </div>
         </form>
         </div>
+</div>
         <script>
           $( ".datepicker" ).datepicker();
         </script>
