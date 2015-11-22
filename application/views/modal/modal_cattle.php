@@ -31,7 +31,7 @@
 
                 <div class="row">
                   <div class="col-lg-4">Cnic Number:</div>
-                  <div class="col-sm-4">{{row.cnicnumber}}</div>
+                  <div class="col-sm-4">{{row.cnic}}</div>
                 </div>
 
                 <div class="row">
@@ -49,18 +49,18 @@
 
         <div class="row">
                       <div class="col-lg-4"> Halqa patwari:</div>
-                       <div class="col-sm-4">{{row.halqapatwari}}</div>
+                       <div class="col-sm-4">{{row.patwari}}</div>
         </div>
 
                 <div class="row">
                   <div class="col-lg-4">Rep of MPA:</div>
-                  <div class="col-sm-4">{{row.repofmpa}}</div>
+                  <div class="col-sm-4">{{row.rep_mpa}}</div>
 
                 </div>
 
                  <div class="row">
                       <div class="col-lg-4">District Officer Liverstock:</div>
-                      <div class="col-sm-4">{{row.districtofficerlivestock}}</div>
+                      <div class="col-sm-4">{{row.officer_livestock}}</div>
         		</div>
 
                 <div class="row">

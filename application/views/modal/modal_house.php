@@ -21,22 +21,27 @@
                       
                   <div class="row">
                       <div class="col-lg-4 ">Father Name:</div>
-                       <div class="col-sm-4">{{row.fathername}}</div>
+                       <div class="col-sm-4">{{row.father_name}}</div>
                   </div>
 
                 <div class="row">
                       <div class="col-lg-4 ">Date of Incident:</div>
-                      <div class="col-sm-4">{{row.dateofincident}}</div>
+                      <div class="col-sm-4">{{row.date_of_incident}}</div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-4">Cnic Number:</div>
-                  <div class="col-sm-4">{{row.cnicnumber}}</div>
+                  <div class="col-sm-4">{{row.cnic}}</div>
                 </div>
 
                 <div class="row">
                 <div class="col-lg-4 "> Address:</div>
                 <div class="col-sm-4">{{row.address}}</div>
+                </div>
+
+                <div class="row">
+                <div class="col-lg-4 "> District:</div>
+                <div class="col-sm-4">{{row.district}}</div>
                 </div>
 
                 <div class="row">
@@ -47,17 +52,17 @@
 
                 <div class="row">
                     <div class="col-lg-4">House Damage:</div>
-                    <div class="col-sm-4">{{row.housedamage}}</div>
+                    <div class="col-sm-4">{{row.damage_type}}</div>
                 </div>
 
               <div class="row">
                       <div class="col-lg-4"> Halqa patwari:</div>
-                       <div class="col-sm-4">{{row.halqapatwari}}</div>
+                       <div class="col-sm-4">{{row.patwari}}</div>
              </div>
 
                 <div class="row">
                     <div class="col-lg-4">Rep of MPA:</div>
-                    <div class="col-sm-4">{{row.repofmpa}}</div>
+                    <div class="col-sm-4">{{row.rep_mpa}}</div>
                </div>
 
                  <div class="row">

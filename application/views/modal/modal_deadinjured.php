@@ -21,17 +21,17 @@
                       
                   <div class="row">
                     <div class="col-lg-4 ">Father Name:</div>
-                    <div class="col-sm-4">{{row.fathername}}</div>
+                    <div class="col-sm-4">{{row.father_name}}</div>
                   </div>
 
                 <div class="row">
                     <div class="col-lg-4 ">Date of Incident:</div>
-                    <div class="col-sm-4">{{row.dateofincident}}</div>
+                    <div class="col-sm-4">{{row.date_of_incident}}</div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4">Cnic Number:</div>
-                    <div class="col-sm-4">{{row.cnicnumber}}</div>
+                    <div class="col-sm-4">{{row.cnic}}</div>
                 </div>
 
                 <div class="row">
@@ -47,17 +47,17 @@
 
               <div class="row">
                     <div class="col-lg-4"> Halqa patwari:</div>
-                    <div class="col-sm-4">{{row.halqapatwari}}</div>
+                    <div class="col-sm-4">{{row.patwari}}</div>
              </div>
 
                 <div class="row">
                     <div class="col-lg-4">Date of Reoprt:</div>
-                    <div class="col-sm-4">{{row.reportdate}}</div>
+                    <div class="col-sm-4">{{row.date_of_report_rfs}}</div>
                </div>
 
                  <div class="row">
                       <div class="col-lg-4">Medical Officer:</div>
-                      <div class="col-sm-4">{{row.medicalofficer}}</div>
+                      <div class="col-sm-4">{{row.med_officer}}</div>
                 </div>
 
                 <div class="row">
@@ -68,6 +68,11 @@
                 <div class="row">
                     <div class="col-lg-4 ">Local Imam Masjid:</div>
                     <div class="col-sm-4">{{row.imam}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 ">tehsildar:</div>
+                    <div class="col-sm-4">{{row.tehsildar}}</div>
                 </div>
 
                     </div>
