@@ -4,7 +4,7 @@
 
 <div class="container" ng-app="pdmadataentry">
 
-<div ng-controller='UserCtrl'>
+<div ng-controller='budgetCtrl'>
 <div class="row">
   <div class="col-lg-8">
     <div class='row'>  
@@ -88,61 +88,48 @@
     </form>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-12">
-    <form ng-submit="AddUser(data)" method="post" role="form">
- 
-        <div class="row">
-             <div class="col-lg-2 label text-right"> Full Name:</div>
+<div class="row">       
+            <div class="col-lg-3 text"> Budget </div>
+            </div> <br/>
+			
+    <div class="row">
+        <div class="col-sm-12">
+   <form ng-submit="budget(data)" method="post" role="form">
+
+   		<div class="row">
+             <div class="col-lg-2 label text-right"> Amount:</div>
                 <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="Full Name" ng-model="data.fullname">
+                <input type="text" class="form-control" name="" id="" placeholder="Amount" ng-model="data.amount">
                 </div>
          </div>
 
          <div class="row">
-             <div class="col-lg-2 label text-right"> User Name:</div>
+             <div class="col-lg-2 label text-right"> Year:</div>
                 <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="User Name" ng-model="data.username">
+                <input type="text" class="form-control" name="" id="" placeholder="Year" ng-model="data.year">
                 </div>
          </div>
 
          <div class="row">
-             <div class="col-lg-2 label text-right"> Password:</div>
-                <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="Password" ng-model="data.password">
-                </div>
-         </div>
-
-         <div class="row">
-             <div class="col-lg-2 label text-right"> Email Address:</div>
-                <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="Email Address" ng-model="data.emailaddress">
-                </div>
-         </div>
-
-        <div class="row">
-        <div class="col-lg-2 label text-right"> Type of User:</div>
-        <div class="col-sm-2">
-          <select class="form-control">
-                 <option>Data Entry Operator</option>
-                <option> AD </option>
-                <option> MIS User</option>
+             <div class="col-lg-2 label text-right"> Category:</div>
+                 <div class="col-sm-3">
+          <select class="form-control input-sm">
+                 <option>Partial Damage</option>
+                <option> Fully Damage </option>
+                <option> Big</option>
+                <option> Small</option>
+                <option> Dead </option>
+                 <option> Injured </option>
             </select>         
         </div>
-        </div>  
-         <div class="row">
-                <div class="col-lg-3 col-lg-offset-4">
-            <button type="submit" class="btn btn-success">Add User</button>
-                </div>
-        </div>  
-       
-    </form>
-  </div> 
-</div>
+         </div>
+   	
+   </form>
+    </div> 
+        </div>
+    </div>
+    </div>
 
-</div>
-
-</div>
-<?php 
+   <?php 
     $this->load->view('template/footer');
 ?>
