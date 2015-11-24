@@ -1,6 +1,9 @@
 <?php 
     $this->load->view('template/header');
 ?>
+<?php 
+    $this->load->view('template/reporting_menu');
+?>
 
 <div class="container" ng-app="pdmadataentry">
 <div class="row" >   

@@ -1,6 +1,9 @@
 <?php 
     $this->load->view('template/header');
 ?>
+<?php 
+    $this->load->view('template/reporting_menu');
+?>
 <style type="text/css">
     a, a:hover, a:active{
         text-decoration: none;
