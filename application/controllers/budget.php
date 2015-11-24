@@ -12,21 +12,43 @@ class Budget extends CI_Controller {
 	/**
 	 * *********************** API proced **********************
 	 */
+	public function edit(){
+		$postdata = file_get_contents("php://input");
+		$formdata = json_decode($postdata);
+		
+		$response = [];
 
+		$this->load->model('budget_model');
+
+
+		if($this->budget_model->edit($formdata)){
+			$response['done'] = true;
+			echo json_encode($response);
+		}
+		else{
+			$response['done'] = false;
+			echo json_encode($response);
+		}
+	}
 	public function getbudget(){
 		$result = $this->db->get('budget')->result_array();
 		echo json_encode($result);
 	}
+	public function get_by_id($id){
+		$this->load->model('budget_model');
+		$data = $this->budget_model->get_by_id($id);
+		echo json_encode($data);
+	} 
 
 	public function add(){
 		$postdata = file_get_contents("php://input");
-		$request = json_decode($postdata);
-		$name = $request->name;
-		$fathername = $request->fathername;
-		$data = array(	'u_username' => $name,
-		 				'u_fullname' => $fathername);
+		$formdata = json_decode($postdata);
+		
 		$response = [];
-		if($this->db->insert('user', $data)){
+
+		$this->load->model('budget_model');
+		
+		if($this->budget_model->add($formdata)){
 			$response['done'] = true;
 			echo json_encode($response);
 		}

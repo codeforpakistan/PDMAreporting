@@ -7,6 +7,11 @@
 <div ng-controller='UserCtrl'>
 <div class="row">
   <div class="col-lg-8">
+    <div class="row">
+      <div class="col-sm-12">
+        <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add New User</button>
+      </div>
+    </div>
     <div class='row'>  
     <div class="col-lg-12"> 
       <div class="table-responsive" >
@@ -88,61 +93,13 @@
     </form>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-12">
-    <form ng-submit="AddUser(data)" method="post" role="form">
- 
-        <div class="row">
-             <div class="col-lg-2 label text-right"> Full Name:</div>
-                <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="Full Name" ng-model="data.fullname">
-                </div>
-         </div>
 
-         <div class="row">
-             <div class="col-lg-2 label text-right"> User Name:</div>
-                <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="User Name" ng-model="data.username">
-                </div>
-         </div>
-
-         <div class="row">
-             <div class="col-lg-2 label text-right"> Password:</div>
-                <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="Password" ng-model="data.password">
-                </div>
-         </div>
-
-         <div class="row">
-             <div class="col-lg-2 label text-right"> Email Address:</div>
-                <div class="col-lg-3 "> 
-                <input type="text" class="form-control" name="" id="" placeholder="Email Address" ng-model="data.emailaddress">
-                </div>
-         </div>
-
-        <div class="row">
-        <div class="col-lg-2 label text-right"> Type of User:</div>
-        <div class="col-sm-2">
-          <select class="form-control">
-                 <option>Data Entry Operator</option>
-                <option> AD </option>
-                <option> MIS User</option>
-            </select>         
-        </div>
-        </div>  
-         <div class="row">
-                <div class="col-lg-3 col-lg-offset-4">
-            <button type="submit" class="btn btn-success">Add User</button>
-                </div>
-        </div>  
-       
-    </form>
-  </div> 
-</div>
 
 </div>
 
 </div>
+<?php $this->load->view('modal/adduser_modal');?>
+
 <?php 
     $this->load->view('template/footer');
 ?>

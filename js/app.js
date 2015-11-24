@@ -148,3 +148,51 @@ app.controller('UserCtrl', function($scope, $http) {
     });
 
 });
+
+
+
+
+
+
+app.controller('budgetCtrl', function($scope, $http) {
+        $scope.addBudget = function(data){
+          //console.log(data);
+            $http.post(baseURL + 'budget/add',data).success(function(data, status, headers, config){          
+                if(data.done == true)
+                  $scope.message = "Data inserted successfully!";
+                else
+                  $scope.message = "Data could not be inserted";
+                
+            });
+            $scope.getBudget();
+        }
+  
+        $scope.getbyid = function(id, set_showBudgetEditForm){
+          $scope.showBudgetEditForm = set_showBudgetEditForm;
+          $http.get(baseURL + 'budget/get_by_id/' + id).success(function(data, status, headers, config){
+            $scope.row = data;
+            //console.log(data);
+          });
+        }
+
+        $scope.editBudget = function(data){ 
+          //console.log(data); 
+            $http.post(baseURL + 'budget/edit', data).success(function(){
+              //console.log(data);
+              $scope.message_update = "Updated Successfully";
+              $scope.showBudgetEditForm = 0; 
+
+            });
+          $scope.getBudget();
+        }
+
+    //get budget data
+    $scope.getBudget = function(){
+       $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
+        $scope.table_info = data;
+      });
+    }
+
+    $scope.getBudget();
+
+});
