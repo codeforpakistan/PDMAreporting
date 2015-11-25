@@ -19,29 +19,36 @@
   		echo "<div class='row' ng-controller='DeadInjuredCtrl'>";
   	}
   ?>
-    <div class="col-lg-12"> 
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-sm-3">
+          <input type="text" class="form-control" placeholder="CNIC" ng-model="searchCNIC">
+        </div>
+      </div> 
       <div class="table-responsive" >
          <table class="table table-bordered">
           <thead>
             <tr >
               <th>Sr No</th>
               <th>Name</th>
+              <th>CNIC</th>
               <th>Father Name</th>
+              <th>District</th>
               <th>Date of Accident</th>
               <th>Category</th>
-              <th>District</th>
               <th>Budget</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="i in table_info">
+            <tr ng-repeat="i in table_info | filter:searchCNIC">
               <td>{{1}}</td>
               <td>{{i.name}}</td>
+              <td>{{i.cnic}}</td>
               <td>{{i.father_name}}</td>
+              <td>{{i.district}}</td>
               <td>{{i.date_of_incident}}</td>
               <td>{{i.b_category}}</td>
-              <td>{{i.district}}</td>
               <td>{{i.b_amount}}</td>
               <td class="text-center">
               <?php  
