@@ -13,8 +13,18 @@
           <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add New</button>
         </div>
       </div>
+      <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <input type="text" placeholder="Category" class="form-control" ng-model="searchCategory">
+      </div>
+      <div class="col-sm-4">
+        <input type="text" placeholder="Year" class="form-control" ng-model="searchYear">
+      </div>
+    </div>
     <div class='row'>  
-    <div class="col-lg-12"> 
+    <div class="col-lg-12">
+
       <div class="table-responsive" >
          <table class="table table-bordered">
           <thead>
@@ -27,7 +37,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="i in table_info">
+            <tr ng-repeat="i in table_info | filter:searchCategory | filter:searchYear" >
               <td>{{$index+1}}</td>
               <td>{{i.b_year}}</td>
               <td>{{i.b_amount}}</td>
@@ -48,7 +58,7 @@
 </div>
   </div>
   <div class="col-lg-4">
-  {{message_update}}
+    {{message_update}}
     <form novalidate ng-show="showBudgetEditForm===1" ng-submit="editBudget(row)" name="editBudgetForm">
       <div class="row">
         <div class="col-sm-4">

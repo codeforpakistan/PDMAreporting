@@ -180,6 +180,9 @@ app.controller('budgetCtrl', function($scope, $http) {
             $http.post(baseURL + 'budget/edit', data).success(function(){
               //console.log(data);
               $scope.message_update = "Updated Successfully";
+              data.b_year = '';
+              data.b_amount = '';
+              data.b_category = '';
               $scope.showBudgetEditForm = 0; 
 
             });
