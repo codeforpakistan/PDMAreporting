@@ -35,7 +35,14 @@
               <th>Father Name</th>
               <th>District</th>
               <th>Date of Accident</th>
-              <th>Category</th>
+              <?php 
+              if($type=='cattle')
+                echo "<th>Cattle Type</th>";
+              if($type=='deadinjured')
+                echo "<th>Casualty Type</th>";
+              if($type=='house')
+                echo "<th>Damage Type</th>";
+              ?>
               <th>Budget</th>
               <th>Action</th>
             </tr>
