@@ -26,10 +26,16 @@ class Report extends CI_Controller {
 			$this->db->select('*');
 			$this->db->from('cattle');
 			
-			if($small == true)
-				$this->db->or_where('cattle.cattle_type','small');
-			if($big == true)
-				$this->db->or_where('cattle.cattle_type','big');
+			if($small == true && $big == false)
+				$this->db->where('cattle.cattle_type','small');
+			if($big == true && $small == false)
+				$this->db->where('cattle.cattle_type','big');
+			if(!empty($district))
+				$this->db->where('district', $district);
+			if(!empty($datefrom))
+				$this->db->where('date_of_incident >=', $datefrom);
+			if(!empty($dateto))
+				$this->db->where('date_of_incident <=', $dateto);
 
 			$data['cattle'] = $this->db->get()->result();
 		}
@@ -38,10 +44,16 @@ class Report extends CI_Controller {
 			$this->db->select('*');
 			$this->db->from('house_damage');
 			
-			if($partial == true)
-				$this->db->or_where('house_damage.damage_type','partial');
-			if($full == true)
-				$this->db->or_where('house_damage.damage_type','full');
+			if($partial == true && $full == false)
+				$this->db->where('house_damage.damage_type','partial');
+			if($full == true && $partial == false)
+				$this->db->where('house_damage.damage_type','full');
+			if(!empty($district))
+				$this->db->where('district', $district);
+			if(!empty($datefrom))
+				$this->db->where('date_of_incident >=', $datefrom);
+			if(!empty($dateto))
+				$this->db->where('date_of_incident <=', $dateto);
 
 			$data['house_damage'] = $this->db->get()->result();
 		}
@@ -50,10 +62,16 @@ class Report extends CI_Controller {
 			$this->db->select('*');
 			$this->db->from('dead_injured');
 
-			if($dead == true)
-				$this->db->or_where('dead_injured.case_type','dead');
-			if($injured == true)
-				$this->db->or_where('dead_injured.case_type','injured');
+			if($dead == true && $injured == false)
+				$this->db->where('dead_injured.case_type','dead');
+			if($injured == true && $dead == false)
+				$this->db->where('dead_injured.case_type','injured');
+			if(!empty($district))
+				$this->db->where('district', $district);
+			if(!empty($datefrom))
+				$this->db->where('date_of_incident >=', $datefrom);
+			if(!empty($dateto))
+				$this->db->where('date_of_incident <=', $dateto);
 
 			$data['dead_injured'] = $this->db->get()->result();
 		}
