@@ -1,24 +1,13 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Report extends CI_Controller {
-	public function index(){
-		
-	}
-	public function general(){
-		
-		$this->load->model('report_model');
-		$data = $this->report_model->general_report();
-		
-		$option = $this->input->post('option');
-		
-		if($option == '0')
-			$this->load->view('general_report', $data);
-		
-		if($option == '1')
-		{
+	class Report_export extends CI_Controller{
+
+		public function index(){
+			
+			$this->load->model('report_model');
+			$data = $this->report_model->general_report();
 			$cattle	= $data['cattle'];
-			$house_damage	= $data['house_damage'];
+			$house	= $data['house_damage'];
 			$dead_injured = $data['dead_injured'];
 			
 			$this->load->library('excel');
@@ -49,43 +38,13 @@ class Report extends CI_Controller {
 	       		$row++;
 	       		$col=0;
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->ct_id);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->district);
 	       		
 	       		// display other data here	
-	       	}
-
-	       	$row= $row+3;
-	   		$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
-	   		$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'House Damages');
-	   		$row= $row+3;
-
-	   		foreach($house_damage as $r) {
-	       		$row++;
-	       		$col=0;
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->hd_id);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
 	       		
-	       		// display other data here	
-	       	}
-
-	       	$row= $row+3;
-	   		$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
-	   		$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'Dead / Injured');
-	   		$row= $row+3;
-
-	   		foreach($dead_injured as $r) {
-	       		$row++;
-	       		$col=0;
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->di_id);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
-	       		
-	       		// display other data here	
 	       	}
 
 			$filename = 'output.xls';
@@ -104,6 +63,4 @@ class Report extends CI_Controller {
 		    flush();
 		    readfile($filename);
 		}
-
 	}
-}	

@@ -25,8 +25,8 @@
                   <div class="col-lg-1 text-right label2"> Option:</div>
                   <div class="col-sm-2">
                     <select class="form-control input-sm" name="option">
-                            <option value="big"> View Report Here</option>
-                            <option value="small"> Export to Excel</option>
+                            <option value="0"> View Report Here</option>
+                            <option value="1"> Export to Excel</option>
                       </select>         
                   </div>
                   
