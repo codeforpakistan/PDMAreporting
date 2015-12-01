@@ -40,53 +40,82 @@ class Report extends CI_Controller {
 			//$obj->getActiveSheet()->mergeCells('A1:D1');
 			//set aligment to center for that merged cell (A1 to D1)
 			//$obj->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-			
-			$row = 2;
-			$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
-			$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'Cattles Data');
-
-			foreach($cattle as $r) {
-	       		$row++;
-	       		$col=0;
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->ct_id);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
+			if(!empty($cattle)){
+					
+				$row = 2;
+				$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true)->setSize(20);
+				$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'Cattles Data');
+				$row = $row+3;
+				$col=0;    
+				$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
+				$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ID');
+	    		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'NAME');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CNIC');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'FATHER NAME');
 	       		
-	       		// display other data here	
-	       	}
 
-	       	$row= $row+3;
-	   		$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
-	   		$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'House Damages');
-	   		$row= $row+3;
+				foreach($cattle as $r) {
+		       		$row++;
+		       		$col=0;
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->ct_id);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
+		       		
+		       		// display other data here	
+		       	}
+			}
 
-	   		foreach($house_damage as $r) {
-	       		$row++;
-	       		$col=0;
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->hd_id);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
+			if(!empty($house_damage)){
+		   			
+		       	$row= $row+3;
+		   		$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true)->setSize(20);	
+		   		$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'House Damages');
+		   		$row= $row+3;
+		   		$col=0;    
+				$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
+				$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ID');
+	    		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'NAME');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CNIC');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'FATHER NAME');
 	       		
-	       		// display other data here	
-	       	}
 
-	       	$row= $row+3;
-	   		$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
-	   		$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'Dead / Injured');
-	   		$row= $row+3;
-
-	   		foreach($dead_injured as $r) {
-	       		$row++;
-	       		$col=0;
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->di_id);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
-	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
+	   			foreach($house_damage as $r) {
+		       		$row++;
+		       		$col=0;
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->hd_id);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
+		       		
+		       		// display other data here	
+		       	}
+	   		}
+	   		if(!empty($dead_injured)){
+	   			
+		       	$row= $row+3;
+		   		$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true)->setSize(20);	
+		   		$obj->getActiveSheet()->setCellValueByColumnAndRow('4', $row, 'Dead / Injured');
+		   		$row = $row+3;
+				$col=0;    
+				$obj->getActiveSheet()->getStyle('A'.$row.':O'.$row.'')->getFont()->setBold(true);	
+				$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ID');
+	    		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'NAME');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CNIC');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'FATHER NAME');
 	       		
-	       		// display other data here	
-	       	}
+
+	   			foreach($dead_injured as $r) {
+		       		$row++;
+		       		$col=0;
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->di_id);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
+		       		
+		       		// display other data here	
+		       	}
+	   		}
 
 			$filename = 'output.xls';
 			// Save it as an excel 2003 file

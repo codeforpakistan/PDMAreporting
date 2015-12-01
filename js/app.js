@@ -2,6 +2,22 @@ var app = angular.module('pdmadataentry',['ngRoute']);
 
 var baseURL = 'http://localhost/PDMAreporting/';
 
+/**
+ * ============= CUSTOM FILTERS ===================================
+ */
+app.filter('sumFilter', function() {
+     return function(table_info) {
+         var budgetTotal = 0;
+         for (i=0; i<table_info.length; i++) {
+             budgetTotal = budgetTotal + parseInt(table_info[i].b_amount);    
+          };
+         return budgetTotal;
+     };
+ });
+/**
+ * ================ CUSTOM FILTERS OVER ============================
+ */
+
 app.config(function($routeProvider) {
     
     $routeProvider.
@@ -22,7 +38,7 @@ app.config(function($routeProvider) {
       });
 });
  
-app.controller('DeadInjuredCtrl', function($scope, $http) {
+app.controller('DeadInjuredCtrl', function($scope, $http, $filter) {
   
      $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
@@ -51,7 +67,7 @@ app.controller('DeadInjuredCtrl', function($scope, $http) {
 
 });
  
-app.controller('HouseDamageCtrl', function($scope, $http) {
+app.controller('HouseDamageCtrl', function($scope, $http, $filter) {
 
         $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
@@ -81,7 +97,7 @@ app.controller('HouseDamageCtrl', function($scope, $http) {
 
 });
 
-app.controller('CattleCtrl', function($scope, $http) {
+app.controller('CattleCtrl', function($scope, $http, $filter) {
 
         $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
           $scope.budget = data;
@@ -103,14 +119,16 @@ app.controller('CattleCtrl', function($scope, $http) {
         $scope.getbyid = function(id){
           $http.get(baseURL+'/cattle/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
-            console.log(data);
+            //console.log(data);
           });
         }
 
     //get cattle data
     $http.get(baseURL+'cattle/get_all').success(function(data, status, headers, config){
       $scope.table_info = data;
-      console.log(data);
+      //$filter('sumFilter')($scope.table_info);
+      //console.log(sum);
+      //console.log(data);
     });
 
 });

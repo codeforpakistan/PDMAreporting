@@ -48,7 +48,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="i in table_info | filter:searchCNIC">
+            <tr ng-repeat="i in filtered = (table_info | filter:searchCNIC)">
               <td>{{1}}</td>
               <td>{{i.name}}</td>
               <td>{{i.cnic}}</td>
@@ -67,6 +67,12 @@
                   echo "<button class='btn btn-sm btn-info'  data-toggle='modal' data-target='#myModal' ng-click='getbyid(i.di_id)'>Details</button>";
                 }
               ?>
+              </td>
+            </tr>
+            <tr>
+              <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              <td>
+                {{ filtered | sumFilter | currency:'PKR ' }}
               </td>
             </tr>
           </tbody>
