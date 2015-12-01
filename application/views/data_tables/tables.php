@@ -24,6 +24,9 @@
         <div class="col-sm-3">
           <input type="text" class="form-control" placeholder="CNIC" ng-model="searchCNIC">
         </div>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" placeholder="District" ng-model="searchDistrict">
+        </div>
       </div> 
       <div class="table-responsive" >
          <table class="table table-bordered">
@@ -43,20 +46,20 @@
               if($type=='house')
                 echo "<th>Damage Type</th>";
               ?>
-              <th>Budget</th>
+              <th>Budget (PKR)</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="i in filtered = (table_info | filter:searchCNIC)">
-              <td>{{1}}</td>
+            <tr ng-repeat="i in filtered = (table_info | filter:{cnic:searchCNIC, district:searchDistrict })">
+              <td>{{$index + 1}}</td>
               <td>{{i.name}}</td>
               <td>{{i.cnic}}</td>
               <td>{{i.father_name}}</td>
               <td>{{i.district}}</td>
               <td>{{i.date_of_incident}}</td>
               <td>{{i.b_category}}</td>
-              <td>{{i.b_amount}}</td>
+              <td align="right">{{i.b_amount | currency : '' : 0}}</td>
               <td class="text-center">
               <?php  
                 if($type == "house"){
@@ -70,9 +73,9 @@
               </td>
             </tr>
             <tr>
-              <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-              <td>
-                {{ filtered | sumFilter | currency:'PKR ' }}
+              <td colspan="6" align="right"></td>
+              <td align="right" colspan="2">
+                <b>Total Budget: <big>{{ filtered | sumFilter | currency : '' : 0 }}</big></b>
               </td>
             </tr>
           </tbody>
