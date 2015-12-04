@@ -1,3 +1,25 @@
+<!-- nav bar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">PDMA</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-nav-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="house-nav"><a href="#Housedamage">House Damage</a></li>
+                    <li class="cattle-nav"><a href="#Cattles">Cattles</a></li>
+                    <li class="dead-nav"><a href="#Deadinjured">Dead / Injured</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- reporting menu -->
 <div class="report-box">
   <div class="container-fluid">
     <div class="row">   

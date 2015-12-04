@@ -52,7 +52,16 @@ class Report extends CI_Controller {
 	    		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'NAME');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CNIC');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'FATHER NAME');
-	       		
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DATE OF INCIDENT');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ADDRESS');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REASON FOR DAMAGE');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DISTRICT');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CATTLE TYPE');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'HALQA PATWARI');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REP OF MPA');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DISTRICT OFFICER LIVESTOCK');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'LOCAL SCHOOL HEADMASTER');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'LOCAL IMAM MASJID');
 
 				foreach($cattle as $r) {
 		       		$row++;
@@ -61,6 +70,16 @@ class Report extends CI_Controller {
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->date_of_incident);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->address);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->reason);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->district);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cattle_type);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->patwari);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->rep_mpa);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->officer_livestoct);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->headmaster);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->imam);
 		       		
 		       		// display other data here	
 		       	}
@@ -78,6 +97,17 @@ class Report extends CI_Controller {
 	    		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'NAME');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CNIC');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'FATHER NAME');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DATE OF INCIDENT');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ADDRESS');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REASON FOR DAMAGE');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DISTRICT');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DAMAGE TYPE');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'HALQA PATWARI');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REP OF MPA');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'TEHSILDAR');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'LOCAL SCHOOL HEADMASTER');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'LOCAL IMAM MASJID');
+
 	       		
 
 	   			foreach($house_damage as $r) {
@@ -87,6 +117,16 @@ class Report extends CI_Controller {
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->date_of_incident);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->address);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->reason);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->district);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->damage_type);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->patwari);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->rep_mpa);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->tehsildar);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->headmaster);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->imam);
 		       		
 		       		// display other data here	
 		       	}
@@ -103,6 +143,18 @@ class Report extends CI_Controller {
 	    		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'NAME');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CNIC');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'FATHER NAME');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DATE OF INCIDENT');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DATE OF REPORT BY R.F.S');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ADDRESS');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REASON ');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DISTRICT');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CASE TYPE');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'HALQA PATWARI');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REP OF MPA');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'LOCAL SCHOOL HEADMASTER');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'MEDICAL OFFICER');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'TEHSILDAR');
+
 	       		
 
 	   			foreach($dead_injured as $r) {
@@ -112,6 +164,16 @@ class Report extends CI_Controller {
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->name);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cnic);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->father_name);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->date_of_incident);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->address);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->reason);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->district);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->case_type);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->patwari);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->rep_mpa);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->headmaster);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->med_officer);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->tehsildar);
 		       		
 		       		// display other data here	
 		       	}
