@@ -31,7 +31,7 @@
                 <div class="row">
                       <div class="col-lg-2 text-right label">Date of Incident:</div>
                 <div class="col-lg-3 "> 
-                <p><input type="date" class="form-control" ng-model="data.incidentdate" required></p>
+                <p><input type="date" class="form-control" ng-model="data.incidentdate" ></p>
                 
                 </div>
                 </div>

@@ -28,6 +28,7 @@ class Cattle_model extends CI_Model{
 		$headmaster = $this->input->post('headmaster');
 		$imam = $this->input->post('imam');
 		$ct_id = $this->input->post('ct_id'); 
+		$user_id = $this->session->userdata('user_id');
 
 		$form_data = array(	'name' => $name,
 							'father_name' => $fathername,
@@ -43,7 +44,7 @@ class Cattle_model extends CI_Model{
 							'officer_livestock' => $officerliverstock,
 							'headmaster' => $headmaster,
 							'imam' => $imam,
-							'u_id'	=> 1 );
+							'u_id'	=> $user_id );
 
 		$this->db->where('ct_id', $ct_id);
 		$this->db->update('cattle', $form_data);
@@ -63,9 +64,10 @@ class Cattle_model extends CI_Model{
 		$districtofficerlivestock = $formdata->districtofficerlivestock;
 		$headmaster = $formdata->headmaster;
 		$imam = $formdata->imam;
+		$user_id = $this->session->userdata('user_id');
 
 
-		$data = array(	'owner_name' => $name,
+		$data = array(	'name' => $name,
 						'cnic'	=> $cnicnumber,
 		 				'father_name' => $fathername,
 		 				'date_of_incident' => $dateofincident,
@@ -79,7 +81,7 @@ class Cattle_model extends CI_Model{
 		 				'officer_livestock' => $districtofficerlivestock,
 		 				'rep_mpa'	=> $repofmpa,
 		 				'b_id'	=> $budget,
-		 				'u_id'	=> 1);
+		 				'u_id'	=> $user_id);
 		$response = [];
 		if($this->db->insert('cattle', $data)){
 			$response['done'] = true;

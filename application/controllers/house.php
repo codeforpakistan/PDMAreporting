@@ -5,17 +5,32 @@ class House extends CI_Controller {
 	public function index(){
 		
 	}
+	public function check_both(){
+		$is_ad = $this->session->userdata('is_ad');
+		$is_mis = $this->session->userdata('is_mis');
+		if(!$is_ad && !$is_mis)
+			redirect('dataentry/dashboard');
+	}
+	public function check_mis(){
+		$is_mis = $this->session->userdata('is_mis');
+		if(!$is_mis)
+			redirect('login');
+	}
+
 	public function data(){
+		$this->check_both();
 		$this->load->view('data_tables/tables');
 	}
 
 	public function edit($id){
+		$this->check_mis();
 		$this->load->model('house_model');
 		$data['data']= $this->house_model->get_by_id($id);
 		$data['budget'] = $this->db->get('budget')->result();
 		$this->load->view('edit_forms/house', $data);
 	}
 	public function update(){
+		$this->check_mis();
 		$this->load->model('house_model');
 		$this->house_model->update();
 		redirect('house/data');

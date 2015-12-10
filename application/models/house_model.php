@@ -29,6 +29,7 @@ class House_model extends CI_Model{
 		$headmaster = $this->input->post('headmaster');
 		$imam = $this->input->post('imam');
 		$di_id = $this->input->post('hd_id'); 
+		$user_id = $this->session->userdata('user_id');
 
 		$form_data = array(	'name' => $name,
 			 				'father_name' => $fathername,
@@ -44,7 +45,7 @@ class House_model extends CI_Model{
 			 				'tehsildar' => $tehsildar,
 			 				'rep_mpa'	=> $repofmpa,
 			 				'b_id'	=> $budget,
-			 				'u_id'	=> 1);
+			 				'u_id'	=> $user_id);
 
 		$this->db->where('hd_id', $di_id);
 		$this->db->update('house_damage', $form_data);
@@ -65,9 +66,9 @@ class House_model extends CI_Model{
 		$tehsildar = $formdata->tehsildar;
 		$localschoolheadmaster = $formdata->localschoolheadmaster;
 		$localimammasjid = $formdata->localimammasjid;
+		$user_id = $this->session->userdata('user_id');
 
-
-		$data = array(	'owner_name' => $name,
+		$data = array(	'name' => $name,
 		 				'father_name' => $fathername,
 		 				'date_of_incident' => $dateofincident,
 		 				'cnic'	=> $cnicnumber,
@@ -81,7 +82,7 @@ class House_model extends CI_Model{
 		 				'tehsildar' => $tehsildar,
 		 				'rep_mpa'	=> $repofmpa,
 		 				'b_id'	=> $budget,
-		 				'u_id'	=> 1);
+		 				'u_id'	=> $user_id);
 		$response = [];
 		if($this->db->insert('house_damage', $data)){
 			$response['done'] = true;

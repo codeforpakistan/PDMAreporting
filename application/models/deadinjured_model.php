@@ -28,6 +28,7 @@ class Deadinjured_model extends CI_Model{
 		$tehsildar = $this->input->post('tehsildar');
 		$headmaster = $this->input->post('headmaster');
 		$di_id = $this->input->post('di_id'); 
+		$user_id = $this->session->userdata('user_id');
 
 		$form_data = array(	'name' => $name,
 							'father_name' => $fathername,
@@ -42,7 +43,7 @@ class Deadinjured_model extends CI_Model{
 							'med_officer' => $medicalofficer,
 							'tehsildar' => $tehsildar,
 							'headmaster' => $headmaster,
-							'u_id'	=> 1 );
+							'u_id'	=> $user_id );
 
 		$this->db->where('di_id', $di_id);
 		$this->db->update('dead_injured', $form_data);
@@ -61,6 +62,7 @@ class Deadinjured_model extends CI_Model{
 		$medicalofficer = $formdata->medicalofficer;
 		$tehsildar = $formdata->tehsildar;
 		$localschoolheadmaster = $formdata->localschoolheadmaster;
+		$user_id = $this->session->userdata('user_id');
 	
 
 
@@ -79,7 +81,7 @@ class Deadinjured_model extends CI_Model{
 		 				'tehsildar' => $tehsildar,
 		 				'date_created' => date('Y-m-d'),
 		 				'b_id'	=> $budget,
-		 				'u_id'	=> 1);
+		 				'u_id'	=> user_id);
 		$response = [];
 		if($this->db->insert('dead_injured', $data)){
 			$response['done'] = $dateofreport;
