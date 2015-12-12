@@ -30,7 +30,7 @@
                    <div class="row">
                        <div class="col-sm-3 label text-right"> Password:</div>
                           <div class="col-sm-6 "> 
-                          <input type="text" class="form-control" name="" id="" placeholder="Password" ng-model="data.password">
+                          <input type="password" class="form-control" name="" id="" placeholder="Password" ng-model="data.password">
                           </div>
                    </div>
 
@@ -44,7 +44,7 @@
                   <div class="row">
                   <div class="col-sm-3 label text-right"> Type of User:</div>
                   <div class="col-sm-6">
-                    <select class="form-control">
+                    <select class="form-control" ng-model="data.category">
                            <option>Data Entry Operator</option>
                           <option> AD </option>
                           <option> MIS User</option>
@@ -54,6 +54,7 @@
                    <div class="row">
                           <div class="col-sm-6 col-lg-offset-4">
                       <button type="submit" class="btn btn-success">Add User</button>
+                      {{message}}
                           </div>
                   </div>  
                  

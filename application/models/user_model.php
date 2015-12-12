@@ -20,39 +20,20 @@ class User_model extends CI_Model{
 
 	}
 	public function add($formdata){
-		$name = $formdata->name;
-		$fathername = $formdata->fathername;
-		$dateofincident = $formdata->incidentdate;
-		$cnicnumber = $formdata->cnicnumber;
-		$address = $formdata->address;
-		$reason = $formdata->reason;
-		$district = $formdata->district;
-		$budget = $formdata->budget;
-		$cattletype = $formdata->cattletype;
-		$halqapatwari = $formdata->halqapatwari;
-		$repofmpa = $formdata->repofmpa;
-		$districtofficerlivestock = $formdata->districtofficerlivestock;
-		$headmaster = $formdata->headmaster;
-		$imam = $formdata->imam;
 
+		$fullname = $formdata->fullname;
+		$username = $formdata->username;
+		$password = $formdata->password;
+		$emailaddress = $formdata->emailaddress;
+		$category = $formdata->category;
 
-		$data = array(	'ct_owner_name' => $name,
-						'ct_cnic'	=> $cnicnumber,
-		 				'ct_father_name' => $fathername,
-		 				'ct_date_of_incident' => $dateofincident,
-		 				'ct_address'	=> $address,
-		 				'ct_cattle_type' => $cattletype,
-		 				'ct_reason'	=> $reason,
-		 				'ct_district' => $district,
-		 				'ct_patwari'	=> $halqapatwari,
-		 				'ct_headmaster'	=> $headmaster,
-		 				'ct_imam'	=> $imam,
-		 				'ct_officer_livestock' => $districtofficerlivestock,
-		 				'ct_rep_mpa'	=> $repofmpa,
-		 				'b_id'	=> $budget,
-		 				'u_id'	=> 1);
+		$data = array(	'u_fullname' => $fullname,
+						'u_username'	=> $username,
+		 				'u_password' => $password,
+		 				'u_email' => $emailaddress,
+		 				'u_category' => $category);
 		$response = [];
-		if($this->db->insert('cattle', $data)){
+		if($this->db->insert('user', $data)){
 			$response['done'] = true;
 			echo json_encode($response);
 		}

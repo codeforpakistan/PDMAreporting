@@ -28,7 +28,7 @@
           </thead>
           <tbody>
             <tr ng-repeat="i in table_info">
-              <td>{{1}}</td>
+              <td>{{$index+1}}</td>
               <td>{{i.u_fullname}}</td>
               <td>{{i.u_username}}</td>
               <td>{{i.u_email}}</td>
@@ -94,11 +94,11 @@
   </div>
 </div>
 
-
-</div>
-
-</div>
 <?php $this->load->view('modal/adduser_modal');?>
+</div>
+
+</div>
+
 
 <?php 
     $this->load->view('template/footer');

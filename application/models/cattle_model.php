@@ -24,7 +24,7 @@ class Cattle_model extends CI_Model{
 		$cattletype = $this->input->post('cattletype');
 		$halqapatwari = $this->input->post('halqapatwari');
 		$repofmpa = $this->input->post('repofmpa');
-		$officerliverstock = $this->input->post('officerliverstock');
+		$officerlivestock = $this->input->post('officerlivestock');
 		$headmaster = $this->input->post('headmaster');
 		$imam = $this->input->post('imam');
 		$ct_id = $this->input->post('ct_id'); 
@@ -41,7 +41,7 @@ class Cattle_model extends CI_Model{
 							'cattle_type' => $cattletype,
 							'patwari' => $halqapatwari,
 							'rep_mpa' => $repofmpa,
-							'officer_livestock' => $officerliverstock,
+							'officer_livestock' => $officerlivestock,
 							'headmaster' => $headmaster,
 							'imam' => $imam,
 							'u_id'	=> $user_id );

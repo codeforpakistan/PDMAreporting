@@ -40,7 +40,7 @@ app.config(function($routeProvider) {
  
 app.controller('DeadInjuredCtrl', function($scope, $http, $filter) {
   
-     $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
+     $http.get(baseURL+'budget/get_deadinjured_budget').success(function(data, status, headers, config){
           $scope.budget = data;
         });
 
@@ -69,7 +69,7 @@ app.controller('DeadInjuredCtrl', function($scope, $http, $filter) {
  
 app.controller('HouseDamageCtrl', function($scope, $http, $filter) {
 
-        $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
+        $http.get(baseURL+'budget/get_house_budget').success(function(data, status, headers, config){
           $scope.budget = data;
         });
 
@@ -99,7 +99,7 @@ app.controller('HouseDamageCtrl', function($scope, $http, $filter) {
 
 app.controller('CattleCtrl', function($scope, $http, $filter) {
 
-        $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
+        $http.get(baseURL+'budget/get_cattle_budget').success(function(data, status, headers, config){
           $scope.budget = data;
         });
 
@@ -136,9 +136,12 @@ app.controller('CattleCtrl', function($scope, $http, $filter) {
 
 
 app.controller('UserCtrl', function($scope, $http) {
-        $scope.addUser = function(data){
+        $scope.AddUser = function(data){
+          console.log(data);
             $http.post(baseURL + 'user/add',data).success(function(data, status, headers, config){          
+                console.log("data inserted");
                 $scope.message = "Data Inserted";
+                $scope.getUser();
             });
         }
   
@@ -160,10 +163,13 @@ app.controller('UserCtrl', function($scope, $http) {
 
         }
 
-    //get cattle data
-    $http.get(baseURL+'user/get_all').success(function(data, status, headers, config){
-      $scope.table_info = data;
-    });
+    //get usr data
+    $scope.getUser = function(){
+       $http.get(baseURL+'user/get_all').success(function(data, status, headers, config){
+        $scope.table_info = data;
+      });
+    }
+    $scope.getUser();
 
 });
 

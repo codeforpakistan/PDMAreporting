@@ -34,6 +34,24 @@ class Budget extends CI_Controller {
 		$result = $this->db->get('budget')->result_array();
 		echo json_encode($result);
 	}
+	public function get_cattle_budget(){
+		$this->db->where('b_category','small');
+		$this->db->or_where('b_category','big');
+		$result = $this->db->get('budget')->result_array();
+		echo json_encode($result);
+	}
+	public function get_deadinjured_budget(){
+		$this->db->where('b_category','dead');
+		$this->db->or_where('b_category','injured');
+		$result = $this->db->get('budget')->result_array();
+		echo json_encode($result);
+	}
+	public function get_house_budget(){
+		$this->db->where('b_category','partial');
+		$this->db->or_where('b_category','full');
+		$result = $this->db->get('budget')->result_array();
+		echo json_encode($result);
+	}
 	public function get_by_id($id){
 		$this->load->model('budget_model');
 		$data = $this->budget_model->get_by_id($id);

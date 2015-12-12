@@ -15,7 +15,6 @@
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">PDMA</a>
             </div>
             <div class="collapse navbar-collapse" id="example-nav-collapse">
                 <ul class="nav navbar-nav">

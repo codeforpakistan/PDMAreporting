@@ -13,6 +13,14 @@ class User extends CI_Controller {
 	/**
 	 * *********************** API proced **********************
 	 */
+	public function add(){
+
+		$postdata = file_get_contents("php://input");
+		$data = json_decode($postdata);
+		$this->load->model('user_model');
+		$return = $this->user_model->add($data);
+		return $return;
+	}
 	public function edit_category(){
 		$postdata = file_get_contents("php://input");
 		$data = json_decode($postdata);
@@ -27,6 +35,7 @@ class User extends CI_Controller {
 	}
 	public function get_all(){
 		$result = $this->db->get('user')->result_array();
+		
 		echo json_encode($result);
 	}
 }
