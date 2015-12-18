@@ -9,7 +9,7 @@
                 <div class="col-lg-12 ">
                     <div class="form-group">
                     <div class="row">
-                        <div class="col-sm-2 text">
+                        <div class="col-sm-4 text">
                             <h2>Dead / Injured</h2>
                         </div>
                     </div>

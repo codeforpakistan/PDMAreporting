@@ -1,6 +1,9 @@
 <?php 
     $this->load->view('template/header');
 ?>
+<?php 
+    $this->load->view('template/reporting_menu');
+?>
 
 <div class="container" ng-app="pdmadataentry">
 
@@ -51,14 +54,13 @@
       </div>
     </div>
     <div class="row">
-        <div class="col-lg-1 col-lg-offset-9">
-            <button type="submit" class="btn btn-success">Generate</button>
-        </div>
+        
     </div>
 </div>
   </div>
   <div class="col-lg-4">
-    {{message_update}}
+    <div class="edit-box">
+          {{message_update}}
     <form novalidate ng-show="showBudgetEditForm===1" ng-submit="editBudget(row)" name="editBudgetForm">
       <div class="row">
         <div class="col-sm-4">
@@ -114,6 +116,8 @@
       <input type="hidden" value="{{row.b_id}}" ng-model="row.u_id">
       <input type="submit" value="Edit" class="btn btn-success" ng-disabled="editBudgetForm.$invalid">
     </form>
+
+    </div>
   </div>
 </div>
 			

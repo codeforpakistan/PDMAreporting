@@ -1,7 +1,9 @@
 <?php 
     $this->load->view('template/header');
 ?>
-
+<?php 
+    $this->load->view('template/reporting_menu');
+?>
 <div class="container" ng-app="pdmadataentry">
 
 <div ng-controller='UserCtrl'>
@@ -9,6 +11,7 @@
   <div class="col-lg-8">
     <div class="row">
       <div class="col-sm-12">
+       <h2>Users</h2>
         <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add New User</button>
       </div>
     </div>
@@ -43,13 +46,13 @@
     </div>
     <div class="row">
         <div class="col-lg-1 col-lg-offset-9">
-            <button type="submit" class="btn btn-success">Generate</button>
         </div>
     </div>
 </div>
   </div>
   <div class="col-lg-4">
-    <form ng-show="showUserEditForm===1" ng-submit="editUserCategory(row)">
+    <div class="edit-box">
+      <form ng-show="showUserEditForm===1" ng-submit="editUserCategory(row)">
       <div class="row">
         <div class="col-sm-4">
           Full Name:
@@ -91,6 +94,7 @@
       <input type="hidden" value="{{row.u_id}}" ng-model="row.u_id">
       <input type="submit" value="Edit" class="btn btn-success">
     </form>
+    </div>
   </div>
 </div>
 

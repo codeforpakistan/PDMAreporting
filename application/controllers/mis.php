@@ -18,7 +18,7 @@ class Mis extends CI_Controller {
       }
 	public function dashboard()
 	{
-            $this->check_mis();
+    $this->check_mis();
 		$this->load->view('mis_dashboard');
 	}
 }

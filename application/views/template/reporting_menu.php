@@ -10,9 +10,14 @@
             </div>
             <div class="collapse navbar-collapse" id="example-nav-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="house-nav"><a href="<?php echo base_url();?>house/data">House Damage</a></li>
-                    <li class="cattle-nav"><a href="<?php echo base_url();?>cattle/data">Cattles</a></li>
-                    <li class="dead-nav"><a href="<?php echo base_url();?>deadinjured/data">Dead / Injured</a></li>
+                    <li class=""><a href="<?php echo base_url();?>house/data">House Damage</a></li>
+                    <li class=""><a href="<?php echo base_url();?>cattle/data">Cattles</a></li>
+                    <li class=""><a href="<?php echo base_url();?>deadinjured/data">Dead / Injured</a></li>
+                    <li class=""><a href="<?php echo base_url();?>budget/data">Budget</a></li>
+                    <li class=""><a href="<?php echo base_url();?>user/data">User</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="<?php echo base_url();?>logout">Logout</a></li>
                 </ul>
             </div>
         </div>
