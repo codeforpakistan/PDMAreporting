@@ -146,3 +146,6 @@
 <script>
           $( ".datepicker" ).datepicker();
         </script>
+        <script type="text/javascript">
+            generate('warning', 'this is my message');
+        </script>

@@ -1,5 +1,5 @@
 <!-- nav bar -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
@@ -57,31 +57,39 @@
                       </select>         
                   </div>
                   
-
             </div>
-            <div class="row">
-              <div class="col-sm-2">
+            <br>
+            <div class="row text-center">
+              <div class="col-sm-4">
                 <input type="checkbox" name="big"> Cattle - Big
               </div>
-              <div class="col-sm-2">
-                <input type="checkbox" name="small"> Cattle - Small
-              </div>
-              <div class="col-sm-2">
+               <div class="col-sm-4">
                 <input type="checkbox" name="full"> House - Full Damage
               </div>
-              <div class="col-sm-2">
-                <input type="checkbox" name="partial"> House - Partial Damage
-              </div>
-              <div class="col-sm-2">
-                <input type="checkbox" name="dead"> Person - Dead
-              </div>
-              <div class="col-sm-2">
+               <div class="col-sm-4">
                 <input type="checkbox" name="injured"> Person - Injured
               </div>
+              </div>
+
+              <div class="row text-center">
+              <div class="col-sm-4">
+                <input type="checkbox" name="small" style="margin-left:10px" > Cattle - Small
+              </div>
+             
+              <div class="col-sm-4">
+                <input type="checkbox" name="partial" style="margin-left:15px"> House - Partial Damage
+              </div>
+              <div class="col-sm-4">
+                <input type="checkbox" name="dead" style="margin-right:10px"> Person - Dead
+              </div>
+             
             </div>
             <div class="row">
-              <div class="col-sm-4 text-center col-sm-offset-4">
-                <br><button type="submit" class="btn btn-success btn-lg">Generate Report</button>
+              <div class="col-lg-1 text-center col-lg-offset-10">
+                <br>
+
+                <button type="submit" class="btn btn-success btn-lg" > Generate Report</button>
+
               </div>
             </div> 
           </form> 
