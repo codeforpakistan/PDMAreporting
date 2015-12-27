@@ -64,13 +64,21 @@
                        </div>
                        </div>
                 <div class="row">
-                    <div class="col-sm-2 text-right label">Budget</div>
+                    <div class="col-sm-2 text-right label">Relief</div>
                     <div class="col-sm-3">
-                        <select name="budget" ng-model="data.budget" required="required">
+                        <select name="budget" ng-model="data.budget" required="required" class="form-control">
                             <option ng-repeat="b in budget" value="{{b.b_id}}">
-                                {{b.b_amount}}
+                                {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
                             </option>
                         </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 text-right label">
+                        Special Compensation <input type="checkbox" name="" id="compensation-checkbox">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" name="" class="form-control" id="compensation-amount" disabled>
                     </div>
                 </div>
                 <div class="row">
@@ -144,8 +152,12 @@
         {{message}}
 </div>
 <script>
-          $( ".datepicker" ).datepicker();
-        </script>
-        <script type="text/javascript">
-            generate('warning', 'this is my message');
+            $('#compensation-checkbox').click(function(){
+                
+                if($(this).prop('checked')){
+                    $('#compensation-amount').prop('disabled', false);
+                }else{
+                    $('#compensation-amount').prop('disabled', true);
+                }
+            });
         </script>
