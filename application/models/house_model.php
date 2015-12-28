@@ -21,6 +21,7 @@ class House_model extends CI_Model{
 		$district = $this->input->post('district');
 		$address = $this->input->post('address');
 		$reason = $this->input->post('reason');
+		$special_compensation = $this->input->post('special_compensation');
 		$budget = $this->input->post('budget');
 		$housedamage = $this->input->post('housedamage');
 		$halqapatwari = $this->input->post('patwari');
@@ -38,6 +39,7 @@ class House_model extends CI_Model{
 			 				'address'	=> $address,
 			 				'damage_type' => $housedamage,
 			 				'reason'	=> $reason,
+			 				'special_compensation' => $special_compensation,
 			 				'district' => $district,
 			 				'patwari'	=> $halqapatwari,
 			 				'headmaster'	=> $headmaster,
@@ -58,6 +60,7 @@ class House_model extends CI_Model{
 		$cnicnumber = $formdata->cnicnumber;
 		$address = $formdata->address;
 		$reason = $formdata->reason;
+		$special_compensation = $formdata->special_compensation;
 		$district = $formdata->district;
 		$budget = $formdata->budget;
 		$housedamage = $formdata->housedamage;
@@ -75,6 +78,7 @@ class House_model extends CI_Model{
 		 				'address'	=> $address,
 		 				'damage_type' => $housedamage,
 		 				'reason'	=> $reason,
+		 				'special_compensation'	=> $special_compensation,
 		 				'district' => $district,
 		 				'patwari'	=> $halqapatwari,
 		 				'headmaster'	=> $localschoolheadmaster,

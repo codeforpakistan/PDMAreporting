@@ -82,6 +82,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-sm-2 text-right label">
+                        Special Compensation <input type="checkbox" name="" id="compensation-checkbox">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" name="" class="form-control" id="compensation-amount" disabled ng-model="data.special_compensation">
+                    </div>
+                </div>
+                <div class="row">
                         <div class="col-lg-2 label text-right"> Date of Report by R.F.S:</div>
                 <div class="col-lg-3 "> 
                 <p><input name="dateofreport" type="date" value="<?php echo $data['date_of_report_rfs'];?>" class="form-control" ng-model="data.reportdate"></p>

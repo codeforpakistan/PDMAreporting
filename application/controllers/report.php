@@ -63,6 +63,7 @@ class Report extends CI_Controller {
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DATE OF INCIDENT');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ADDRESS');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REASON FOR DAMAGE');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'SPECIAL_COMPENSATION');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DISTRICT');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CATTLE TYPE');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'HALQA PATWARI');
@@ -81,6 +82,7 @@ class Report extends CI_Controller {
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->date_of_incident);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->address);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->reason);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->special_compensation);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->district);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->cattle_type);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->patwari);
@@ -108,6 +110,7 @@ class Report extends CI_Controller {
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DATE OF INCIDENT');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ADDRESS');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REASON FOR DAMAGE');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'SPECIAL_COMPENSATION');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DISTRICT');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DAMAGE TYPE');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'HALQA PATWARI');
@@ -128,6 +131,7 @@ class Report extends CI_Controller {
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->date_of_incident);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->address);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->reason);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->special_compensation);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->district);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->damage_type);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->patwari);
@@ -155,6 +159,7 @@ class Report extends CI_Controller {
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DATE OF REPORT BY R.F.S');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'ADDRESS');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'REASON ');
+	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'SPECIAL_COMPENSATION');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'DISTRICT');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'CASE TYPE');
 	       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, 'HALQA PATWARI');
@@ -175,6 +180,7 @@ class Report extends CI_Controller {
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->date_of_incident);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->address);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->reason);
+		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->special_compensation);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->district);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->case_type);
 		       		$obj->getActiveSheet()->setCellValueByColumnAndRow($col++, $row, $r->patwari);

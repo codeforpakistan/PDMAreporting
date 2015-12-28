@@ -90,6 +90,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-sm-2 text-right label">
+                        Special Compensation <input type="checkbox" name="" id="compensation-checkbox">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" name="" class="form-control" id="compensation-amount" disabled ng-model="data.special_compensation">
+                    </div>
+                </div>
+                <div class="row">
                 <div class="col-lg-2 text-right label">Cattle Type:</div>
                 <div class="col-lg-3"> 
                 <input type="radio" name="cattletype" value="small"

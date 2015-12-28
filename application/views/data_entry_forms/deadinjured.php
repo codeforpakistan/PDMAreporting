@@ -72,7 +72,7 @@
                         Special Compensation <input type="checkbox" name="" id="compensation-checkbox">
                     </div>
                     <div class="col-sm-3">
-                        <input type="text" name="" class="form-control" id="compensation-amount" disabled>
+                        <input type="text" name="" class="form-control" id="compensation-amount" disabled ng-model="data.special_compensation">
                     </div>
                 </div>
                 <div class="row">

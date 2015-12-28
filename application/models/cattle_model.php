@@ -20,6 +20,7 @@ class Cattle_model extends CI_Model{
 		$district = $this->input->post('district');
 		$address = $this->input->post('address');
 		$reason = $this->input->post('reason');
+		$special_compensation = $this->input->post('special_compensation');
 		$budget = $this->input->post('budget');
 		$cattletype = $this->input->post('cattletype');
 		$halqapatwari = $this->input->post('halqapatwari');
@@ -37,6 +38,7 @@ class Cattle_model extends CI_Model{
 							'district' => $district,
 							'address' => $address,
 							'reason' => $reason,
+							'special_compensation' => $special_compensation,
 							'b_id' => $budget,
 							'cattle_type' => $cattletype,
 							'patwari' => $halqapatwari,
@@ -56,6 +58,7 @@ class Cattle_model extends CI_Model{
 		$cnicnumber = $formdata->cnicnumber;
 		$address = $formdata->address;
 		$reason = $formdata->reason;
+		$special_compensation = $formdata->special_compensation;
 		$district = $formdata->district;
 		$budget = $formdata->budget;
 		$cattletype = $formdata->cattletype;
@@ -74,6 +77,7 @@ class Cattle_model extends CI_Model{
 		 				'address'	=> $address,
 		 				'cattle_type' => $cattletype,
 		 				'reason'	=> $reason,
+		 				'special_compensation' =>$special_compensation,
 		 				'district' => $district,
 		 				'patwari'	=> $halqapatwari,
 		 				'headmaster'	=> $headmaster,

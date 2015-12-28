@@ -21,6 +21,7 @@ class Deadinjured_model extends CI_Model{
 		$district = $this->input->post('district');
 		$address = $this->input->post('address');
 		$reason = $this->input->post('reason');
+		$special_compensation = $this->input->post('special_compensation');
 		$budget = $this->input->post('budget');
 		$cattletype = $this->input->post('cattletype');
 		$halqapatwari = $this->input->post('halqapatwari');
@@ -38,6 +39,7 @@ class Deadinjured_model extends CI_Model{
 							'district' => $district,
 							'address' => $address,
 							'reason' => $reason,
+							'special_compensation' => $special_compensation,
 							'b_id' => $budget,
 							'patwari' => $halqapatwari,
 							'med_officer' => $medicalofficer,
@@ -56,6 +58,7 @@ class Deadinjured_model extends CI_Model{
 		$cnicnumber = $formdata->cnicnumber;
 		$address = $formdata->address;
 		$reason = $formdata->reason;
+		$special_compensation = $formdata->special_compensation;
 		$district = $formdata->district;
 		$budget = $formdata->budget;
 		$halqapatwari = $formdata->halqapatwari;
@@ -74,6 +77,7 @@ class Deadinjured_model extends CI_Model{
 		 				'address'	=> $address,
 		 				'cnic'	=> $cnicnumber,
 		 				'reason'	=> $reason,
+		 				'special_compensation'	=> $special_compensation,
 		 				'district' => $district,
 		 				'patwari'	=> $halqapatwari,
 		 				'headmaster'	=> $localschoolheadmaster,

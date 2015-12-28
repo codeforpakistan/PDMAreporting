@@ -44,6 +44,11 @@
                      <div class="col-sm-4">{{row.reason}}</div>
 
                 </div>
+                 <div class="row">
+                  <div class="col-lg-4 ">Special Compensation:</div>
+                   <div class="col-sm-4">{{row.special_compensation}}</div>
+
+                </div>
 
               <div class="row">
                     <div class="col-lg-4"> Halqa patwari:</div>
