@@ -220,7 +220,7 @@
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">
                 <input type="hidden" value="<?php echo $data['ct_id']?>" name="ct_id">
-                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="submit" value="Update" class="btn btn-success">
                     </div>
                 </div>
     </form>

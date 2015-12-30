@@ -3,19 +3,19 @@
 ?>
 <div class="container-fluid">
     <div class="row title-banner">
-        <div class="col-lg-2 col-lg-offset-1 text-center"><img class="login-image img-responsive" src="<?php echo base_url();?>img/KP_Logo.jpg" alt=""/></div>
-        <div class="col-lg-6">
+        <div class="col-sm-2 col-sm-offset-1 text-center"><img class="login-image" src="<?php echo base_url();?>img/KP_Logo.jpg" alt=""/></div>
+        <div class="col-sm-6">
             <div class="row">
-                <div class="col-lg-12 heading1">Provisional Disaster Management Authority</div>
+                <div class="col-sm-12 heading1">Provisional Disaster Management Authority</div>
             </div>
             <div class="row">
-                <div class="col-lg-12 heading2">Relief Reporting System</div>
+                <div class="col-sm-12 heading2">Relief Reporting System</div>
             </div>
         </div>
-        <div class="col-lg-2 text-center"><img class="login-image img-responsive" src="<?php echo base_url();?>img/PDMA_Logo.jpg" alt=""/></div>
-    </div>
+        <div class="col-sm-2 text-center"><img class="login-image" src="<?php echo base_url();?>img/PDMA_Logo.jpg" alt=""/></div>
+    </div>  
     <div class="row edit-area">
-        <div class="col-lg-4 col-lg-offset-4">
+        <div class="col-sm-4 col-sm-offset-4">
 
             <?php 
             if($invalid_credentials):
@@ -41,7 +41,7 @@
                     <br/>
                     <input type="text" class="form-control" name="" id="forgot_email" placeholder="Enter email">
                 </div>
-
+<div class="clearfix"></div>
                 <!--<a href="http://google.com" class="anchor-small">Google </a>-->
                 <button type="submit" class="btn btn-success btn-main">Submit</button>
                 <button type="submit" class="btn btn-success btn-forget hidden">F-Submit</button>
@@ -49,7 +49,10 @@
             </form>
         </div>
     </div>
-    <div class="row"><img class="login-bottom img-responsive" src="<?php echo base_url();?>img/login-bottom.png" alt=""/></div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <img class="login-bottom img-responsive hidden-xs" src="<?php echo base_url();?>img/login-bottom.png" alt=""/>
+    </div>
 </div>
 
 

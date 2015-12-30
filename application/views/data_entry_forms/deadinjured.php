@@ -133,10 +133,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">
-            <button type="submit" class="btn btn-success" ng-disabled="newDeadInjuredForm.$invalid">Add to list</button>
+            <button type="submit" class="btn btn-success" ng-disabled="newDeadInjuredForm.$invalid">Submit</button>
                     </div>
                 </div>
         </form>
+        <div class="alert alert-info" ng-show="showalert===1">
+            {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         </div>
 <script>
             $('#compensation-checkbox').click(function(){

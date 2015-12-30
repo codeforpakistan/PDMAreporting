@@ -33,6 +33,10 @@ app.config(function($routeProvider) {
         templateUrl: baseURL+'dataentry/cattles',
         controller: 'CattleCtrl'
         }).
+      when('/Complaint', {
+        templateUrl: baseURL+'dataentry/complaint',
+        controller: 'ComplaintCtrl'
+        }).
       otherwise({
         redirectTo: '/'
       });
@@ -51,6 +55,7 @@ app.controller('DeadInjuredCtrl', function($scope, $http, $filter) {
               $http.post('http://localhost/PDMAreporting/deadinjured/add',data).success(function(data, status, headers, config){
   
                 $scope.message = "Data Inserted";
+                $scope.showalert = 1;
               });
         }
         $scope.getbyid = function(id){
@@ -79,6 +84,7 @@ app.controller('HouseDamageCtrl', function($scope, $http, $filter) {
               $http.post('http://localhost/PDMAreporting/house/add',data).success(function(data, status, headers, config){
               
                 $scope.message = "Data Inserted";
+                $scope.showalert = 1;
               });
         }
 
@@ -108,6 +114,7 @@ app.controller('CattleCtrl', function($scope, $http, $filter) {
           $scope.message = "Data is being inserted...";
               $http.post(baseURL + 'cattle/add',data).success(function(data, status, headers, config){          
                 $scope.message = "Data Inserted";
+                $scope.showalert = 1;
               });
           /*
               $http.get('http://localhost/PDMAreporting/cattle/add2/'+1).success(function(data, status, headers, config){
@@ -141,6 +148,7 @@ app.controller('UserCtrl', function($scope, $http) {
             $http.post(baseURL + 'user/add',data).success(function(data, status, headers, config){          
                 console.log("data inserted");
                 $scope.message = "Data Inserted";
+                $scope.showalert = 1;
                 $scope.getUser();
             });
         }
@@ -182,8 +190,11 @@ app.controller('budgetCtrl', function($scope, $http) {
         $scope.addBudget = function(data){
           //console.log(data);
             $http.post(baseURL + 'budget/add',data).success(function(data, status, headers, config){          
-                if(data.done == true)
+                if(data.done == true){
                   $scope.message = "Data inserted successfully!";
+                  $scope.showalert = 1;
+                }
+
                 else
                   $scope.message = "Data could not be inserted";
                 
@@ -221,5 +232,57 @@ app.controller('budgetCtrl', function($scope, $http) {
     }
 
     $scope.getBudget();
+
+});
+
+
+app.controller('ComplaintCtrl', function($scope, $http) {
+        $scope.addComplaint = function(data){
+        
+            $http.post(baseURL + 'complaint/add',data).success(function(data, status, headers, config){          
+                console.log(data);
+                if(data.done == true){
+                  $scope.message = "Data inserted successfully!";
+                  $scope.showalert = 1;
+                }
+                else
+                  $scope.message = "Data could not be inserted";
+                
+            });
+            $scope.getComplaint();
+        }
+  
+        $scope.getbyid = function(id, set_showBudgetEditForm){
+          $scope.showBudgetEditForm = set_showBudgetEditForm;
+          $http.get(baseURL + 'budget/get_by_id/' + id).success(function(data, status, headers, config){
+            $scope.row = data;
+            //console.log(data);
+          });
+        }
+
+        $scope.editComplaint = function(data){ 
+          //console.log(data); 
+            $http.post(baseURL + 'budget/edit', data).success(function(){
+              //console.log(data);
+              $scope.message_update = "Updated Successfully";
+              /*
+              data.b_year = '';
+              data.b_amount = '';
+              data.b_category = '';
+              */
+              $scope.showBudgetEditForm = 0; 
+
+            });
+          $scope.getComplaint();
+        }
+
+    //get budget data
+    $scope.getComplaint = function(){
+       $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
+        $scope.table_info = data;
+      });
+    }
+
+    $scope.getComplaint();
 
 });

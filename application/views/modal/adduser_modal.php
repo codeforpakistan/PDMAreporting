@@ -54,10 +54,15 @@
                    <div class="row">
                           <div class="col-sm-6 col-lg-offset-4">
                       <button type="submit" class="btn btn-success">Add User</button>
-                      {{message}}
+                      
                           </div>
                   </div>  
-                 
+                 <div class="alert alert-info" ng-show="showalert===1">
+            {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
               </form>
             </div> 
           </div>

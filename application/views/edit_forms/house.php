@@ -216,7 +216,7 @@
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">
                  <input type="hidden" value="<?php echo $data['hd_id']?>" name="hd_id">
-            <button type="submit" class="btn btn-success">Add to list</button>
+            <button type="submit" class="btn btn-success">Update</button>
                     </div>
                 </div>
         </form>
