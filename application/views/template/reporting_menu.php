@@ -13,6 +13,7 @@
                     <li class=""><a href="<?php echo base_url();?>house/data">House Damage</a></li>
                     <li class=""><a href="<?php echo base_url();?>cattle/data">Cattles</a></li>
                     <li class=""><a href="<?php echo base_url();?>deadinjured/data">Dead / Injured</a></li>
+                    <li class=""><a href="<?php echo base_url();?>complaint/data">Complaint</a></li>
                     <li class=""><a href="<?php echo base_url();?>budget/data">Budget</a></li>
                     <li class=""><a href="<?php echo base_url();?>user/data">User</a></li>
                 </ul>

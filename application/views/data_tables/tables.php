@@ -15,7 +15,7 @@
   		echo "<div class='row' ng-controller='HouseDamageCtrl'>";
   	}else if($type == "cattle"){
   		echo "<div class='row' ng-controller='CattleCtrl'>";
-  	}else{
+    }else{
   		echo "<div class='row' ng-controller='DeadInjuredCtrl'>";
   	}
   ?>
@@ -45,6 +45,7 @@
                 echo "<th>Casualty Type</th>";
               if($type=='house')
                 echo "<th>Damage Type</th>";
+
               ?>
               <th>Budget (PKR)</th>
               <th>Action</th>
@@ -90,6 +91,7 @@
       $this->load->view('modal/modal_house');
     if($type == "deadinjured")
       $this->load->view('modal/modal_deadinjured');
+
 
 ?>
 

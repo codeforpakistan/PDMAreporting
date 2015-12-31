@@ -8,7 +8,7 @@
 </style>
 <div class="container-fluid" ng-app="pdmadataentry">
 <!-- navbar -->
-<nav class="navbar navbar-default navbar-fixed-top hide" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top hide" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">

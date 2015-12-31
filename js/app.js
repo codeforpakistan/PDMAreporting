@@ -123,6 +123,7 @@ app.controller('CattleCtrl', function($scope, $http, $filter) {
           */
         }
 
+
         $scope.getbyid = function(id){
           $http.get(baseURL+'/cattle/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
@@ -157,8 +158,7 @@ app.controller('UserCtrl', function($scope, $http) {
           $scope.showUserEditForm = set_showUserEditForm;
           $http.get(baseURL + 'user/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
-            console.log(data);
-          });
+                     });
         }
 
         $scope.editUserCategory = function(data){ 
@@ -179,12 +179,11 @@ app.controller('UserCtrl', function($scope, $http) {
     }
     $scope.getUser();
 
+//get complaint
+   
 });
 
-
-
-
-
+ 
 
 app.controller('budgetCtrl', function($scope, $http) {
         $scope.addBudget = function(data){
@@ -222,6 +221,7 @@ app.controller('budgetCtrl', function($scope, $http) {
 
             });
           $scope.getBudget();
+
         }
 
     //get budget data
@@ -237,6 +237,7 @@ app.controller('budgetCtrl', function($scope, $http) {
 
 
 app.controller('ComplaintCtrl', function($scope, $http) {
+        
         $scope.addComplaint = function(data){
         
             $http.post(baseURL + 'complaint/add',data).success(function(data, status, headers, config){          
@@ -252,37 +253,41 @@ app.controller('ComplaintCtrl', function($scope, $http) {
             $scope.getComplaint();
         }
   
-        $scope.getbyid = function(id, set_showBudgetEditForm){
-          $scope.showBudgetEditForm = set_showBudgetEditForm;
-          $http.get(baseURL + 'budget/get_by_id/' + id).success(function(data, status, headers, config){
+        $scope.getbyid = function(id, set_showComplaintEditForm){
+          $scope.showComplaintEditForm = set_showComplaintEditForm;
+          $http.get(baseURL + 'complaint/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
             //console.log(data);
           });
         }
 
         $scope.editComplaint = function(data){ 
-          //console.log(data); 
-            $http.post(baseURL + 'budget/edit', data).success(function(){
+          console.log(data);
+
+            $http.post(baseURL + 'complaint/edit', data).success(function(){
               //console.log(data);
+              console.log(data);
               $scope.message_update = "Updated Successfully";
+            
+
               /*
               data.b_year = '';
               data.b_amount = '';
               data.b_category = '';
               */
-              $scope.showBudgetEditForm = 0; 
+              $scope.showComplaintEditForm = 0; 
 
             });
           $scope.getComplaint();
         }
 
-    //get budget data
-    $scope.getComplaint = function(){
-       $http.get(baseURL+'budget/getbudget').success(function(data, status, headers, config){
-        $scope.table_info = data;
-      });
-    }
+        $scope.getComplaint = function(){
+          $http.get(baseURL+'complaint/get_all').success(function(data, status, headers, config){
+            $scope.table_info = data;
+          });
+        }
 
-    $scope.getComplaint();
+      $scope.getComplaint();
+   
 
 });

@@ -140,6 +140,36 @@
 				</table>
 				</div>
 			<?php endif; ?>
+
+			<?php if(!empty($complaint)):?>
+				<br>
+				<h2>Casualties Report</h2>
+				<div class="table-responsive">
+					<table class="table table-hover table-condensed table-striped">
+					<tr class="success">
+						<th>ID</th>
+						<th>Name</th>
+						<th>CNIC</th>
+						<th>Father Name</th>
+						<th>District</th>
+						<th>Address</th>
+						<th>Reason</th>
+					</tr>
+					<?php foreach($complaint as $c):?>
+					<tr>
+						<td><?php echo $c->cm_id?></td>
+						<td><?php echo $c->name?></td>
+						<td><?php echo $c->cnic?></td>
+						<td><?php echo $c->father_name?></td>
+						<td><?php echo $c->address?></td>
+						<td><?php echo $c->reason?></td>
+						<td><?php echo $c->district?></td>
+						<td></td>
+					</tr>
+				<?php endforeach;?>
+				</table>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>

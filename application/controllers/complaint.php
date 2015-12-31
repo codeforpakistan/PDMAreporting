@@ -27,16 +27,16 @@ class Complaint extends CI_Controller {
 	public function data(){
 		$this->check_both();
 
-		$this->load->view('data_tables/tables');
+		$this->load->view('data_tables/complaint');
 	}
 
     public function edit($id){
-		$this->check_mis();
-
+		
+		$postdata = file_get_contents("php://input");
+		$data = json_decode($postdata);
 		$this->load->model('complaint_model');
-		$data['data']= $this->complaint_model->get_by_id($id);
-		$data['budget'] = $this->db->get('budget')->result();
-		$this->load->view('edit_forms/complaint', $data);
+		$return = $this->complaint_model->update($data);
+		return $return;
 	}
 	public function update(){
 		$this->check_mis();
@@ -57,14 +57,12 @@ class Complaint extends CI_Controller {
 		echo json_encode($data);
 	} 
 	public function get_all(){
-		$this->db->select('*');
-		$this->db->from('complaint');
-		$this->db->join('budget', 'budget.b_id = complaint.b_id');
-		$this->db->join('user', 'user.u_id = complaint.u_id');
-		$result  = $this->db->get()->result_array();
+		$result = $this->db->get('complaint')->result_array();
+		
 		echo json_encode($result);
-
 	}
+
+	
 	public function add(){
 		$postdata = file_get_contents("php://input");
 		$data = json_decode($postdata);
@@ -72,5 +70,6 @@ class Complaint extends CI_Controller {
 		$return = $this->complaint_model->add($data);
 		return $return;
 	}
+
 
 }
