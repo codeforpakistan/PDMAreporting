@@ -31,7 +31,7 @@
                 <div class="row">
                       <div class="col-lg-2 text-right label">Date of Incident:</div>
                 <div class="col-lg-3 "> 
-                <p><input type="date" class="form-control" ng-model="data.incidentdate" ></p>
+                <p><input type="date" class="form-control" ng-model="data.incidentdate" required></p>
                 
                 </div>
                 </div>
@@ -53,20 +53,20 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label"> Address:</div>
                 <div class="col-lg-3 ">
-                       <textarea class="form-control" name="" id="" placeholder="Address" ng-model="data.address"></textarea>
+                       <textarea class="form-control" name="" id="" placeholder="Address" ng-model="data.address" required></textarea>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">Reason For Damage:</div>
                 <div class="col-lg-3 ">
-                       <input type="text" class="form-control" name="" id="" placeholder="Reason" ng-model="data.reason">
+                       <input type="text" class="form-control" name="" id="" placeholder="Reason" ng-model="data.reason" required>
                        </div>
                        </div>
                 <div class="row">
                     <div class="col-sm-2 text-right label">Relief</div>
                     <div class="col-sm-3">
-                        <select name="budget" ng-model="data.budget" required="required" class="form-control">
+                        <select name="budget" ng-model="data.budget" required="required" class="form-control" required>
                             <option ng-repeat="b in budget" value="{{b.b_id}}">
                                 {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
                             </option>
@@ -78,7 +78,7 @@
                         Special Compensation <input type="checkbox" name="" id="compensation-checkbox">
                     </div>
                     <div class="col-sm-3">
-                        <input type="text" name="" class="form-control" id="compensation-amount" disabled ng-model="data.special_compensation">
+                        <input type="text" name="" class="form-control" id="compensation-amount" disabled ng-model="data.special_compensation" required>
                     </div>
                 </div>
                 <div class="row">

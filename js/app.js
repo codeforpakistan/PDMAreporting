@@ -37,6 +37,10 @@ app.config(function($routeProvider) {
         templateUrl: baseURL+'dataentry/complaint',
         controller: 'ComplaintCtrl'
         }).
+      when('/Items', {
+        templateUrl: baseURL+'dataentry/items',
+        controller: 'ItemsCtrl'
+        }).
       otherwise({
         redirectTo: '/'
       });
@@ -262,7 +266,7 @@ app.controller('ComplaintCtrl', function($scope, $http) {
         }
 
         $scope.editComplaint = function(data){ 
-          console.log(data);
+      
 
             $http.post(baseURL + 'complaint/edit', data).success(function(){
               //console.log(data);
@@ -288,6 +292,62 @@ app.controller('ComplaintCtrl', function($scope, $http) {
         }
 
       $scope.getComplaint();
+   
+
+});
+
+app.controller('ItemsCtrl', function($scope, $http) {
+        
+        $scope.addItems = function(data){
+        
+            $http.post(baseURL + 'items/add',data).success(function(data, status, headers, config){          
+                console.log(data);
+                if(data.done == true){
+                  $scope.message = "Data inserted successfully!";
+                  $scope.showalert = 1;
+                }
+                else
+                  $scope.message = "Data could not be inserted";
+                
+            });
+           $scope.getItems();
+        }
+  
+        $scope.getbyid = function(id, set_showItemsEditForm){
+          $scope.showItemsEditForm = set_showItemsEditForm;
+          $http.get(baseURL + 'items/get_by_id/' + id).success(function(data, status, headers, config){
+            $scope.row = data;
+            //console.log(data);
+          });
+        }
+
+        $scope.editItems = function(data){ 
+      
+
+            $http.post(baseURL + 'items/edit', data).success(function(){
+              //console.log(data);
+              console.log(data);
+              $scope.message_update = "Updated Successfully";
+            
+
+              /*
+              data.b_year = '';
+              data.b_amount = '';
+              data.b_category = '';
+              */
+              $scope.showItemsEditForm = 0; 
+
+            });
+          $scope.getItems();
+        }
+
+        $scope.getItems = function(){
+          $http.get(baseURL+'items/getitems').success(function(data, status, headers, config){
+            $scope.table_info = data;
+          });
+        }
+
+      $scope.getItems();
    
 
 });

@@ -25,7 +25,7 @@
                      <div class="row">
                       <div class="col-lg-2 text-right label">Father Name:</div>
                 <div class="col-lg-3 "> 
-                   <input type="text" class="form-control" name="" id="" placeholder="Father Name" ng-model="data.fathername">
+                   <input type="text" class="form-control" name="" id="" placeholder="Father Name" ng-model="data.fathername" required>
                 
                 </div>
                 </div>
@@ -33,7 +33,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Cnic Number:</div>
                 <div class="col-lg-3 "> 
-                       <input type="text" class="form-control" name="" id="" placeholder="Cnic number" ng-model="data.cnicnumber">
+                       <input type="text" class="form-control" name="" id="" placeholder="Cnic number" ng-model="data.cnicnumber" required>
                 </div>
                 </div>
 
@@ -47,20 +47,20 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label"> Address:</div>
                 <div class="col-lg-3 ">
-                       <textarea class="form-control" name="" id="" placeholder="Address" ng-model="data.address"></textarea>
+                       <textarea class="form-control" name="" id="" placeholder="Address" ng-model="data.address" required></textarea>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">Reason:</div>
                 <div class="col-lg-3 ">
-                       <input type="text" class="form-control" name="" id="" placeholder="Reason" ng-model="data.reason">
+                       <input type="text" class="form-control" name="" id="" placeholder="Reason" ng-model="data.reason" required>
                        </div>
                        </div>
                 <div class="row">
                     <div class="col-sm-2 text-right label">Relief</div>
                     <div class="col-sm-3">
-                        <select name="budget" ng-model="data.budget" required="required" class="form-control">
+                        <select name="budget" ng-model="data.budget" required="required" class="form-control" required>
                             <option ng-repeat="b in budget" value="{{b.b_id}}">
                                 {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}
                             </option>

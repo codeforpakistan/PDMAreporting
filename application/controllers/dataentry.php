@@ -26,4 +26,7 @@ class Dataentry extends CI_Controller {
 	public function complaint(){
 		$this->load->view('data_entry_forms/complaint');
 	}
+	public function items(){
+		$this->load->view('data_entry_forms/items');
+	}
 }

@@ -22,6 +22,7 @@
                     <li class="cattle-nav"><a href="#Cattles">Cattles</a></li>
                     <li class="dead-nav"><a href="#Deadinjured">Dead / Injured</a></li>
                     <li class="complaint-nav"><a href="#Complaint">Complaint</a></li>
+                      <li class="complaint-nav"><a href="#Items">Items</a></li>
                 </ul>
                  <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?php echo base_url();?>logout">Logout</a></li>

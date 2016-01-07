@@ -47,14 +47,14 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label"> Address:</div>
                 <div class="col-lg-3 ">
-                       <textarea class="form-control" name="" id="" placeholder="Address" ng-model="data.address"></textarea>
+                       <textarea class="form-control" name="" id="" placeholder="Address" ng-model="data.address" required></textarea>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">Reason:</div>
                 <div class="col-lg-3 ">
-                       <textarea class="form-control" name="" id="" placeholder="" ng-model="data.reason"></textarea>
+                       <textarea class="form-control" name="" id="" placeholder="" ng-model="data.reason" required></textarea>
                        </div>
                        </div>
 
