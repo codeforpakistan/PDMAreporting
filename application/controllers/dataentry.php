@@ -29,4 +29,7 @@ class Dataentry extends CI_Controller {
 	public function items(){
 		$this->load->view('data_entry_forms/items');
 	}
+	public function reportdistrict(){
+		$this->load->view('data_entry_forms/report_dist');
+	}
 }

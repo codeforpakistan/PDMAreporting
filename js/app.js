@@ -41,6 +41,10 @@ app.config(function($routeProvider) {
         templateUrl: baseURL+'dataentry/items',
         controller: 'ItemsCtrl'
         }).
+      when('/report_dist', {
+        templateUrl: baseURL+'dataentry/reportdistrict',
+        controller: 'DistrictReportingCtrl'
+        }).
       otherwise({
         redirectTo: '/'
       });
@@ -351,3 +355,62 @@ app.controller('ItemsCtrl', function($scope, $http) {
    
 
 });
+
+
+app.controller('DistrictReportingCtrl', function($scope, $http) {
+        
+        $scope.addDistrictReporting = function(data){
+        
+            $http.post(baseURL + 'report_dist/add',data).success(function(data, status, headers, config){          
+                console.log(data);
+                if(data.done == true){
+                  $scope.message = "Data inserted successfully!";
+                  $scope.showalert = 1;
+                }
+                else
+                  $scope.message = "Data could not be inserted";
+                
+            });
+           $scope.getDistrictReporting();
+        }
+  
+        $scope.getbyid = function(id, set_showDistrictReportingEditForm){
+          $scope.showDistrictReportingEditForm = set_showDistrictReportingEditForm;
+          $http.get(baseURL + 'report_dist/get_by_id/' + id).success(function(data, status, headers, config){
+            $scope.row = data;
+            //console.log(data);
+          });
+        }
+
+        $scope.editDistrictReporting = function(data){ 
+      
+
+            $http.post(baseURL + 'report_dist/edit', data).success(function(){
+              //console.log(data);
+              console.log(data);
+              $scope.message_update = "Updated Successfully";
+            
+
+              /*
+              data.b_year = '';
+              data.b_amount = '';
+              data.b_category = '';
+              */
+              $scope.showDistrictReportingEditForm = 0; 
+
+            });
+          $scope.getDistrictReporting();
+        }
+
+        $scope.getDistrictReporting = function(){
+          $http.get(baseURL+'report_dist/getDistrictReporting').success(function(data, status, headers, config){
+            $scope.table_info = data;
+          });
+        }
+
+      $scope.getDistrictReporting();
+   
+
+});
+
+
