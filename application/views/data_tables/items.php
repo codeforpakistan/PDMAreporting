@@ -15,6 +15,12 @@
        
       </div>
     </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" placeholder="District" ng-model="searchDistrict">
+        </div>
+      </div>
     <div class='row'>  
     <div class="col-lg-12"> 
       <div class="table-responsive" >
@@ -31,7 +37,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="i in table_info">
+             <tr ng-repeat="i in filtered = (table_info | filter:{ district:searchDistrict })">
               <td>{{$index+1}}</td>
               <td>{{i.i_fooditems}}</td>
               <td>{{i.i_nfooditems}}</td>

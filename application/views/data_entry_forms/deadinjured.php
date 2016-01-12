@@ -39,9 +39,38 @@
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
-                <div class="col-lg-3 "> 
-                       <input type="text" class="form-control" name="" id="" placeholder="District" ng-model="data.district" required>
-                </div>
+                <div class="col-lg-3">
+                    <select class="form-control input-sm" name="">
+                            <option >Abbottabad</option>
+                            <option >Bannu</option>
+                             <option> Batagram</option>
+                             <option> Buner</option>
+                             <option> Charsadda</option>
+                             <option> Chitral</option>
+                            <option> Dera Ismail Khan</option>
+                             <option> Hangu</option>
+                             <option> Haripur</option>
+                             <option> Karak</option>
+                             <option> Kohat</option>
+                             <option> Kohistan</option>
+                             <option> Lakki Marwat</option>
+                             <option> Lower Dir</option>
+                             <option> Malakand</option>
+                             <option> Mansehra</option>
+                             <option> Mardan</option>
+                             <option> Nowshera</option>
+                             <option> Peshawar</option>
+                             <option> Shangla</option>
+                             <option> Swabi</option>
+                            <option> Swat</option>
+                             <option> Tank</option>
+                             <option> Tor Ghar</option>
+                             <option>  Upper Dir</option>
+                             <option> Lower Kohistan</option>
+
+
+                      </select>         
+                  </div>
                 </div>
 
                 <div class="row">
@@ -52,10 +81,14 @@
                 </div>
 
                 <div class="row">
-                <div class="col-lg-2 text-right label">Reason:</div>
-                <div class="col-lg-3 ">
-                       <input type="text" class="form-control" name="" id="" placeholder="Reason" ng-model="data.reason" required>
-                       </div>
+                <div class="col-lg-2 text-right label">Nature of Clamity:</div>
+                 <div class="col-lg-3">
+                    <select class="form-control input-sm" name="">
+                            <option >Flood </option>
+                            <option >Earth Quake</option>
+                             <option> Thunder Storm</option>
+                      </select>         
+                  </div>
                        </div>
                 <div class="row">
                     <div class="col-sm-2 text-right label">Relief</div>
@@ -122,6 +155,16 @@
                 <div class="col-lg-3 "> 
                 <input type="radio" name="LocalSchoolHeadmaster" value="yes" ng-model="data.localschoolheadmaster"> Yes
                  <input type="radio" name="LocalSchoolHeadmaster" value="no" ng-model="data.localschoolheadmaster"> No
+
+                      
+                </div>
+                </div>
+
+                 <div class="row">
+                <div class="col-lg-2 text-right label">Counter Signed by DC :</div>
+                <div class="col-lg-3 "> 
+                <input type="radio" name="dc" value="1" ng-model="data.dc"> Yes
+                <input type="radio" name="dc" value="0" ng-model="data.dc"> No
 
                       
                 </div>

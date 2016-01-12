@@ -15,6 +15,7 @@
         <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add New User</button>
       </div>
     </div>
+    <br>
     <div class='row'>  
     <div class="col-lg-12"> 
       <div class="table-responsive" >
@@ -25,7 +26,7 @@
               <th>Full Name</th>
               <th>User Name</th>
               <th>Email</th>
-              <th>Category</th>
+              <th>Group Type</th>
               <th width="30%">Action</th>
             </tr>
           </thead>
@@ -79,7 +80,7 @@
       </div>
       <div class="row">
         <div class="col-sm-4">
-          Category:
+          Group Type:
         </div>
         <div class="col-sm-8">
           <select class="form-control" ng-model="row.u_category">

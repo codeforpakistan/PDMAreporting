@@ -50,9 +50,41 @@
 
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
-                <div class="col-lg-3 "> 
-                       <input type="text" value="<?php echo $data['district'];?>" class="form-control" name="district" id="" placeholder="District" ng-model="data.district" required>
-                </div>
+                <div class="col-lg-3">
+                    <select class="form-control input-sm" name="district">
+                    <optiion selected="selected"><?php
+                    echo $data['ct_district'];?></optiion>
+                  
+                            <option >Abbottabad</option>
+                            <option >Bannu</option>
+                             <option> Batagram</option>
+                             <option> Buner</option>
+                             <option> Charsadda</option>
+                             <option> Chitral</option>
+                            <option> Dera Ismail Khan</option>
+                             <option> Hangu</option>
+                             <option> Haripur</option>
+                             <option> Karak</option>
+                             <option> Kohat</option>
+                             <option> Kohistan</option>
+                             <option> Lakki Marwat</option>
+                             <option> Lower Dir</option>
+                             <option> Malakand</option>
+                             <option> Mansehra</option>
+                             <option> Mardan</option>
+                             <option> Nowshera</option>
+                             <option> Peshawar</option>
+                             <option> Shangla</option>
+                             <option> Swabi</option>
+                            <option> Swat</option>
+                             <option> Tank</option>
+                             <option> Tor Ghar</option>
+                             <option>  Upper Dir</option>
+                             <option> Lower Kohistan</option>
+
+
+                      </select>         
+                  </div>
                 </div>
 
                 <div class="row">
@@ -65,10 +97,16 @@
                 </div>
 
                 <div class="row">
-                <div class="col-lg-2 text-right label">Reason For Damage:</div>
-                <div class="col-lg-3 ">
-                       <input type="text" value="<?php echo $data['reason'];?>" class="form-control" name="reason" id="" placeholder="Reason" ng-model="data.reason">
-                       </div>
+                <div class="col-lg-2 text-right label">Nature of Clamity:</div>
+                <div class="col-lg-3">
+                    <select class="form-control input-sm" name="reason">
+                    <optiion selected="selected"><?php
+                    echo $data['ct_reason'];?></optiion>
+                            <option >Flood </option>
+                            <option >Earth Quake</option>
+                             <option> Thunder Storm</option>
+                      </select>         
+                  </div>
                        </div>
                 <div class="row">
                     <div class="col-sm-2 text-right label">Budget</div>
@@ -205,6 +243,26 @@
                 <input type="radio" name="imam" value="no" 
                 <?php
                     if($data['imam'] == "no")
+                    echo 'checked';
+                    ?>
+                > No
+
+                      
+                </div>
+                </div>
+
+                 <div class="row">
+                <div class="col-lg-2 text-right label">Counter Signed by DC :</div>
+                <div class="col-lg-3 "> 
+               <input type="radio" name="dc" value="yes" 
+                <?php
+                    if($data['dc'] == "yes")
+                    echo 'checked';
+                    ?>
+                > Yes
+                <input type="radio" name="dc" value="no" 
+                <?php
+                    if($data['dc'] == "no")
                     echo 'checked';
                     ?>
                 > No

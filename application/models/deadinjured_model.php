@@ -28,6 +28,7 @@ class Deadinjured_model extends CI_Model{
 		$medicalofficer = $this->input->post('medicalofficer');
 		$tehsildar = $this->input->post('tehsildar');
 		$headmaster = $this->input->post('headmaster');
+		$dc = $this->input->post('dc');
 		$di_id = $this->input->post('di_id'); 
 		$user_id = $this->session->userdata('user_id');
 
@@ -45,6 +46,7 @@ class Deadinjured_model extends CI_Model{
 							'med_officer' => $medicalofficer,
 							'tehsildar' => $tehsildar,
 							'headmaster' => $headmaster,
+							'dc' => $dc,
 							'u_id'	=> $user_id );
 
 		$this->db->where('di_id', $di_id);
@@ -64,6 +66,7 @@ class Deadinjured_model extends CI_Model{
 		$halqapatwari = $formdata->halqapatwari;
 		$medicalofficer = $formdata->medicalofficer;
 		$tehsildar = $formdata->tehsildar;
+			$dc = $formdata->dc;
 		$localschoolheadmaster = $formdata->localschoolheadmaster;
 		$user_id = $this->session->userdata('user_id');
 	
@@ -82,7 +85,8 @@ class Deadinjured_model extends CI_Model{
 		 				'patwari'	=> $halqapatwari,
 		 				'headmaster'	=> $localschoolheadmaster,
 		 				'med_officer'	=> $medicalofficer,
-		 				'tehsildar' => $tehsildar,
+		 				'tehsildar' => $tehsildar
+		 				'dc' => $dc,
 		 				'date_created' => date('Y-m-d'),
 		 				'b_id'	=> $budget,
 		 				'u_id'	=> user_id);

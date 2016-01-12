@@ -29,6 +29,7 @@ class House_model extends CI_Model{
 		$tehsildar = $this->input->post('tehsildar');
 		$headmaster = $this->input->post('headmaster');
 		$imam = $this->input->post('imam');
+		$imam = $this->input->post('dc');
 		$di_id = $this->input->post('hd_id'); 
 		$user_id = $this->session->userdata('user_id');
 
@@ -46,6 +47,7 @@ class House_model extends CI_Model{
 			 				'imam'	=> $imam,
 			 				'tehsildar' => $tehsildar,
 			 				'rep_mpa'	=> $repofmpa,
+			 				'dc'	=> $dc,
 			 				'b_id'	=> $budget,
 			 				'u_id'	=> $user_id);
 
@@ -67,6 +69,7 @@ class House_model extends CI_Model{
 		$halqapatwari = $formdata->halqapatwari;
 		$repofmpa = $formdata->repofmpa;
 		$tehsildar = $formdata->tehsildar;
+		$dc = $formdata->dc;
 		$localschoolheadmaster = $formdata->localschoolheadmaster;
 		$localimammasjid = $formdata->localimammasjid;
 		$user_id = $this->session->userdata('user_id');
@@ -85,6 +88,7 @@ class House_model extends CI_Model{
 		 				'imam'	=> $localimammasjid,
 		 				'tehsildar' => $tehsildar,
 		 				'rep_mpa'	=> $repofmpa,
+		 				'dc'	=> $dc,
 		 				'b_id'	=> $budget,
 		 				'u_id'	=> $user_id);
 		$response = [];

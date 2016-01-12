@@ -28,6 +28,7 @@ class Cattle_model extends CI_Model{
 		$officerlivestock = $this->input->post('officerlivestock');
 		$headmaster = $this->input->post('headmaster');
 		$imam = $this->input->post('imam');
+		$imam = $this->input->post('dc');
 		$ct_id = $this->input->post('ct_id'); 
 		$user_id = $this->session->userdata('user_id');
 
@@ -46,6 +47,7 @@ class Cattle_model extends CI_Model{
 							'officer_livestock' => $officerlivestock,
 							'headmaster' => $headmaster,
 							'imam' => $imam,
+							'dc' => $dc,
 							'u_id'	=> $user_id );
 
 		$this->db->where('ct_id', $ct_id);
@@ -67,6 +69,7 @@ class Cattle_model extends CI_Model{
 		$districtofficerlivestock = $formdata->districtofficerlivestock;
 		$headmaster = $formdata->headmaster;
 		$imam = $formdata->imam;
+		$dc = $formdata->dc;
 		$user_id = $this->session->userdata('user_id');
 
 
@@ -84,6 +87,7 @@ class Cattle_model extends CI_Model{
 		 				'imam'	=> $imam,
 		 				'officer_livestock' => $districtofficerlivestock,
 		 				'rep_mpa'	=> $repofmpa,
+		 				'dc'	=> $dc,
 		 				'b_id'	=> $budget,
 		 				'u_id'	=> $user_id);
 		$response = [];

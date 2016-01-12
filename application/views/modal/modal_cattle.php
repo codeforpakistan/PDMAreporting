@@ -40,8 +40,14 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-4 ">Reason:</div>
+                  <div class="col-lg-4 ">Nature of Clamity:</div>
                    <div class="col-sm-4">{{row.reason}}</div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-4 ">District:</div>
+                   <div class="col-sm-4">{{row.district}}</div>
 
                 </div>
 
@@ -78,6 +84,12 @@
                   <div class="col-lg-4 ">Local Imam Masjid:</div>
                   <div class="col-sm-4">{{row.imam}}</div>
                 </div>
+
+                  <div class="row">
+                  <div class="col-lg-4 ">Counter signed by DC:</div>
+                  <div class="col-sm-4">{{row.dc}}</div>
+                </div>
+
                     </div>
 
                 </div>
