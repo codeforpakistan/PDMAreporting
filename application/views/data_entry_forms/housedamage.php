@@ -46,7 +46,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
                  <div class="col-lg-3">
-                    <select class="form-control input-sm" name="">
+                    <select class="form-control input-sm" name="" ng-model="data.district">
                             <option >Abbottabad</option>
                             <option >Bannu</option>
                              <option> Batagram</option>
@@ -89,7 +89,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Nayure of Clamity:</div>
              <div class="col-lg-3">
-                    <select class="form-control input-sm" name="">
+                    <select class="form-control input-sm" name="" ng-model="data.reason">
                             <option >Flood </option>
                             <option >Earth Quake</option>
                              <option> Thunder Storm</option>
@@ -187,17 +187,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-4">
+                <div class="col-lg-2 col-lg-offset-4">
             <button type="submit" class="btn btn-success" ng-disabled="newHouseForm.$invalid">Submit</button>
                     </div>
-                </div>
-        </form>
-        <div class="alert alert-info" ng-show="showalert===1">
+                    <div class="col-lg-3">
+                       <div class="alert alert-info" ng-show="showalert===1">
             {{message}}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-        </div>
+        </div>  
+                    </div>
+                </div>
+        </form>
+       
         </div>
 <script>
             $('#compensation-checkbox').click(function(){

@@ -45,7 +45,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
                 <div class="col-lg-3">
-                    <select class="form-control input-sm" name="district">
+                    <select class="form-control input-sm" name="district" ng-model="data.district">
                     <optiion selected="selected"><?php
                     echo $data['di_district'];?></optiion>
                             <option >Abbottabad</option>
@@ -90,7 +90,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Nature Of Clamity:</div>
                 <div class="col-lg-3">
-                    <select class="form-control input-sm" name="reason">
+                    <select class="form-control input-sm" name="reason" ng-model="data.reason">
                     <optiion selected="selected"><?php
                     echo $data['di_reason'];?></optiion>
                             <option >Flood </option>
