@@ -27,7 +27,16 @@
               <th>User Name</th>
               <th>Email</th>
               <th>Group Type</th>
+<?php
+        $is_ad = $this->session->userdata('is_mis');
+        if ($is_ad) {
+
+        ?>
               <th width="30%">Action</th>
+                 <?php
+}
+?>       
+  
             </tr>
           </thead>
           <tbody>
@@ -37,9 +46,19 @@
               <td>{{i.u_username}}</td>
               <td>{{i.u_email}}</td>
               <td>{{i.u_category}}</td>
+              <?php
+        $is_ad = $this->session->userdata('is_mis');
+        if ($is_ad) {
+
+        ?>
               <td class="text-center">
-              <button class='btn btn-sm btn-info' ng-click='getbyid(i.u_id,1)'>Edit</button>       
-              </td>
+                
+              <button class='btn btn-sm btn-info' ng-click='getbyid(i.u_id,1)'>Edit</button>
+                       </td>
+                          <?php
+}
+?>       
+  
             </tr>
           </tbody>
         </table>

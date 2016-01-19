@@ -36,7 +36,15 @@
               <th>Year</th>
               <th>Amount</th>
               <th>Category</th>
+              <?php
+        $is_ad = $this->session->userdata('is_mis');
+        if ($is_ad) {
+
+        ?>
               <th width="30%">Action</th>
+              <?php
+}
+?> 
             </tr>
           </thead>
           <tbody>
@@ -45,9 +53,19 @@
               <td>{{i.b_year}}</td>
               <td>{{i.b_amount}}</td>
               <td>{{i.b_category}}</td>
+              <?php
+        $is_ad = $this->session->userdata('is_mis');
+        if ($is_ad) {
+
+        ?>
               <td class="text-center">
-              <button class='btn btn-sm btn-info' ng-click='getbyid(i.b_id,1)'>Edit</button>       
+                
+              <button class='btn btn-sm btn-info' ng-click='getbyid(i.b_id,1)'>Edit</button>   
+                
               </td>
+                <?php
+}
+?>
             </tr>
           </tbody>
         </table>

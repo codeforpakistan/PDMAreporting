@@ -85,7 +85,7 @@ class Deadinjured_model extends CI_Model{
 		 				'patwari'	=> $halqapatwari,
 		 				'headmaster'	=> $localschoolheadmaster,
 		 				'med_officer'	=> $medicalofficer,
-		 				'tehsildar' => $tehsildar
+		 				'tehsildar' => $tehsildar,
 		 				'dc' => $dc,
 		 				'date_created' => date('Y-m-d'),
 		 				'b_id'	=> $budget,

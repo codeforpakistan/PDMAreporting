@@ -40,7 +40,15 @@
               <th>Injured</th> 
               <th>District</th>
               <th>Date</th>
+              <?php
+        $is_ad = $this->session->userdata('is_mis');
+        if ($is_ad) {
+
+        ?>
               <th width="30%">Action</th>
+              <?php
+}
+?> 
             </tr>
           </thead>
           <tbody>
@@ -54,10 +62,18 @@
               <td>{{i.i_injured}}</td>
               <td>{{i.i_district}}</td>
               <td>{{i.i_date}}</td>
+                <?php
+        $is_ad = $this->session->userdata('is_mis');
+        if ($is_ad) {
+
+        ?>
               
               <td class="text-center">
               <button class='btn btn-sm btn-info' ng-click='getbyid(i.id,1)'>Edit</button>       
               </td>
+               <?php
+}
+?>
             </tr>
           </tbody>
         </table>

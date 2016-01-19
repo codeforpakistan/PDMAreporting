@@ -67,6 +67,7 @@ app.controller('DeadInjuredCtrl', function($scope, $http, $filter) {
               });
         }
         $scope.getbyid = function(id){
+           console.log(id);
           $http.get(baseURL+'/deadinjured/get_by_id/' + id).success(function(data, status, headers, config){
             $scope.row = data;
             console.log(data);

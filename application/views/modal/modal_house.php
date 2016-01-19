@@ -94,11 +94,20 @@
                 </div>
             </div>
           </div>
+            <?php
+        $is_ad = $this->session->userdata('is_mis');
+        if ($is_ad) {
+
+        ?>
               <div class="row">
                   <div class="col-lg-1 col-lg-offset-8">
                   <a href="<?php echo base_url();?>house/edit/{{row.hd_id}}" class="btn btn-success"> Edit</a>
                   </div>  
                 </div>
+
+                <?php
+}
+?>
                 <br>
 
         <div class="modal-footer">
