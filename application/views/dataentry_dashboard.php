@@ -22,10 +22,11 @@
                     <li class="cattle-nav"><a href="#Cattles">Cattles</a></li>
                     <li class="dead-nav"><a href="#Deadinjured">Dead / Injured</a></li>
                     <li class="complaint-nav"><a href="#Complaint">Complaint</a></li>
-                      <li class="complaint-nav"><a href="#Items">Items</a></li>
-                      <li class="complaint-nav"><a href="#report_dist">District Reporting</a></li>
+                    <li class="items-nav"><a href="#Items">Items</a></li>
+                    <li class="report-nav"><a href="#report_dist">District Reporting</a></li>
+                    <li class="import-nav"><a href="<?php echo base_url();?>dataentry/importsheet">Import Sheet</a></li>
                 </ul>
-                 <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?php echo base_url();?>logout">Logout</a></li>
                 </ul>
             </div>

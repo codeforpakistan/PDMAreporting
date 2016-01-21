@@ -32,4 +32,9 @@ class Dataentry extends CI_Controller {
 	public function reportdistrict(){
 		$this->load->view('data_entry_forms/report_dist');
 	}
+	public function importsheet()
+	{
+		$this->load->view('data_entry_forms/import_sheet');
+	}
+	
 }

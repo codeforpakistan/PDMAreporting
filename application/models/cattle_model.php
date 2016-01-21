@@ -53,6 +53,9 @@ class Cattle_model extends CI_Model{
 		$this->db->where('ct_id', $ct_id);
 		$this->db->update('cattle', $form_data);
 	}
+	public function add_from_sheet($data){
+		$this->db->insert('cattle', $data);
+	}
 	public function add($formdata){
 		$name = $formdata->name;
 		$fathername = $formdata->fathername;

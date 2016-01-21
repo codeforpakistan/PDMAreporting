@@ -45,6 +45,10 @@ app.config(function($routeProvider) {
         templateUrl: baseURL+'dataentry/reportdistrict',
         controller: 'DistrictReportingCtrl'
         }).
+      when('/import_sheet', {
+        templateUrl: baseURL+'dataentry/importsheet',
+        controller: 'ImportSheetCtrl'
+        }).
       otherwise({
         redirectTo: '/'
       });
@@ -412,6 +416,20 @@ app.controller('DistrictReportingCtrl', function($scope, $http) {
       $scope.getDistrictReporting();
    
 
+});
+
+
+
+app.controller('ImportSheetCtrl', function($scope, $http) {
+        
+   //get budget data
+    $scope.getBudget = function(){
+       $http.get(baseURL+'budget/get_cattle_budget').success(function(data, status, headers, config){
+        $scope.budget = data;
+
+      });
+    }
+    $scope.getBudget();
 });
 
 
