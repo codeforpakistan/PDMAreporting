@@ -23,7 +23,7 @@ class Deadinjured_model extends CI_Model{
 		$reason = $this->input->post('reason');
 		$special_compensation = $this->input->post('special_compensation');
 		$budget = $this->input->post('budget');
-		$cattletype = $this->input->post('cattletype');
+		$casetype = $this->input->post('casetype');
 		$halqapatwari = $this->input->post('halqapatwari');
 		$medicalofficer = $this->input->post('medicalofficer');
 		$tehsildar = $this->input->post('tehsildar');
@@ -52,6 +52,11 @@ class Deadinjured_model extends CI_Model{
 		$this->db->where('di_id', $di_id);
 		$this->db->update('dead_injured', $form_data);
 	}
+
+public function add_from_sheet($data){
+		$this->db->insert('deadinjured', $data);
+	}
+
 	public function add($formdata){
 		$dateofreport = $formdata->reportdate;
 		$dateofaccident = $formdata->incidentdate;

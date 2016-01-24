@@ -29,7 +29,7 @@ class House_model extends CI_Model{
 		$tehsildar = $this->input->post('tehsildar');
 		$headmaster = $this->input->post('headmaster');
 		$imam = $this->input->post('imam');
-		$imam = $this->input->post('dc');
+		$dc = $this->input->post('dc');
 		$di_id = $this->input->post('hd_id'); 
 		$user_id = $this->session->userdata('user_id');
 
@@ -54,6 +54,11 @@ class House_model extends CI_Model{
 		$this->db->where('hd_id', $di_id);
 		$this->db->update('house_damage', $form_data);
 	}
+
+	public function add_from_sheet($data){
+		$this->db->insert('house', $data);
+	}
+
 
 	public function add($formdata){
 		$name = $formdata->name;

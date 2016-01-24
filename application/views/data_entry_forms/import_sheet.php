@@ -37,12 +37,14 @@
     }
 </style>
 <div ng-controller="ImportSheetCtrl">
+<div class="row">
+    <div class="col-lg-4">
     <form method="post" action="<?php echo base_url();?>import_cattle" enctype="multipart/form-data" >
             <div class="row form-row">
-                <div class="col-md-4 ">
+                <div class="col-sm-10 ">
                     <div class="form-group">
                     <div class="row">
-                        <div class="col-md-12 text">
+                        <div class="col-md-10 text" style="margin-left:70px">
                             <h3> Import Cattle Data from Sheet</h3>
                         </div>
                     </div>
@@ -86,7 +88,7 @@
               
                 <div class="row">
                 <br>
-                <div class="col-md-2 col-md-offset-4">
+                <div class="col-md-2 col-md-offset-7"style="margin-left:61%">
                 <input type="submit" value="Submit" class="btn btn-success">
                     </div>
                     <div class="col-md-3">
@@ -94,11 +96,145 @@
                     </div>
 
                 </div>
-                </div>                            
+                </div>  
+                                          
+                </div>
+                </div>
+
+    </form></div>
+    <div class="col-lg-4"><form method="post" action="<?php echo base_url();?>import_house" enctype="multipart/form-data" >
+            <div class="row form-row">
+                <div class="col-sm-9 ">
+                    <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12 text" style="margin-left:50px">
+                            <h3> Import House Damage Data from Sheet</h3>
+                        </div>
+                    </div>
+                
+                <div class="row">
+                        <div class="col-md-5 label text-right"> End Row:</div>
+                <div class="col-md-7 "> 
+                <input type="file" class="form-control" name="userfile" id="" placeholder="" ng-model="data.i_hd_partial" required>
+                </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-md-5 label text-right"> Start Row:</div>
+                <div class="col-md-7 "> 
+                <input type="number" class="form-control" name="startrow" id="" placeholder="" ng-model="data.i_hd_full" required>
+                </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-md-5 label text-right"> End Row:</div>
+                <div class="col-md-7"> 
+                <input type="number" class="form-control" name="endrow" id="" placeholder="" ng-model="data.i_hd_partial" required>
+                </div>
+                </div>
+                      
+
+                     <div class="row">
+                      <div class="col-md-5 text-right label"> Relief:</div>
+                <div class="col-md-7 "> 
+                   <select name="budget" ng-model="data.budget" required="required" class="form-control" required>
+                            <option ng-repeat="b in budget" value="{{b.b_id}}">
+                                {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
+                            </option>
+                        </select>
+                </div>
+                </div>
+              
+
+
+                
+              
+                <div class="row">
+                <br>
+                <div class="col-md-2 col-md-offset-7" >
+                <input type="submit" value="Submit" class="btn btn-success">
+                    </div>
+                    <div class="col-md-3">
+                    
+                    </div>
+
+                </div>
+                </div>  
+                                          
                 </div>
                 </div>
 
     </form>
+    </div>
+    <div class="col-lg-4">
+    <form method="post" action="<?php echo base_url();?>import_deadinjured" enctype="multipart/form-data" >
+            <div class="row form-row">
+                <div class="col-sm-9 ">
+                    <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12 text" style="margin-left:5%">
+                            <h3> Import Dead/Injured Data from Sheet</h3>
+                        </div>
+                    </div>
+                
+                <div class="row">
+                        <div class="col-md-5 label text-right"> End Row:</div>
+                <div class="col-md-7 "> 
+                <input type="file" class="form-control" name="userfile" id="" placeholder="" ng-model="data.i_hd_partial" required>
+                </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-md-5 label text-right"> Start Row:</div>
+                <div class="col-md-7 "> 
+                <input type="number" class="form-control" name="startrow" id="" placeholder="" ng-model="data.i_hd_full" required>
+                </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-md-5 label text-right"> End Row:</div>
+                <div class="col-md-7 "> 
+                <input type="number" class="form-control" name="endrow" id="" placeholder="" ng-model="data.i_hd_partial" required>
+                </div>
+                </div>
+                      
+
+                     <div class="row">
+                      <div class="col-md-5 text-right label"> Relief:</div>
+                <div class="col-md-7 "> 
+                   <select name="budget" ng-model="data.budget" required="required" class="form-control" required>
+                            <option ng-repeat="b in budget" value="{{b.b_id}}">
+                                {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
+                            </option>
+                        </select>
+                </div>
+                </div>
+              
+
+
+                
+              
+                <div class="row">
+                <br>
+                <div class="col-md-2 col-md-offset-7">
+                <input type="submit" value="Submit" class="btn btn-success">
+                    </div>
+                    <div class="col-md-3">
+                    
+                    </div>
+
+                </div>
+                </div>  
+                                          
+                </div>
+                </div>
+
+    </form>
+
+    </div>
+</div>
+
+    
          
 </div>
 </div>

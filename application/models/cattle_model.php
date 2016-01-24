@@ -28,7 +28,7 @@ class Cattle_model extends CI_Model{
 		$officerlivestock = $this->input->post('officerlivestock');
 		$headmaster = $this->input->post('headmaster');
 		$imam = $this->input->post('imam');
-		$imam = $this->input->post('dc');
+		$dc = $this->input->post('dc');
 		$ct_id = $this->input->post('ct_id'); 
 		$user_id = $this->session->userdata('user_id');
 
