@@ -56,7 +56,7 @@ class House_model extends CI_Model{
 	}
 
 	public function add_from_sheet($data){
-		$this->db->insert('house', $data);
+		$this->db->insert('house_damage', $data);
 	}
 
 

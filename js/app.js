@@ -425,8 +425,13 @@ app.controller('ImportSheetCtrl', function($scope, $http) {
    //get budget data
     $scope.getBudget = function(){
        $http.get(baseURL+'budget/get_cattle_budget').success(function(data, status, headers, config){
-        $scope.budget = data;
-
+        $scope.budget_cattle = data;
+      });
+        $http.get(baseURL+'budget/get_house_budget').success(function(data, status, headers, config){
+        $scope.budget_house = data;
+      });
+        $http.get(baseURL+'budget/get_deadinjured_budget').success(function(data, status, headers, config){
+        $scope.budget_di = data;
       });
     }
     $scope.getBudget();

@@ -1,5 +1,5 @@
 <?php
-class Import_cattle extends CI_Controller {
+class Import_deadinjured extends CI_Controller {
 
 	public function __construct(){
 
@@ -93,7 +93,7 @@ class Import_cattle extends CI_Controller {
 					  	$district 	= $objWorksheet->getCellByColumnAndRow(4,$i)->getValue();
 					  	$reason 	= $objWorksheet->getCellByColumnAndRow(5,$i)->getValue();
 					  	$special_compensation 		= $objWorksheet->getCellByColumnAndRow(6,$i)->getValue();
-					  	$housedamage				= $objWorksheet->getCellByColumnAndRow(7,$i)->getValue();
+					  	$case_type				= $objWorksheet->getCellByColumnAndRow(7,$i)->getValue();
 						
 						$date_of_incident	= $objWorksheet->getCellByColumnAndRow(8,$i)->getValue();
 						$date_of_report		= $objWorksheet->getCellByColumnAndRow(9,$i)->getValue();
@@ -128,7 +128,7 @@ class Import_cattle extends CI_Controller {
 							'dc' => $dc,
 							'u_id'	=> $user_id );
 					  	
-					  	$this->cattle_model->add_from_sheet($form_data);
+					  	$this->deadinjured_model->add_from_sheet($form_data);
 					  	$msg['msg'][0] = 'Data inserted successfully...';
 
 		  				

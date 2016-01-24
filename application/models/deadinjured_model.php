@@ -54,7 +54,7 @@ class Deadinjured_model extends CI_Model{
 	}
 
 public function add_from_sheet($data){
-		$this->db->insert('deadinjured', $data);
+		$this->db->insert('dead_injured', $data);
 	}
 
 	public function add($formdata){

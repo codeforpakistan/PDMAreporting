@@ -1,5 +1,5 @@
 <?php
-class Import_cattle extends CI_Controller {
+class Import_house extends CI_Controller {
 
 	public function __construct(){
 
@@ -118,7 +118,7 @@ class Import_cattle extends CI_Controller {
 							'reason' => $reason,
 							'special_compensation' => $special_compensation,
 							'b_id' => $b_id,
-							'damage_type' => $damage_type,
+							'damage_type' => $housedamage,
 							'patwari' => $patwari,
 							'rep_mpa' => $rep_of_mpa,
 							'tehsildar' => $tehsildar,
@@ -127,7 +127,7 @@ class Import_cattle extends CI_Controller {
 							'dc' => $dc,
 							'u_id'	=> $user_id );
 					  	
-					  	$this->cattle_model->add_from_sheet($form_data);
+					  	$this->house_model->add_from_sheet($form_data);
 					  	$msg['msg'][0] = 'Data inserted successfully...';
 
 		  				
