@@ -38,43 +38,46 @@
             <div class="col-lg-4 col-lg-offset-4 dash-title">Choose a Category ?</div>
         </div>
         <div class="row dashboard-row">
-            <div class="col-lg-3 ">
+            <div class="col-lg-4 ">
                 <a href="#Housedamage">
                 <div class="box b1"><img class="dash-img" src="<?php echo base_url();?>img/house.png" alt=""/><div class="box1">House Damage</div></div>
                 </a>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <a href="#Cattles">
                 <div class="box b2"><img class="dash-img" src="<?php echo base_url();?>img/cattle.png" alt=""/><div class="box2">Cattles</div></div>
                 </a>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <a href="#Deadinjured">
                 <div class="box b3"><img class="dash-img" src="<?php echo base_url();?>img/dead.png" alt=""/><div class="box3">Dead / Injured</div></div>
                 </a>
             </div>
-            <div class="col-lg-3">  
+            </div>
+             <div class="row dashboard-row">
+            <div class="col-lg-4">  
                       <a href="#Complaint">
                     <div class="box b4"><img class="dash-img" src="<?php echo base_url();?>img/complaint.png" alt=""/><div class="box4">Complaints</div></div>
                      </a>         
             </div>
-            <div class="col-lg-3"> 
+            <div class="col-lg-4"> 
             <a href="#Items">           
                     <div class="box b5"><img class="dash-img" src="<?php echo base_url();?>img/items.png" alt=""/><div class="box5">Items</div></div>
                     </a>
             </div>
-           <div class="col-lg-3">
+           <div class="col-lg-4">
                 <a href="#report_dist">
                 <div class="box b3"><img class="dash-img" src="<?php echo base_url();?>img/District1.png" alt=""/><div class="box3">District Reporting</div></div>
                 </a>
             </div>
-            <div class="col-lg-3"> 
+        </div>
+         <div class="row dashboard-row">
+         <div class="col-lg-12"> 
             <a href="#Import_sheet">           
-                    <div class="box b1"><img class="dash-img" src="<?php echo base_url();?>img/import.png" alt=""/><div class="box1">Import Sheet</div></div>
+                    <div class="box b1" ><img class="dash-img" src="<?php echo base_url();?>img/import.png" alt=""/><div class="box1">Import Sheet</div></div>
                 </a>
             </div>
-
-        </div>
+            </div>
     </div>
     <div class="my-view hide">
         <ng-view></ng-view>
