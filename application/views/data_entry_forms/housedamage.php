@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="row">
-                <div class="col-lg-2 text-right label">Nayure of Clamity:</div>
+                <div class="col-lg-2 text-right label">Nature of Clamity:</div>
              <div class="col-lg-3">
                     <select class="form-control input-sm" name="" ng-model="data.reason">
                             <option >Flood </option>

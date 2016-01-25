@@ -53,9 +53,27 @@
                 <div class="box b3"><img class="dash-img" src="<?php echo base_url();?>img/dead.png" alt=""/><div class="box3">Dead / Injured</div></div>
                 </a>
             </div>
-            <div class="col-lg-3">            
-                    <div class="box b4"><img class="dash-img" src="<?php echo base_url();?>img/others.png" alt=""/><div class="box4">Others</div></div>
+            <div class="col-lg-3">  
+                      <a href="#Complaint">
+                    <div class="box b4"><img class="dash-img" src="<?php echo base_url();?>img/complaint.png" alt=""/><div class="box4">Complaints</div></div>
+                     </a>         
             </div>
+            <div class="col-lg-3"> 
+            <a href="#Items">           
+                    <div class="box b5"><img class="dash-img" src="<?php echo base_url();?>img/items.png" alt=""/><div class="box5">Items</div></div>
+                    </a>
+            </div>
+           <div class="col-lg-3">
+                <a href="#report_dist">
+                <div class="box b3"><img class="dash-img" src="<?php echo base_url();?>img/District1.png" alt=""/><div class="box3">District Reporting</div></div>
+                </a>
+            </div>
+            <div class="col-lg-3"> 
+            <a href="#Import_sheet">           
+                    <div class="box b1"><img class="dash-img" src="<?php echo base_url();?>img/import.png" alt=""/><div class="box1">Import Sheet</div></div>
+                </a>
+            </div>
+
         </div>
     </div>
     <div class="my-view hide">
