@@ -45,6 +45,9 @@
                     <div class="form-group">
                     <div class="row">
                         <div class="col-md-10 text" style="margin-left:70px">
+                            <p class="text-center">
+                                <button class="btn btn-success" id="download-template-cattle">Download Template</button>
+                            </p>
                             <h4> Import Cattle Data from Sheet</h4>
                         </div>
                     </div>
@@ -108,6 +111,9 @@
                     <div class="form-group">
                     <div class="row">
                         <div class="col-md-12 text" style="margin-left:50px">
+                            <p class="text-center">
+                                <button class="btn btn-success" id="download-template-house">Download Template</button>
+                            </p>
                             <h4> Import House Damage Data from Sheet</h4>
                         </div>
                     </div>
@@ -173,6 +179,10 @@
                     <div class="form-group">
                     <div class="row">
                         <div class="col-md-12 text" style="margin-left:5%">
+                            <p class="text-center">
+                                <button class="btn btn-success" id="download-template-di">Download Template</button>
+                            </p>
+                            <hr>
                             <h4> Import Dead/Injured Data from Sheet</h4>
                         </div>
                     </div>
@@ -242,3 +252,18 @@
 <?php 
     $this->load->view('template/footer');
 ?>
+<script type="text/javascript">
+    $('#download-template-cattle').click(function(e) {
+        e.preventDefault();  //stop the browser from following
+        window.location.href = "<?php echo base_url();?>templates/cattle.xlsx";
+    });
+    $('#download-template-house').click(function(e) {
+        e.preventDefault();  //stop the browser from following
+        window.location.href = "<?php echo base_url();?>templates/housedamage.xlsx";
+    });
+    $('#download-template-di').click(function(e) {
+        e.preventDefault();  //stop the browser from following
+        window.location.href = "<?php echo base_url();?>templates/deadinjured.xlsx";
+    });
+
+</script>

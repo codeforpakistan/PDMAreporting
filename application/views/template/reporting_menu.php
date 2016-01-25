@@ -64,26 +64,26 @@
             <br>
             <div class="row text-center">
               <div class="col-sm-4">
-                <input type="checkbox" name="big"> Cattle - Big
+                <input type="checkbox" checked name="big"> Cattle - Big
               </div>
                <div class="col-sm-4">
-                <input type="checkbox" name="full"> House - Full Damage
+                <input type="checkbox" checked name="full"> House - Full Damage
               </div>
                <div class="col-sm-4">
-                <input type="checkbox" name="injured"> Person - Injured
+                <input type="checkbox" checked name="injured"> Person - Injured
               </div>
               </div>
 
               <div class="row text-center">
               <div class="col-sm-4">
-                <input type="checkbox" name="small" style="margin-left:10px" > Cattle - Small
+                <input type="checkbox" checked name="small" style="margin-left:10px" > Cattle - Small
               </div>
              
               <div class="col-sm-4">
-                <input type="checkbox" name="partial" style="margin-left:15px"> House - Partial Damage
+                <input type="checkbox" checked name="partial" style="margin-left:15px"> House - Partial Damage
               </div>
               <div class="col-sm-4">
-                <input type="checkbox" name="dead" style="margin-right:10px"> Person - Dead
+                <input type="checkbox" checked name="dead" style="margin-right:10px"> Person - Dead
               </div>
              
             </div>
