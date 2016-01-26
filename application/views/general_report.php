@@ -37,7 +37,7 @@
 						<td><?php echo $c->reason?></td>
 						<td><?php echo $c->cattle_type?></td>
 						<td><?php echo $c->date_of_incident?></td>
-						<td><?php echo $c->budget?></td>
+						<td><?php echo $c->b_amount?></td>
 						<td><?php echo $c->patwari?></td>
 						<td><?php echo $c->rep_mpa?></td>
 						<td><?php echo $c->officer_livestock?></td>
@@ -84,6 +84,7 @@
 						<td><?php echo $c->district?></td>
 						<td><?php echo $c->damage_type?></td>
 						<td><?php echo $c->date_of_incident?></td>
+						<td><?php echo $c->b_amount?></td>
 						<td><?php echo $c->patwari?></td>
 						<td><?php echo $c->rep_mpa?></td>
 						<td><?php echo $c->tehsildar?></td>
@@ -98,7 +99,7 @@
 
 			<?php if(!empty($dead_injured)):?>
 				<br>
-				<h2>Casualties Report</h2>
+				<h2>Dead/Injured Report</h2>
 				<div class="table-responsive">
 					<table class="table table-hover table-condensed table-striped">
 					<tr class="success">
@@ -129,6 +130,7 @@
 						<td><?php echo $c->district?></td>
 						<td><?php echo $c->case_type?></td>
 						<td><?php echo $c->date_of_incident?></td>
+						<td><?php echo $c->b_amount?></td>
 						<td><?php echo $c->patwari?></td>
 						<td><?php echo $c->rep_mpa?></td>
 						<td><?php echo $c->tehsildar?></td>

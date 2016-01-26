@@ -48,8 +48,9 @@
                 <div class="col-lg-2 text-right label">District</div>
                 <div class="col-lg-3">
                     <select class="form-control input-sm" name="district" ng-model="data.district">
-                    <optiion selected="selected"><?php
-                    echo $data['hd_district'];?></optiion>
+                    <option selected="selected">
+                        <?php echo $data['district'];?>
+                    </optiion>
                             <option >Abbottabad</option>
                             <option >Bannu</option>
                              <option> Batagram</option>

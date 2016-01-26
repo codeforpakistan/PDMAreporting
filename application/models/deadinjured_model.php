@@ -68,10 +68,11 @@ public function add_from_sheet($data){
 		$special_compensation = $formdata->special_compensation;
 		$district = $formdata->district;
 		$budget = $formdata->budget;
+		$certificate = $formdata->certificate;
 		$halqapatwari = $formdata->halqapatwari;
 		$medicalofficer = $formdata->medicalofficer;
 		$tehsildar = $formdata->tehsildar;
-			$dc = $formdata->dc;
+		$dc = $formdata->dc;
 		$localschoolheadmaster = $formdata->localschoolheadmaster;
 		$user_id = $this->session->userdata('user_id');
 	
@@ -88,6 +89,7 @@ public function add_from_sheet($data){
 		 				'special_compensation'	=> $special_compensation,
 		 				'district' => $district,
 		 				'patwari'	=> $halqapatwari,
+		 				'certificate'	=> $certificate,
 		 				'headmaster'	=> $localschoolheadmaster,
 		 				'med_officer'	=> $medicalofficer,
 		 				'tehsildar' => $tehsildar,

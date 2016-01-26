@@ -116,9 +116,19 @@
                 </div>
 
                  <div class="row">
-                 <div class="col-lg-2 text-right label">Date of accident:</div>
+                 <div class="col-lg-2 text-right label">Date of Incident:</div>
                 <div class="col-lg-3 "> 
                 <p><input type="date" class="form-control" ng-model="data.incidentdate"></p>
+                </div>
+                </div>
+               
+                <div class="row">
+                      <div class="col-lg-2 text-right label">Death/Injured Certificate:</div>
+                     <div class="col-lg-3 "> 
+                  <input type="radio" name="certificate" value="yes" ng-model="data.certificate"> Yes
+                 <input type="radio" name="certificate" value="no" ng-model="data.certificate"> No
+
+                
                 </div>
                 </div>
 
