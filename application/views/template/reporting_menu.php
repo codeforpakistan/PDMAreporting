@@ -38,6 +38,11 @@
           <br>
           <form action="<?php echo base_url();?>report/general" method="post">
             <div class="row">
+              <div class="col-sm-3 text-center">
+                 <input type="checkbox" name="only_special_compensated" id=""> Show Only Special Compensated
+              </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-1 text-right label2">From:</div>
                   <div class="col-lg-2 "> 
                      <input type="date" class="form-control input-sm" name="datefrom" id="" placeholder="Date">
@@ -88,7 +93,8 @@
              
             </div>
             <div class="row">
-              <div class="col-lg-1 text-center col-lg-offset-10">
+              
+              <div class="col-sm-1 text-center col-sm-offset-10">
                 <br>
 
                 <button type="submit" class="btn btn-success btn-lg" > Generate Report</button>

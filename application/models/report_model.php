@@ -17,6 +17,8 @@ class Report_model extends CI_Model{
 		$partial = $this->input->post('partial');
 		$full = $this->input->post('full');
 
+		$compensated = $this->input->post('only_special_compensated');
+
 		
 		if($small == true || $big == true){
 			$this->db->select('*');
@@ -33,6 +35,8 @@ class Report_model extends CI_Model{
 				$this->db->where('date_of_incident >=', $datefrom);
 			if(!empty($dateto))
 				$this->db->where('date_of_incident <=', $dateto);
+			if(!empty($compensated))
+				$this->db->where('special_compensation !=','');
 
 			$data['cattle'] = $this->db->get()->result();
 		}
@@ -52,6 +56,8 @@ class Report_model extends CI_Model{
 				$this->db->where('date_of_incident >=', $datefrom);
 			if(!empty($dateto))
 				$this->db->where('date_of_incident <=', $dateto);
+			if(!empty($compensated))
+				$this->db->where('special_compensation !=','');
 
 			$data['house_damage'] = $this->db->get()->result();
 		}
@@ -71,6 +77,8 @@ class Report_model extends CI_Model{
 				$this->db->where('date_of_incident >=', $datefrom);
 			if(!empty($dateto))
 				$this->db->where('date_of_incident <=', $dateto);
+			if(!empty($compensated))
+				$this->db->where('special_compensation !=','');
 
 			$data['dead_injured'] = $this->db->get()->result();
 		}
