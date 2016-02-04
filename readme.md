@@ -10,4 +10,7 @@
 </ul>
 
 ###SOME SNAPSHOTS
+![alt tag](./img/login.jpg)
 ![alt tag](./img/dashboard.jpg)
+![alt tag](./img/reporting.jpg)
+![alt tag](./img/individual.jpg)
