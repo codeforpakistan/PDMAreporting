@@ -45,7 +45,7 @@
             </tr>
           </thead>
           <tbody>
-             <tr ng-repeat="i in filtered = (table_info | filter:{ district:searchDistrict })">
+             <tr ng-repeat="i in filtered = (table_info | filter:{ i_district:searchDistrict })">
               <td>{{$index+1}}</td>
               <td>{{i.i_fooditems}}</td>
               <td>{{i.i_nfooditems}}</td>

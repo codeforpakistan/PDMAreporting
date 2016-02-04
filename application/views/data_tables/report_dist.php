@@ -18,9 +18,6 @@
 
       <div class="row">
         <div class="col-sm-4">
-          <input type="text" class="form-control" placeholder="CNIC" ng-model="searchCNIC">
-        </div>
-        <div class="col-sm-4">
           <input type="text" class="form-control" placeholder="District" ng-model="searchDistrict">
         </div>
       </div>
@@ -52,7 +49,7 @@
             </tr>
           </thead>
           <tbody>
-             <tr ng-repeat="i in filtered = (table_info | filter:{cnic:searchCNIC, district:searchDistrict })">
+             <tr ng-repeat="i in filtered = (table_info | filter:{i_district:searchDistrict })">
               <td>{{$index+1}}</td>
               <td>{{i.i_hd_full}}</td>
               <td>{{i.i_hd_partial}}</td>

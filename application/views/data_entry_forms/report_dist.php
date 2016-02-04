@@ -63,7 +63,7 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
                  <div class="col-lg-3">
-                    <select class="form-control input-sm" name="" ng-model="data.district">
+                    <select class="form-control input-sm" name="" ng-model="data.i_district">
                             <option >Abbottabad</option>
                             <option >Bannu</option>
                              <option> Batagram</option>
