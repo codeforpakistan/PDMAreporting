@@ -8,3 +8,6 @@
 <li>Set the database settings in db.php file</li>
 <li>You are now ready to start http://localhost/PDMAreporting</li>
 </ul>
+
+###SOME SNAPSHOTS
+![alt tag](./img/dashboard.jpg)
