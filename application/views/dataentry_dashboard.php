@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="example-nav-collapse">
                 <ul class="nav navbar-nav">
                     <li class="house-nav"><a href="#Housedamage">House Damage</a></li>
-                    <li class="cattle-nav"><a href="#Cattles">Cattles</a></li>
+                    <li class="cattle-nav"><a href="#Cattles">Cattle</a></li>
                     <li class="dead-nav"><a href="#Deadinjured">Dead / Injured</a></li>
                     <li class="complaint-nav"><a href="#Complaint">Complaint</a></li>
                     <li class="items-nav"><a href="#Items">Items</a></li>
@@ -61,7 +61,7 @@
                      </a>         
             </div>
             <div class="col-lg-4"> 
-            <a href="#Items">           
+                    <a href="#Items">           
                     <div class="box b5"><img class="dash-img" src="<?php echo base_url();?>img/items.png" alt=""/><div class="box5">Items</div></div>
                     </a>
             </div>
@@ -73,7 +73,7 @@
         </div>
          <div class="row dashboard-row">
          <div class="col-lg-12"> 
-            <a href="#Import_sheet">           
+            <a href="#import_sheet">           
                     <div class="box b1" ><img class="dash-img" src="<?php echo base_url();?>img/import.png" alt=""/><div class="box1">Import Sheet</div></div>
                 </a>
             </div>

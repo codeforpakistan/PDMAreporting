@@ -10,7 +10,7 @@
                     <div class="form-group">
                     <div class="row">
                         <div class="col-sm-4 text">
-                            <h2>Cattles</h2>
+                            <h2>Cattle</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -119,8 +119,6 @@
                 <div class="col-lg-3"> 
                 <input type="radio" name="cattletype" value="small" ng-model="data.cattletype"> Small
                 <input type="radio" name="cattletype" value="big" ng-model="data.cattletype"> Big
-
-                
                 </div>
                 </div>
 

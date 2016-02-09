@@ -28,6 +28,7 @@
                 
                 </div>
                 </div>
+                <!--
                 <div class="row">
                       <div class="col-lg-2 text-right label"> Compensation:</div>
                 <div class="col-lg-3 "> 
@@ -35,6 +36,7 @@
                 
                 </div>
                 </div>
+              -->
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
                  <div class="col-lg-3">
