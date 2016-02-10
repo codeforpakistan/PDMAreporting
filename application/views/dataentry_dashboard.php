@@ -61,7 +61,7 @@
                      </a>         
             </div>
             <div class="col-lg-4"> 
-            <a href="#Items">           
+                    <a href="#Items">           
                     <div class="box b5"><img class="dash-img" src="<?php echo base_url();?>img/items.png" alt=""/><div class="box5">Items</div></div>
                     </a>
             </div>
@@ -73,7 +73,7 @@
         </div>
          <div class="row dashboard-row">
          <div class="col-lg-12"> 
-            <a href="#Import_sheet">           
+            <a href="#import_sheet">           
                     <div class="box b1" ><img class="dash-img" src="<?php echo base_url();?>img/import.png" alt=""/><div class="box1">Import Sheet</div></div>
                 </a>
             </div>

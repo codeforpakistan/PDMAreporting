@@ -23,14 +23,22 @@ class Items_model extends CI_Model{
 	public function edit($formdata){
 		$fi = $formdata->i_fooditems;
 		$nfi = $formdata->i_nfooditems;
+<<<<<<< HEAD
 		//$compensation = $formdata->i_compensation;
+=======
+		// $compensation = $formdata->i_compensation;
+>>>>>>> origin/master
 		$district = $formdata->i_district;
 		$date = $formdata->i_date;
 		$id = $formdata->id;
 
 		$data = array(	'i_fooditems' => $fi,
 						'i_nfooditems'	=> $nfi,
+<<<<<<< HEAD
 		 				//'i_compensation' => $compensation,
+=======
+		 				// 'i_compensation' => $compensation,
+>>>>>>> origin/master
 		 				'i_district' => $district,
 		 				'i_date' => $date);
 		
@@ -46,13 +54,21 @@ class Items_model extends CI_Model{
 	public function add($formdata){
 		$fi = $formdata->fi;
 		$nfi = $formdata->nfi;
+<<<<<<< HEAD
 		//$compensation = $formdata->compensation;
+=======
+		// $compensation = $formdata->compensation;
+>>>>>>> origin/master
 		$district = $formdata->district;
 		$date = $formdata->date;
 
 		$data = array(	'i_fooditems' => $fi,
 						'i_nfooditems'	=> $nfi,
+<<<<<<< HEAD
 		 				//'i_compensation' => $compensation,
+=======
+		 				// 'i_compensation' => $compensation,
+>>>>>>> origin/master
 		 				'i_district' => $district,
 		 				'i_date' => $date);
 		

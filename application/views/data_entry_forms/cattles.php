@@ -120,8 +120,6 @@
                 <div class="col-lg-3"> 
                 <input type="radio" name="cattletype" value="small" ng-model="data.cattletype"> Small
                 <input type="radio" name="cattletype" value="big" ng-model="data.cattletype"> Big
-
-                
                 </div>
                 </div>
 
