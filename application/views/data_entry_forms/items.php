@@ -28,13 +28,13 @@
                 
                 </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                       <div class="col-lg-2 text-right label"> Compensation:</div>
                 <div class="col-lg-3 "> 
                    <input type="number" class="form-control" name="" id="" placeholder="compensation" ng-model="data.compensation" required>
                 
                 </div>
-                </div>
+                </div> -->
                 <div class="row">
                 <div class="col-lg-2 text-right label">District</div>
                  <div class="col-lg-3">

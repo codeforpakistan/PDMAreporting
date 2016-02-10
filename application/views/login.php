@@ -6,7 +6,7 @@
         <div class="col-sm-2 col-sm-offset-1 text-center"><img class="login-image" src="<?php echo base_url();?>img/KP_Logo.jpg" alt=""/></div>
         <div class="col-sm-6">
             <div class="row">
-                <div class="col-sm-12 heading1">Provisional Disaster Management Authority</div>
+                <div class="col-sm-12 heading1">Provincial Disaster Management Authority</div>
             </div>
             <div class="row">
                 <div class="col-sm-12 heading2">Relief Reporting System</div>

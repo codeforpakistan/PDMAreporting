@@ -10,7 +10,7 @@
                     <div class="form-group">
                     <div class="row">
                         <div class="col-sm-4 text">
-                            <h2>Cattles</h2>
+                            <h2>Cattle</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -99,11 +99,12 @@
                 <div class="row">
                     <div class="col-sm-2 text-right label">Relief</div>
                     <div class="col-sm-3">
-                        <select name="budget" ng-model="data.budget" required="required" class="form-control" required>
+                       <input type="text" ng-model="data.budget" class="form-control" placeholder="Relief Amount">
+                       <!--  <select name="budget" ng-model="data.budget" required="required" class="form-control" required>
                             <option ng-repeat="b in budget" value="{{b.b_id}}">
                                 {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
                             </option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
                 <div class="row">

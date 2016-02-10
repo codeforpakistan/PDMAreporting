@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="example-nav-collapse">
                 <ul class="nav navbar-nav">
                     <li class="house-nav"><a href="#Housedamage">House Damage</a></li>
-                    <li class="cattle-nav"><a href="#Cattles">Cattles</a></li>
+                    <li class="cattle-nav"><a href="#Cattles">Cattle</a></li>
                     <li class="dead-nav"><a href="#Deadinjured">Dead / Injured</a></li>
                     <li class="complaint-nav"><a href="#Complaint">Complaint</a></li>
                     <li class="items-nav"><a href="#Items">Items</a></li>
