@@ -6,7 +6,7 @@ class Cattle_model extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('cattle');
 		$this->db->where('ct_id',$id);
-		$this->db->join('budget', 'budget.b_id = cattle.b_id');
+		//$this->db->join('budget', 'budget.b_id = cattle.b_id');
 		$return = $this->db->get()->result_array();
 
 		return $return[0];

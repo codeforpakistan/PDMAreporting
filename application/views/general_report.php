@@ -38,7 +38,7 @@
 						<td><?php echo $c->reason?></td>
 						<td><?php echo $c->cattle_type?></td>
 						<td><?php echo $c->date_of_incident?></td>
-						<td><?php echo $c->b_amount?></td>
+						<td><?php echo $c->b_id?></td>
 						<td><?php echo $c->special_compensation?></td>
 						<td><?php echo $c->patwari?></td>
 						<td><?php echo $c->rep_mpa?></td>
@@ -87,7 +87,7 @@
 						<td><?php echo $c->district?></td>
 						<td><?php echo $c->damage_type?></td>
 						<td><?php echo $c->date_of_incident?></td>
-						<td><?php echo $c->b_amount?></td>
+						<td><?php echo $c->b_id?></td>
 						<td><?php echo $c->special_compensation?></td>
 						<td><?php echo $c->patwari?></td>
 						<td><?php echo $c->rep_mpa?></td>
@@ -119,7 +119,6 @@
 						<th>Budget</th>
 						<th>Compensation</th>
 						<th>Halqa Patwari</th>
-						<th>Rep of MPA</th>
 						<th>Tehsildar</th>
 						<th>Local headmaster</th>
 						<th>Medical Officer</th>
@@ -135,10 +134,9 @@
 						<td><?php echo $c->district?></td>
 						<td><?php echo $c->case_type?></td>
 						<td><?php echo $c->date_of_incident?></td>
-						<td><?php echo $c->b_amount?></td>
+						<td><?php echo $c->b_id?></td>
 						<td><?php echo $c->special_compensation?></td>
 						<td><?php echo $c->patwari?></td>
-						<td><?php echo $c->rep_mpa?></td>
 						<td><?php echo $c->tehsildar?></td>
 						<td><?php echo $c->headmaster?></td>
 						<td><?php echo $c->med_officer?></td>

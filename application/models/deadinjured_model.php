@@ -6,7 +6,7 @@ class Deadinjured_model extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('dead_injured');
 		$this->db->where('di_id',$id);
-		$this->db->join('budget', 'budget.b_id = dead_injured.b_id');
+		//$this->db->join('budget', 'budget.b_id = dead_injured.b_id');
 		$return = $this->db->get()->result_array();
 
 		return $return[0];

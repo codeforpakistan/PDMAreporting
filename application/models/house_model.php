@@ -5,7 +5,7 @@ class House_model extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('house_damage');
 		$this->db->where('hd_id',$id);
-		$this->db->join('budget', 'budget.b_id = house_damage.b_id');
+		//$this->db->join('budget', 'budget.b_id = house_damage.b_id');
 		$return = $this->db->get()->result_array();
 		return $return[0];
 	}

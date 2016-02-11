@@ -23,7 +23,7 @@ class Report_model extends CI_Model{
 		if($small == true || $big == true){
 			$this->db->select('*');
 			$this->db->from('cattle');
-			$this->db->join('budget','budget.b_id = cattle.b_id');
+			//$this->db->join('budget','budget.b_id = cattle.b_id');
 			
 			if($small == true && $big == false)
 				$this->db->where('cattle.cattle_type','small');
@@ -45,7 +45,7 @@ class Report_model extends CI_Model{
 		if($partial == true || $full == true){
 			$this->db->select('*');
 			$this->db->from('house_damage');
-			$this->db->join('budget','budget.b_id = house_damage.b_id');
+			//$this->db->join('budget','budget.b_id = house_damage.b_id');
 			if($partial == true && $full == false)
 				$this->db->where('house_damage.damage_type','partial');
 			if($full == true && $partial == false)
@@ -65,7 +65,7 @@ class Report_model extends CI_Model{
 		if($dead == true || $injured == true){
 			$this->db->select('*');
 			$this->db->from('dead_injured');
-			$this->db->join('budget','budget.b_id = dead_injured.b_id');
+			//$this->db->join('budget','budget.b_id = dead_injured.b_id');
 
 			if($dead == true && $injured == false)
 				$this->db->where('dead_injured.case_type','dead');
