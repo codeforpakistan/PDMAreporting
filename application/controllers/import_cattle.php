@@ -80,7 +80,6 @@ class Import_cattle extends CI_Controller {
 				
 				$startrow 	= $this->input->post('startrow');
 				$endrow 	= $this->input->post('endrow');
-				$b_id 	= $this->input->post('budget');
 				$user_id = $this->session->userdata('user_id');
 				
 				
@@ -92,18 +91,20 @@ class Import_cattle extends CI_Controller {
 					  	$address 	= $objWorksheet->getCellByColumnAndRow(3,$i)->getValue();
 					  	$district 	= $objWorksheet->getCellByColumnAndRow(4,$i)->getValue();
 					  	$reason 	= $objWorksheet->getCellByColumnAndRow(5,$i)->getValue();
-					  	$special_compensation 		= $objWorksheet->getCellByColumnAndRow(6,$i)->getValue();
-					  	$cattle_type 				= $objWorksheet->getCellByColumnAndRow(7,$i)->getValue();
+					  	$relief 	= $objWorksheet->getCellByColumnAndRow(6,$i)->getValue();
+					  	
+					  	$special_compensation 	= $objWorksheet->getCellByColumnAndRow(7,$i)->getValue();
+					  	$cattle_type 			= $objWorksheet->getCellByColumnAndRow(8,$i)->getValue();
 						
-						$date_of_incident	= $objWorksheet->getCellByColumnAndRow(8,$i)->getValue();
-						$date_of_report		= $objWorksheet->getCellByColumnAndRow(9,$i)->getValue();
+						$date_of_incident	= $objWorksheet->getCellByColumnAndRow(9,$i)->getValue();
+						$date_of_report		= $objWorksheet->getCellByColumnAndRow(10,$i)->getValue();
 						
-						$patwari	= $objWorksheet->getCellByColumnAndRow(10,$i)->getValue();
-						$imaam		= $objWorksheet->getCellByColumnAndRow(11,$i)->getValue();
-						$rep_of_mpa	= $objWorksheet->getCellByColumnAndRow(12,$i)->getValue();
-						$headmaster	= $objWorksheet->getCellByColumnAndRow(13,$i)->getValue();
-						$livestock	= $objWorksheet->getCellByColumnAndRow(14,$i)->getValue();
-						$dc			= $objWorksheet->getCellByColumnAndRow(15,$i)->getValue();
+						$patwari	= $objWorksheet->getCellByColumnAndRow(11,$i)->getValue();
+						$imaam		= $objWorksheet->getCellByColumnAndRow(12,$i)->getValue();
+						$rep_of_mpa	= $objWorksheet->getCellByColumnAndRow(13,$i)->getValue();
+						$headmaster	= $objWorksheet->getCellByColumnAndRow(14,$i)->getValue();
+						$livestock	= $objWorksheet->getCellByColumnAndRow(15,$i)->getValue();
+						$dc			= $objWorksheet->getCellByColumnAndRow(16,$i)->getValue();
 						
 
 						if(empty($name))
@@ -117,7 +118,7 @@ class Import_cattle extends CI_Controller {
 							'address' => $address,
 							'reason' => $reason,
 							'special_compensation' => $special_compensation,
-							'b_id' => $b_id,
+							'b_id' => $relief,
 							'cattle_type' => $cattle_type,
 							'patwari' => $patwari,
 							'rep_mpa' => $rep_of_mpa,

@@ -47,32 +47,32 @@
                 <div class="col-lg-2 text-right label">District</div>
                  <div class="col-lg-3">
                     <select class="form-control input-sm" name="" ng-model="data.district">
-                            <option >Abbottabad</option>
-                            <option >Bannu</option>
-                             <option> Batagram</option>
-                             <option> Buner</option>
-                             <option> Charsadda</option>
-                             <option> Chitral</option>
-                            <option> Dera Ismail Khan</option>
-                             <option> Hangu</option>
-                             <option> Haripur</option>
-                             <option> Karak</option>
-                             <option> Kohat</option>
-                             <option> Kohistan</option>
-                             <option> Lakki Marwat</option>
-                             <option> Lower Dir</option>
-                             <option> Malakand</option>
-                             <option> Mansehra</option>
-                             <option> Mardan</option>
-                             <option> Nowshera</option>
-                             <option> Peshawar</option>
-                             <option> Shangla</option>
-                             <option> Swabi</option>
-                            <option> Swat</option>
-                             <option> Tank</option>
-                             <option> Tor Ghar</option>
-                             <option>  Upper Dir</option>
-                             <option> Lower Kohistan</option>
+                            <option>Abbottabad</option>
+                            <option>Bannu</option>
+                             <option>Batagram</option>
+                             <option>Buner</option>
+                             <option>Charsadda</option>
+                             <option>Chitral</option>
+                            <option>Dera Ismail Khan</option>
+                             <option>Hangu</option>
+                             <option>Haripur</option>
+                             <option>Karak</option>
+                             <option>Kohat</option>
+                             <option>Kohistan</option>
+                             <option>Lakki Marwat</option>
+                             <option>Lower Dir</option>
+                             <option>Malakand</option>
+                             <option>Mansehra</option>
+                             <option>Mardan</option>
+                             <option>Nowshera</option>
+                             <option>Peshawar</option>
+                             <option>Shangla</option>
+                             <option>Swabi</option>
+                            <option>Swat</option>
+                             <option>Tank</option>
+                             <option>Tor Ghar</option>
+                             <option>Upper Dir</option>
+                             <option>Lower Kohistan</option>
 
 
                       </select>         
@@ -90,9 +90,9 @@
                 <div class="col-lg-2 text-right label">Nature of Clamity :</div>
                  <div class="col-lg-3">
                     <select class="form-control input-sm" name="" ng-model="data.reason" >
-                            <option >Flood </option>
-                            <option >Earth Quake</option>
-                             <option> Thunder Storm</option>
+                            <option>Flood </option>
+                            <option>Earth Quake</option>
+                             <option>Thunder Storm</option>
                       </select>         
                   </div>
                        </div>
@@ -112,7 +112,7 @@
                         Special Compensation <input type="checkbox" name="" id="compensation-checkbox">
                     </div>
                     <div class="col-sm-3">
-                        <input type="text" name="" class="form-control" id="compensation-amount" disabled ng-model="data.special_compensation" required>
+                        <input type="text" name="" class="form-control" id="compensation-amount" disabled ng-model="data.special_compensation">
                     </div>
                 </div>
                 <div class="row">
@@ -126,8 +126,8 @@
                     <div class="row">
                       <div class="col-lg-2 text-right label">Halqa patwari:</div>
                      <div class="col-lg-3 "> 
-                  <input type="radio" name="HalqaPatwari" value="1" ng-model="data.halqapatwari"> Yes
-                 <input type="radio" name="HalqaPatwari" value="0" ng-model="data.halqapatwari"> No
+                  <input type="radio" name="HalqaPatwari" value="yes" ng-model="data.halqapatwari"> Yes
+                 <input type="radio" name="HalqaPatwari" value="no" ng-model="data.halqapatwari"> No
 
                 
                 </div>
@@ -136,8 +136,8 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Rep of MPA:</div>
                 <div class="col-lg-3 "> 
-                 <input type="radio" name="RepOfMPA" value="1" ng-model="data.repofmpa"> Yes
-                 <input type="radio" name="RepOfMPA" value="0" ng-model="data.repofmpa"> No
+                 <input type="radio" name="RepOfMPA" value="yes" ng-model="data.repofmpa"> Yes
+                 <input type="radio" name="RepOfMPA" value="no" ng-model="data.repofmpa"> No
 
                 </div>
                 </div>
@@ -145,8 +145,8 @@
                  <div class="row">
                       <div class="col-lg-2 text-right label">District Officer Liverstock:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="DistrictOfficerLiverstock" value="1" ng-model="data.districtofficerlivestock"> Yes
-                 <input type="radio" name="DistrictOfficerLiverstock" value="0" ng-model="data.districtofficerlivestock"> No
+                <input type="radio" name="DistrictOfficerLiverstock" value="yes" ng-model="data.districtofficerlivestock"> Yes
+                 <input type="radio" name="DistrictOfficerLiverstock" value="no" ng-model="data.districtofficerlivestock"> No
    
                 </div>
                 </div>
@@ -154,8 +154,8 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Local School Headmaster:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="headmaster" value="1" ng-model="data.headmaster"> Yes
-                 <input type="radio" name="headmaster" value="0" ng-model="data.headmaster"> No
+                <input type="radio" name="headmaster" value="yes" ng-model="data.headmaster"> Yes
+                 <input type="radio" name="headmaster" value="no" ng-model="data.headmaster"> No
 
                       
                 </div>
@@ -164,8 +164,8 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Local Imam Masjid:</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="imam" value="1" ng-model="data.imam"> Yes
-                <input type="radio" name="imam" value="0" ng-model="data.imam"> No
+                <input type="radio" name="imam" value="yes" ng-model="data.imam"> Yes
+                <input type="radio" name="imam" value="no" ng-model="data.imam"> No
 
                       
                 </div>
@@ -174,8 +174,8 @@
                 <div class="row">
                 <div class="col-lg-2 text-right label">Counter Signed by DC :</div>
                 <div class="col-lg-3 "> 
-                <input type="radio" name="dc" value="1" ng-model="data.dc"> Yes
-                <input type="radio" name="dc" value="0" ng-model="data.dc"> No
+                <input type="radio" name="dc" value="yes" ng-model="data.dc"> Yes
+                <input type="radio" name="dc" value="no" ng-model="data.dc"> No
 
                       
                 </div>

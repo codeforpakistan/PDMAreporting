@@ -41,32 +41,32 @@
                 <div class="col-lg-2 text-right label">District</div>
                 <div class="col-lg-3">
                     <select class="form-control input-sm" name="" ng-model="data.district">
-                            <option >Abbottabad</option>
-                            <option >Bannu</option>
-                             <option> Batagram</option>
-                             <option> Buner</option>
-                             <option> Charsadda</option>
-                             <option> Chitral</option>
-                            <option> Dera Ismail Khan</option>
-                             <option> Hangu</option>
-                             <option> Haripur</option>
-                             <option> Karak</option>
-                             <option> Kohat</option>
-                             <option> Kohistan</option>
-                             <option> Lakki Marwat</option>
-                             <option> Lower Dir</option>
-                             <option> Malakand</option>
-                             <option> Mansehra</option>
-                             <option> Mardan</option>
-                             <option> Nowshera</option>
-                             <option> Peshawar</option>
-                             <option> Shangla</option>
-                             <option> Swabi</option>
-                            <option> Swat</option>
-                             <option> Tank</option>
-                             <option> Tor Ghar</option>
-                             <option>  Upper Dir</option>
-                             <option> Lower Kohistan</option>
+                            <option>Abbottabad</option>
+                            <option>Bannu</option>
+                             <option>Batagram</option>
+                             <option>Buner</option>
+                             <option>Charsadda</option>
+                             <option>Chitral</option>
+                            <option>Dera Ismail Khan</option>
+                             <option>Hangu</option>
+                             <option>Haripur</option>
+                             <option>Karak</option>
+                             <option>Kohat</option>
+                             <option>Kohistan</option>
+                             <option>Lakki Marwat</option>
+                             <option>Lower Dir</option>
+                             <option>Malakand</option>
+                             <option>Mansehra</option>
+                             <option>Mardan</option>
+                             <option>Nowshera</option>
+                             <option>Peshawar</option>
+                             <option>Shangla</option>
+                             <option>Swabi</option>
+                            <option>Swat</option>
+                             <option>Tank</option>
+                             <option>Tor Ghar</option>
+                             <option>Upper Dir</option>
+                             <option>Lower Kohistan</option>
 
 
                       </select>         
@@ -84,9 +84,9 @@
                 <div class="col-lg-2 text-right label">Nature of Clamity:</div>
                  <div class="col-lg-3">
                     <select class="form-control input-sm" name="" ng-model="data.reason">
-                            <option >Flood </option>
-                            <option >Earth Quake</option>
-                             <option> Thunder Storm</option>
+                            <option>Flood </option>
+                            <option>Earth Quake</option>
+                             <option>Thunder Storm</option>
                       </select>         
                   </div>
                        </div>

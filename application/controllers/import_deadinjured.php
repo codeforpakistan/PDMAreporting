@@ -80,7 +80,6 @@ class Import_deadinjured extends CI_Controller {
 				
 				$startrow 	= $this->input->post('startrow');
 				$endrow 	= $this->input->post('endrow');
-				$b_id 	= $this->input->post('budget');
 				$user_id = $this->session->userdata('user_id');
 				
 				
@@ -92,19 +91,21 @@ class Import_deadinjured extends CI_Controller {
 					  	$address 	= $objWorksheet->getCellByColumnAndRow(3,$i)->getValue();
 					  	$district 	= $objWorksheet->getCellByColumnAndRow(4,$i)->getValue();
 					  	$reason 	= $objWorksheet->getCellByColumnAndRow(5,$i)->getValue();
-					  	$special_compensation 		= $objWorksheet->getCellByColumnAndRow(6,$i)->getValue();
-					  	$case_type				= $objWorksheet->getCellByColumnAndRow(7,$i)->getValue();
+					  	$relief 	= $objWorksheet->getCellByColumnAndRow(6,$i)->getValue();
+					  	
+					  	$special_compensation 	= $objWorksheet->getCellByColumnAndRow(7,$i)->getValue();
+					  	$case_type			= $objWorksheet->getCellByColumnAndRow(8,$i)->getValue();
 						
-						$date_of_incident	= $objWorksheet->getCellByColumnAndRow(8,$i)->getValue();
-						$date_of_report		= $objWorksheet->getCellByColumnAndRow(9,$i)->getValue();
-						$tehsildar		= $objWorksheet->getCellByColumnAndRow(10,$i)->getValue();
+						$date_of_incident	= $objWorksheet->getCellByColumnAndRow(9,$i)->getValue();
+						$date_of_report		= $objWorksheet->getCellByColumnAndRow(10,$i)->getValue();
+						$tehsildar		= $objWorksheet->getCellByColumnAndRow(11,$i)->getValue();
 						
-						$patwari	= $objWorksheet->getCellByColumnAndRow(11,$i)->getValue();
+						$patwari	= $objWorksheet->getCellByColumnAndRow(12,$i)->getValue();
 						
-						$medicalofficer	= $objWorksheet->getCellByColumnAndRow(12,$i)->getValue();
-						$headmaster	= $objWorksheet->getCellByColumnAndRow(13,$i)->getValue();
+						$medicalofficer	= $objWorksheet->getCellByColumnAndRow(13,$i)->getValue();
+						$headmaster	= $objWorksheet->getCellByColumnAndRow(14,$i)->getValue();
 						
-						$dc			= $objWorksheet->getCellByColumnAndRow(14,$i)->getValue();
+						$dc			= $objWorksheet->getCellByColumnAndRow(15,$i)->getValue();
 						
 
 						if(empty($name))
@@ -118,7 +119,7 @@ class Import_deadinjured extends CI_Controller {
 							'address' => $address,
 							'reason' => $reason,
 							'special_compensation' => $special_compensation,
-							'b_id' => $b_id,
+							'b_id' => $relief,
 							'case_type' => $case_type,
 							'patwari' => $patwari,
 							'med_officer' => $medicalofficer,

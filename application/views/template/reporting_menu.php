@@ -53,7 +53,37 @@
                    </div>
                   <div class="col-lg-1 text-right label2">District:</div>
                     <div class="col-lg-2 "> 
-                     <input type="text" class="form-control input-sm" name="district" id="" placeholder="District">
+
+                     <select class="form-control input-sm" name="district">
+                            <option>Abbottabad</option>
+                            <option>Bannu</option>
+                             <option>Batagram</option>
+                             <option>Buner</option>
+                             <option>Charsadda</option>
+                             <option>Chitral</option>
+                            <option>Dera Ismail Khan</option>
+                             <option>Hangu</option>
+                             <option>Haripur</option>
+                             <option>Karak</option>
+                             <option>Kohat</option>
+                             <option>Kohistan</option>
+                             <option>Lakki Marwat</option>
+                             <option>Lower Dir</option>
+                             <option>Malakand</option>
+                             <option>Mansehra</option>
+                             <option>Mardan</option>
+                             <option>Nowshera</option>
+                             <option>Peshawar</option>
+                             <option>Shangla</option>
+                             <option>Swabi</option>
+                            <option>Swat</option>
+                             <option>Tank</option>
+                             <option>Tor Ghar</option>
+                             <option>Upper Dir</option>
+                             <option>Lower Kohistan</option>
+
+
+                      </select>
                     </div>
                   
                   

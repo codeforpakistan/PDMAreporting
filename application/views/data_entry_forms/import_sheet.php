@@ -73,21 +73,6 @@
                 </div>
                 </div>
                       
-
-                     <div class="row">
-                      <div class="col-md-6 text-right label"> Relief:</div>
-                <div class="col-md-6 "> 
-                   <select name="budget" ng-model="data.budget_cattle" required="required" class="form-control" required>
-                            <option ng-repeat="b in budget_cattle" value="{{b.b_id}}">
-                                {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
-                            </option>
-                        </select>
-                </div>
-                </div>
-              
-
-
-                
               
                 <div class="row">
                 <br>
@@ -140,16 +125,7 @@
                 </div>
                       
 
-                     <div class="row">
-                      <div class="col-md-5 text-right label"> Relief:</div>
-                <div class="col-md-7 "> 
-                   <select name="budget" ng-model="data.budget_house" required="required" class="form-control" required>
-                            <option ng-repeat="b in budget_house" value="{{b.b_id}}">
-                                {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
-                            </option>
-                        </select>
-                </div>
-                </div>
+                     
               
 
 
@@ -208,16 +184,7 @@
                 </div>
                 </div>
                       
-                     <div class="row">
-                      <div class="col-md-5 text-right label"> Relief:</div>
-                <div class="col-md-7 "> 
-                   <select name="budget" ng-model="data.budget_di" required="required" class="form-control" required>
-                            <option ng-repeat="b in budget_di" value="{{b.b_id}}">
-                                {{b.b_year}} - {{b.b_category}} - {{b.b_amount}}   
-                            </option>
-                        </select>
-                </div>
-                </div>
+                   
               
               
                 <div class="row">
