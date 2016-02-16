@@ -55,6 +55,7 @@
                     <div class="col-lg-2 "> 
 
                      <select class="form-control input-sm" name="district">
+                            <option></option>
                             <option>Abbottabad</option>
                             <option>Bannu</option>
                              <option>Batagram</option>

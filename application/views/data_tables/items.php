@@ -30,7 +30,6 @@
               <th>Sr No</th>
               <th>Food Items</th>
               <th>Non Food Items</th>
-              <th>Compemsation</th>
               <th>District</th>
               <th>Date</th>
               <?php
@@ -49,7 +48,6 @@
               <td>{{$index+1}}</td>
               <td>{{i.i_fooditems}}</td>
               <td>{{i.i_nfooditems}}</td>
-              <td>{{i.i_compensation}}</td>
               <td>{{i.i_district}}</td>
               <td>{{i.i_date}}</td>
               <?php
@@ -95,20 +93,41 @@
           <input type="text" class="form-control" value="" ng-model="row.i_nfooditems" required>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-4">
-          Compensation:
-        </div>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" value="" ng-model="row.i_compensation" required>
-        </div>
-      </div>
+      
       <div class="row">
         <div class="col-sm-4">
           District:
         </div>
         <div class="col-sm-8">
-          <input type="text" class="form-control" value="" ng-model="row.i_district" required>
+          <!-- <input type="text" class="form-control" value="" ng-model="row.i_district" disabled> -->
+          <select class="form-control input-sm" name="district" ng-model="row.i_district">
+                            <option>Abbottabad</option>
+                            <option>Bannu</option>
+                             <option>Batagram</option>
+                             <option>Buner</option>
+                             <option>Charsadda</option>
+                             <option>Chitral</option>
+                            <option>Dera Ismail Khan</option>
+                             <option>Hangu</option>
+                             <option>Haripur</option>
+                             <option>Karak</option>
+                             <option>Kohat</option>
+                             <option>Kohistan</option>
+                             <option>Lakki Marwat</option>
+                             <option>Lower Dir</option>
+                             <option>Malakand</option>
+                             <option>Mansehra</option>
+                             <option>Mardan</option>
+                             <option>Nowshera</option>
+                             <option>Peshawar</option>
+                             <option>Shangla</option>
+                             <option>Swabi</option>
+                            <option>Swat</option>
+                             <option>Tank</option>
+                             <option>Tor Ghar</option>
+                             <option>Upper Dir</option>
+                             <option>Lower Kohistan</option>
+                      </select>
         </div>
       </div>
       <div class="row">
